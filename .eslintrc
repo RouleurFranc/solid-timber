@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript",
+    "airbnb-base",
+    "plugin:editorconfig/all",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "editorconfig",
+    "prettier",
+    "tailwindcss"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "consistent-return": "off",
+    "comma-dangle": [
+      "ERROR",
+      "always-multiline"
+    ],
+    "eqeqeq": [
+      1,
+      "always"
+    ],
+    "function-paren-newline": [
+      "off"
+    ],
+    "implicit-arrow-linebreak": "off",
+    "import/extensions": 0,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/no-named-as-default-member": 0,
+    "import/no-nodejs-modules": "OFF",
+    "import/no-unresolved": "OFF",
+    "import/prefer-default-export": 0,
+    "no-confusing-arrow": [
+      "off"
+    ],
+    "no-console": 1,
+    "no-debugger": 1,
+    "no-plusplus": [
+      1,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-undef": 0,
+    "object-curly-newline": "off",
+    "operator-linebreak": [
+      "off"
+    ],
+    "prettier/prettier": 1,
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}
