@@ -21,7 +21,7 @@ const data = computed(() => props.data);
           :src="data.image[0]?.url"
           alt="dashboard image"
         />
-          <div class="mt-8 md:mt-4 md:mt-0">
+          <div class="mt-8 md:mt-4">
             <!--Text heading-->
             <h2
               class="mb-4 text-xl font-extrabold tracking-tight text-center text-gray-900  md:text-left md:text-4xl"
