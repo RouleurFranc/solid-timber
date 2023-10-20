@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/apollo'],
+  ssr: false,
   apollo: {
     clients: {
         prepr: './apollo/prepr.ts',
