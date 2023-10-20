@@ -14,6 +14,7 @@ module.exports = {
       md: '768px',
       lg: '976px',
       xl: '1440px',
+      xxl: '1800px',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
@@ -25,9 +26,10 @@ module.exports = {
         'green-light': '#00665e',
         'green': '#004b2e',
         'green-dark': '#003e39',
-        'orange': '#ed925c',
+        'orange': '#f78154',
+        'orange-dark': '#F55D23',
         'beige': '#f4eee0',
-        'gray': '#232c39',
+        'gray': '#ebe9e9',
         'white': '#ffffff',
         'black': '#000000',
         'base': '464646',
@@ -38,6 +40,9 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+      },
+      backgroundImage: {
+        'hero-pattern': "url('./assets/images/hero-patern.svg')",
       }
     }
   },

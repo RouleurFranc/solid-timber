@@ -1,53 +1,28 @@
-  <!-- Add a script to fetch the data -->
-  <script setup>
-
+<script setup>
   import { computed } from "vue";
-  
-  // Pass the data as props to the page
+
   const props = defineProps(["data"]);
   const data = computed(() => props.data);
   const hasImage = computed(() => "image" in props.data);
-  
 </script>
 <template>
-    <!-- Set background image -->
-    <section
-      :style="`background-image: url(${data.image[0].url})`"
-      class="mt-[69px] mb-12 py-12 flex items-center h-[600px]"
-      :class="`
-        bg-no-repeat bg-cover
-      `"
-    >
-      <div class="container mx-auto md:px-0">
-        
-        <h1 
-          class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-6xl md:text-5xl lg:text-6xl"
-        >
+    <section class="mt-[68px] mb-12 pt-10 flex bg-green-dark items-center justify-center">
+    <div class="flex items-center justify-between max-w-[1800px]">
+      <div class="mask1">
+      <img
+        class="md:max-h-[900px]"
+        :src="data.image[0]?.url"
+        alt="dashboard image"
+      />
+      </div>
+      <div class="container ml-24 mx-auto md:px-0 md:basis-1/2">
+        <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
             {{ data.heading }}
         </h1>
-       
-        <p
-          class="mb-8 text-base font-normal text-white md:text-lg lg:text-xl"
-        >
-             {{ data.text }}
+        <p class="mb-8 text-base font-normal text-white md:text-lg lg:text-xl">
+          {{ data.text }}
         </p>
-        <a
-          href="#" 
-          class="
-            inline-flex
-            items-center
-            px-6
-            py-3.5
-            text-sm
-            font-medium
-            text-center text-white
-            rounded-lg
-            bg-green-dark
-            hover:bg-green-light
-            focus:ring-4 focus:outline-none focus:ring-green-light
-          "
-        >
-             <!-- Set the Call to action link in the page header-->
+        <a href="#" class="inline-flex items-center px-10 py-4 text-md font-medium rounded-3xl text-center text-white bg-orange hover:bg-orange-dark focus:ring-4 focus:outline-none focus:ring-orange-dark">
              {{ data.cta_label }}
           <svg
             aria-hidden="true"
@@ -59,8 +34,22 @@
               fill-rule="evenodd"
               d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
               clip-rule="evenodd" 
-            ></path></svg>
+            ></path>
+          </svg>
         </a>
+        </div>
       </div>
     </section>
   </template>
+
+
+<style>
+.mask1 {
+  -webkit-mask-image: url('../assets/images/mask-image.svg');
+  mask-image: url('../assets/images/mask-image.svg');
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+}
+</style>
