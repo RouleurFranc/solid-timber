@@ -2,7 +2,7 @@
 import { GetMenuItems } from "@/queries/getMenuItems";
 
 const { data } = await useAsyncQuery(GetMenuItems);
-const menuItems = data.value.MenuItems.items;
+const menuItems = data?.value?.MenuItems?.items;
 </script>
 <template>
     <nav class="bg-green-dark dark:bg-gray-900 fixed w-full border-0 z-20 top-0 left-0">
