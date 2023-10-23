@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  target: process.env.TARGET || "server",
   app: {
     head: {
       title: "Solid Timber",
