@@ -1,16 +1,9 @@
+
 import { defineApolloClient } from "@nuxtjs/apollo";
 
 export default defineApolloClient({
-  httpEndpoint: "https://graphql.prepr.io/graphql",
+  httpEndpoint: `https://graphql.prepr.io/${process.env.PREPR_ACCESS_TOKEN}`,
   defaultOptions: {},
   inMemoryCacheOptions: {},
-  tokenName: "apollo:prepr.token",
-  tokenStorage: "cookie",
-  authType: "Bearer",
-  authHeader: "Authorization",
-  httpLinkOptions: {
-    headers: {
-      Authorization: `Bearer ${process.env.PREPR_ACCESS_TOKEN}`,
-    },
-  },
+  tokenName: "apollo:<client-name>.token",
 });

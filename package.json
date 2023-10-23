@@ -12,7 +12,8 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.1.1",
-    "@nuxtjs/apollo": "^5.0.0-alpha.6",
+    "@nuxtjs/apollo": "^5.0.0-alpha.7",
+    "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/eslint-config": "^12.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
@@ -36,5 +37,8 @@
   },
   "dependencies": {
     "vue-gtag": "^2.0.1"
+  },
+  "engines": {
+    "node": "^18.0.0"
   }
 }

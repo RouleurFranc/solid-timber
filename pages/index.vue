@@ -25,13 +25,14 @@
 
   const page = data.value.Page;
   const stack = computed(() => {
-    return page.stack;
+    return page.stack;     
   });
   </script>
 
 <template>
   <Header/>
   <component
+    v-if="stack"
     v-for="element in stack"
     :key="element._id"
     :is="getComponent(element.__typename)"
