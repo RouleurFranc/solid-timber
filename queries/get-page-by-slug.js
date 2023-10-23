@@ -6,9 +6,6 @@ export const GetPageBySlug = gql`
       _id
       title
       _slug
-
-      # Retrieve the stack and two components: 
-      # Page Header and Image and Text 
       stack {
         __typename
         ... on PageHeader  {

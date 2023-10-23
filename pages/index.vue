@@ -1,3 +1,4 @@
+
   <script setup>
     import { computed } from "vue";
     import { reactive } from "vue";
@@ -14,32 +15,33 @@
     ];
   
     // Assign the components for the stack loop above
-    const getComponent = (name) => { 
+    const getComponent = (name) => {
       const component = components.find((component) => component.name === name);
       return component ? component.comp : null;
     };
   
-    const { data } = await useAsyncQuery(
+    const { data, error } = await useAsyncQuery(
       GetPageBySlug,
       {
         slug: "home",
       }
     );
-  
-    // Assign the page and stack variables with the queried results
-    const page = data.value.Page;
+
+    const page = data?.value?.Page;
     const stack = computed(() => {
       return page.stack;
     });
     </script>
-  
-  <template>
-    <Header/>
+
+<template>
+  <Header />
+  <!--Loop through elements in the queried stack and set the data variable to the components you want -->
     <component
       v-for="element in stack"
       :key="element._id"
       :is="getComponent(element.__typename)"
       :data="element"
     ></component>
-    <Footer/>
-  </template>
+  <Footer/> 
+</template>
+  
