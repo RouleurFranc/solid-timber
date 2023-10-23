@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       title: "Solid Timber",
     }
   },
+  ssr: false,
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/apollo', '@nuxtjs/google-fonts'],
   apollo: {
