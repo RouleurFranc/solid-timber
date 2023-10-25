@@ -27,6 +27,17 @@ export const GetPageBySlug = gql`
           image_position
           _id
         }
+        ... on CallToAction {
+          _id
+          heading
+          description
+          background_image { 
+            _id
+            url
+          }
+          cta_label
+          cta_url
+        }
       }
     }
   }

@@ -7,11 +7,13 @@
     // Import the components
     import PageHeader from "@/components/PageHeader";
     import ImageAndText from "@/components/ImageAndText";
+    import CallToAction from "@/components/CallToAction.vue";
   
     // Set up the components
     const components = [
       { name: "PageHeader", comp: PageHeader },
       { name: "ImageAndText", comp: ImageAndText },
+      { name: "CallToAction", comp: CallToAction} , 
     ];
   
     // Assign the components for the stack loop above

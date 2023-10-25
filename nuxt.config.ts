@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   ssr: false,
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/apollo', '@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/apollo', '@nuxtjs/google-fonts', 'nuxt-icon'],
   apollo: {
     clients: {
       default: "./apollo/prepr.ts",

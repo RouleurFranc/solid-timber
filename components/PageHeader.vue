@@ -6,23 +6,23 @@
   const hasImage = computed(() => "image" in props.data);
 </script>
 <template>
-    <section class="mt-[68px] mb-12 pt-10 flex bg-green-dark items-center justify-center">
-    <div class="flex items-center justify-between max-w-[1800px]">
-      <div class="mask1">
+    <section class="relative flex bg-green-dark items-center justify-center">
+    <div class="flex items-center justify-between">
+      <div class="mask1 mx-auto md:basis-1/2 mr-8">
       <img
-        class="md:max-h-[900px]"
-        :src="data.image[0]?.url"
+      class="max-h-[550px]"
+          :src="data.image[0]?.url"
         alt="dashboard image"
       />
-      </div>
-      <div class="container ml-24 mx-auto md:px-0 md:basis-1/2">
+      </div>  
+      <div class="max-w-[700px] mt-[-20px] container md:px-0 md:basis-1/2">
         <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
             {{ data.heading }}
         </h1>
         <p class="mb-8 text-base font-normal text-white md:text-lg lg:text-xl">
           {{ data.text }}
         </p>
-        <a href="#" class="inline-flex items-center px-10 py-4 text-md font-medium rounded-3xl text-center text-white bg-orange hover:bg-orange-dark focus:ring-4 focus:outline-none focus:ring-orange-dark">
+        <a href="#" class="inline-flex items-center px-10 py-4 text-md font-medium rounded-3xl text-center text-white bg-coral hover:bg-coral-dark focus:ring-4 focus:outline-none focus:ring-coral-dark">
              {{ data.cta_label }}
           <svg
             aria-hidden="true"
@@ -47,8 +47,8 @@
 .mask1 {
   -webkit-mask-image: url('../assets/images/mask-image.svg');
   mask-image: url('../assets/images/mask-image.svg');
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
+  -webkit-mask-size: 80%;
+  mask-size: 80%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;    
 }
