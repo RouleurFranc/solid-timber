@@ -13,7 +13,7 @@ const menuItems = data?.value?.MenuItems?.items;
                 <span class="self-center text-4xl font-light whitespace-nowrap text-white">Solid Timber</span>
             </a>
             <div @click="showMenu = !showMenu" class="flex md:order-2">
-                <button :class="showMenu ? 'open' : 'close'" type="button" class="bg-coral hover:bg-coral-dark z-20 text-white inline-flex items-center p-2 w-16 h-16 justify-center text-sm text-gray-500 rounded-full hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                <button :class="showMenu ? 'open' : 'close'" type="button" class="bg-coral hover:bg-coral-dark z-20 hover:scale-110 transition-all hover:transition-all text-white inline-flex items-center p-2 w-16 h-16 justify-center text-sm text-gray-500 rounded-full hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Open menu</span>
                     <div class="hamburger text-white" :class="showMenu ? 'open' : 'close'" viewbox="0 0 60 40">
                         <span class="bg-white"></span>
@@ -72,6 +72,11 @@ const menuItems = data?.value?.MenuItems?.items;
                          ></path>
                        </svg>
                      </a>
+                     <div class="absolute -bottom-2 w-10 left-auto flex justify-between right-6 h-6 text-white">
+                      <Icon size="14" name="mdi:pine-tree-variant" class="tree"/>
+                      <Icon size="18" name="mdi:pine-tree-variant" class="tree"/>
+                      <Icon size="14" name="mdi:pine-tree-variant" class="tree"/>
+                     </div>
                     </div>                 
                 </div>
             </div>
@@ -80,6 +85,15 @@ const menuItems = data?.value?.MenuItems?.items;
 </template>
 
 <style>
+.tree {
+  transition: all 1s ease-out;
+  margin-top: -4px
+}
+
+.tree:hover {
+  margin-top: -8px;
+  transition: all 1s ease-out;
+}
 .hamburger {
     width: 38px;
     height: 40px;
@@ -101,7 +115,6 @@ const menuItems = data?.value?.MenuItems?.items;
     position: absolute;
     height: 4px;
     width: 100%;
-    border-radius: 9px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
