@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Solid Timber",
-    }
+      title: 'Solid Timber',
+    },
   },
   ssr: false,
   devtools: { enabled: true },
@@ -12,13 +12,13 @@ export default defineNuxtConfig({
     '@nuxtjs/apollo',
     '@nuxtjs/google-fonts',
     'nuxt-icon',
-    "@nuxtjs/eslint-module",
+    '@nuxtjs/eslint-module',
   ],
   apollo: {
     clients: {
-      default: "./apollo/prepr.ts",
-      asegment: "./apollo/asegment.ts",
-      bsegment: "./apollo/bsegment.ts",
+      default: './apollo/prepr.ts',
+      asegment: './apollo/asegment.ts',
+      bsegment: './apollo/bsegment.ts',
     },
   },
   runtimeConfig: {
@@ -34,6 +34,6 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ["tslib"],
+    transpile: ['tslib'],
   },
 })

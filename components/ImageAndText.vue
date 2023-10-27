@@ -1,36 +1,29 @@
-  <!-- Add a script to fetch the data -->
+<!-- Add a script to fetch the data -->
 <script setup>
-
-import { computed } from "vue";
-
-// Pass the data as props to the page
-const props = defineProps(["data"]);
-const data = computed(() => props.data);
-
+const props = defineProps(['data'])
+const data = computed(() => props.data)
 </script>
 <template>
-      <section class="bg-green-light relative">
-        <div
-          class="items-center relative max-w-screen-xl gap-8 px-4 py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+  <section class="relative bg-green-light">
+    <div
+      class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 lg:px-6 xl:gap-16"
+    >
+      <img
+        :class="data.image_position === 'Right' ? 'order-last' : ''"
+        class="h-60 w-full rounded-lg object-cover shadow-xl md:h-96"
+        :src="data.image[0]?.url"
+        alt="dashboard image"
+      />
+      <div class="mt-8 md:mt-4">
+        <h2
+          class="mb-4 text-center text-xl font-extrabold tracking-tight md:text-left md:text-4xl"
         >
-        <img
-          :class="data.image_position === 'Right' ? 'order-last' : ''"
-          class="object-cover w-full rounded-lg shadow-xl  h-60 md:h-96"
-          :src="data.image[0]?.url"
-          alt="dashboard image"
-        />
-          <div class="mt-8 md:mt-4">
-            <h2
-              class="mb-4 text-xl font-extrabold tracking-tight text-center text-gray-900  md:text-left md:text-4xl"
-            >
-            {{ data.title }}
-            </h2>
-            <p
-              class="font-light text-center text-gray-500  md:mb-6 md:text-left md:text-lg"
-            >
-            {{ data.text }}
-            </p>
-          </div>
-        </div>
-      </section>
-  </template>
+          {{ data.title }}
+        </h2>
+        <p class="text-center font-light md:mb-6 md:text-left md:text-lg">
+          {{ data.text }}
+        </p>
+      </div>
+    </div>
+  </section>
+</template>

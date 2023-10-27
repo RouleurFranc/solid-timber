@@ -1,13 +1,14 @@
 export const GetMenuItems = gql`
- query {
+  query {
     MenuItems {
-        items {
-            _id
-            title
-            link_to_page {
-            __typename
-            _slug
-            }
+      items {
+        _id
+        title
+        link_to_page {
+          __typename
+          _slug
         }
+      }
     }
- }`
+  }
+`

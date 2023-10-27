@@ -6,4 +6,4 @@ export default defineApolloClient({
   inMemoryCacheOptions: {},
   tokenName: 'apollo:<client-name>.token',
   tokenStorage: 'cookie',
-});
+})

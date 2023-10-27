@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue",
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue',
   ],
   theme: {
     screens: {
@@ -24,29 +24,26 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         'green-light': '#00665e',
-        'green': '#004b2e',
+        green: '#004b2e',
         'green-dark': '#003e39',
         'green-accent': '#dde3c3',
-        'coral': '#f48668',
+        coral: '#f48668',
         'coral-dark': '#db785d',
-        'beige': '#f4eee0',
-        'gray': '#ebe9e9',
-        'white': '#ffffff',
-        'licorice': '#230903',
-        'black': '#000000',
-        'base': '464646',
+        beige: '#f4eee0',
+        gray: '#ebe9e9',
+        white: '#ffffff',
+        licorice: '#230903',
+        black: '#000000',
+        base: '464646',
       },
       spacing: {
-        '128': '32rem',
-        '144': '36rem',
+        128: '32rem',
+        144: '36rem',
       },
       borderRadius: {
         '4xl': '2rem',
       },
-      backgroundImage: {
-        'hero-pattern': "url('./assets/images/hero-patern.svg')",
-      }
-    }
+    },
   },
   plugins: [],
 }

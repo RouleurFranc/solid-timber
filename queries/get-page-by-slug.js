@@ -8,7 +8,7 @@ export const GetPageBySlug = gql`
       _slug
       stack {
         __typename
-        ... on PageHeader  {
+        ... on PageHeader {
           heading
           cta_url
           cta_label
@@ -31,13 +31,13 @@ export const GetPageBySlug = gql`
           _id
           heading
           description
-          background_image { 
+          background_image {
             _id
             url
           }
           cta_label
           cta_url
-          stack { 
+          stack {
             __typename
             _id
             image {
@@ -89,4 +89,4 @@ export const GetPageBySlug = gql`
       }
     }
   }
-`;
+`
