@@ -4,7 +4,7 @@ const props = defineProps(['data'])
 const data = computed(() => props.data)
 </script>
 <template>
-  <section class="relative bg-green-light">
+  <section class="relative bg-beige">
     <div
       class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 lg:px-6 xl:gap-16"
     >

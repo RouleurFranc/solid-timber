@@ -5,7 +5,7 @@ const data = computed(() => props.data)
 const stack = data?.value?.stack
 </script>
 <template>
-  <section class="relative bg-beige">
+  <section class="relative bg-beige-light">
     <div
       class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 md:grid lg:px-6"
     >
