@@ -30,7 +30,7 @@ const stack = data?.value?.stack
             v-for="element in stack"
             :key="element._id"
             :data="element"
-            class="mb-10 rounded-3xl bg-green-accent p-6 md:px-14 md:py-10"
+            class="mb-8 rounded-3xl bg-green-accent p-6 md:mb-12 md:px-14 md:py-12"
           >
             <div class="flex items-center justify-between">
               <div

@@ -14,11 +14,13 @@ const data = computed(() => props.data)
       </div>
       <div class="container mt-[-20px] max-w-[700px] md:basis-1/2 md:px-0">
         <h1
-          class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl"
+          class="mb-4 text-3xl font-semibold leading-none tracking-tight text-white md:text-5xl lg:text-6xl"
         >
           {{ data.heading }}
         </h1>
-        <p class="mb-8 text-base font-normal text-white md:text-lg lg:text-xl">
+        <p
+          class="mb-8 text-base font-light leading-10 text-white md:text-lg lg:text-xl"
+        >
           {{ data.text }}
         </p>
         <a

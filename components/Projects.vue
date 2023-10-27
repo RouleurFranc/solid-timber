@@ -9,7 +9,7 @@ const projects = data?.value?.projects
     <div
       class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-6 xl:gap-16"
     >
-      <h2 class="mb-10 text-4xl text-beige">{{ data.heading }}</h2>
+      <h2 class="mb-10 text-2xl text-beige md:text-5xl">{{ data.heading }}</h2>
       <div v-if="projects">
         <div class="gap-8 md:grid md:grid-cols-3">
           <NuxtLink
@@ -32,7 +32,7 @@ const projects = data?.value?.projects
               </div>
 
               <div
-                class="inline-flex items-center rounded-full bg-coral p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark"
+                class="inline-flex items-center rounded-full bg-coral p-2 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark"
               >
                 <svg
                   aria-hidden="true"
