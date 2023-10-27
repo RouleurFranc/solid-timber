@@ -10,8 +10,8 @@
     <div class="flex items-center justify-between">
       <div class="mask1 mx-auto md:basis-1/2 mr-8">
       <img
-      class="max-h-[660px]"
-          :src="data.image[0]?.url"
+        class="max-h-[660px]"
+        :src="data.image[0]?.url"
         alt="dashboard image"
       />
       </div>  
@@ -41,8 +41,7 @@
       </div>
     </section>
   </template>
-
-
+  
 <style>
 .mask1 {
   -webkit-mask-image: url('../assets/images/mask-image.svg');

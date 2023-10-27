@@ -127,7 +127,6 @@ const menuItems = data?.value?.MenuItems?.items;
     transition: .25s ease-in-out;
   }
 
-
   .hamburger span:nth-child(1) {
     top: 7px;
   }
@@ -164,6 +163,5 @@ const menuItems = data?.value?.MenuItems?.items;
     top: 18px;
     width: 0%;
     left: 50%;
-  }
-  
-    </style>
+  }  
+</style>

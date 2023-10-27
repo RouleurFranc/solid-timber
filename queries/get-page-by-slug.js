@@ -37,6 +37,18 @@ export const GetPageBySlug = gql`
           }
           cta_label
           cta_url
+          stack { 
+            __typename
+            _id
+            image {
+              _id
+              url
+              name
+            }
+            text
+            title
+            image_position
+        }
         }
       }
     }

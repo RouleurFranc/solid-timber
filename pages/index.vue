@@ -39,7 +39,7 @@
   <Header />
   <!--Loop through elements in the queried stack and set the data variable to the components you want -->
     <component
-    v-if="stack"
+      v-if="stack"
       v-for="element in stack"
       :key="element._id"
       :is="getComponent(element.__typename)"
