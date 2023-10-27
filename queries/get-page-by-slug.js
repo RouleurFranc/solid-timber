@@ -48,7 +48,43 @@ export const GetPageBySlug = gql`
             text
             title
             image_position
+          }
         }
+        ... on ProjectCollection {
+          _id
+          heading
+          description
+          projects {
+            _id
+            _slug
+            content {
+              ... on Text {
+                body
+              }
+            }
+            details {
+              ... on Text {
+                body
+              }
+            }
+            image {
+              _id
+              url
+              name
+            }
+            image_slider {
+              name
+              url
+              _id
+            }
+            location {
+              latitude
+              longitude
+              _id
+            }
+            tag
+            title
+          }
         }
       }
     }

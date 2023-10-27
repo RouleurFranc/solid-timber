@@ -1,10 +1,9 @@
 <template>
-    <div class="align-bottom">
-      <div
-        class="flex justify-center h-36 w-auto bg-gray-800 px-4 py-4 text-center text-sm items-center text-white md:px-32 bg-green-dark"
-      >
-       SOLID TIMBER
-      </div>
+  <div class="align-bottom">
+    <div
+      class="flex h-36 w-auto items-center justify-center bg-green-dark p-4 text-center text-sm text-white md:px-32"
+    >
+      SOLID TIMBER
     </div>
-  </template>
-  
+  </div>
+</template>

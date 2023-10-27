@@ -21,6 +21,7 @@
     "tailwindcss"
   ],
   "rules": {
+    "vue/multi-word-component-names": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "consistent-return": "off",
     "comma-dangle": [

@@ -8,12 +8,14 @@
     import PageHeader from "@/components/PageHeader";
     import ImageAndText from "@/components/ImageAndText";
     import CallToAction from "@/components/CallToAction.vue";
+    import Projects from "@/components/Projects.vue";
   
     // Set up the components
     const components = [
       { name: "PageHeader", comp: PageHeader },
       { name: "ImageAndText", comp: ImageAndText },
       { name: "CallToAction", comp: CallToAction} , 
+      { name: "Projects", comp: Projects},
     ];
   
     // Assign the components for the stack loop above
