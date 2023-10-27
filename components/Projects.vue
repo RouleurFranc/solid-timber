@@ -9,7 +9,9 @@ const projects = data?.value?.projects
     <div
       class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 xl:gap-16"
     >
-      <h2 class="mb-10 text-2xl text-beige md:text-5xl">{{ data.heading }}</h2>
+      <h2 class="mb-10 text-center text-2xl text-beige md:text-6xl">
+        {{ data.heading }}
+      </h2>
       <div v-if="projects">
         <div class="gap-8 md:grid md:grid-cols-3">
           <NuxtLink

@@ -23,6 +23,8 @@ export const GetPageBySlug = gql`
             url(width: 800)
           }
           text
+          text_center
+          text_bottom
           title
           image_position
           _id
