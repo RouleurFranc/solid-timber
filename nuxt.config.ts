@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-icon',
     '@nuxtjs/eslint-module',
+    '@nuxt/image',
   ],
   apollo: {
     clients: {

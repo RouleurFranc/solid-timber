@@ -1,7 +1,5 @@
 <!-- Add a script to fetch the data -->
 <script setup>
-import { computed } from 'vue'
-
 const props = defineProps(['data'])
 const data = computed(() => props.data)
 const stack = data?.value?.stack
