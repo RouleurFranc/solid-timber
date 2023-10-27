@@ -6,7 +6,7 @@ const data = computed(() => props.data)
 <template>
   <section class="relative bg-beige">
     <div
-      class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 lg:px-6 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center gap-8 p-8 md:grid md:grid-cols-2 xl:gap-16"
     >
       <img
         :class="data.image_position === 'Right' ? 'order-last' : ''"

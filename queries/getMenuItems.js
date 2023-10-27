@@ -3,11 +3,8 @@ export const GetMenuItems = gql`
     MenuItems {
       items {
         _id
+        _slug
         title
-        link_to_page {
-          __typename
-          _slug
-        }
       }
     }
   }

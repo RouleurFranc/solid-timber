@@ -7,7 +7,7 @@ const projects = data?.value?.projects
 <template>
   <section class="relative bg-green-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-6 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 xl:gap-16"
     >
       <h2 class="mb-10 text-2xl text-beige md:text-5xl">{{ data.heading }}</h2>
       <div v-if="projects">
@@ -57,7 +57,7 @@ const projects = data?.value?.projects
           >Al onze projecten
           <svg
             aria-hidden="true"
-            class="h-5 w-5"
+            class="ml-4 h-5 w-5"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"

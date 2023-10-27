@@ -62,9 +62,9 @@ const menuItems = data?.value?.MenuItems?.items
             <li
               v-for="menuItem in menuItems"
               :key="menuItem._id"
-              :data="menuItems"
             >
               <NuxtLink
+                v-if="menuItem._slug"
                 :to="`/${menuItem._slug}`"
                 class="block py-2 pl-3 pr-4 text-white md:mb-10 md:p-0 md:text-5xl md:hover:text-coral xl:mb-16"
                 >{{ menuItem.title }}</NuxtLink
