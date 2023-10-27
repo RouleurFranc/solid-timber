@@ -21,7 +21,7 @@ const data = computed(() => props.data)
           alt="dashboard image"
         />
         <div
-          class="mt-8 max-w-[65%] bg-green-dark p-20 pr-40 text-white md:mt-4"
+          class="mt-8 max-w-[65%] bg-green-dark p-20 pr-40 text-beige-light md:mt-4"
         >
           <p
             class="text-center font-light !leading-8 md:mb-6 md:text-left md:text-lg lg:text-xl"

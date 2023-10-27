@@ -2,6 +2,7 @@
 import { GetPageBySlug } from '@/queries/get-page-by-slug'
 import CallToAction from '@/components/CallToAction.vue'
 import Projects from '@/components/Projects.vue'
+import Usps from '@/components/Usps.vue'
 import PageHeader from '@/components/PageHeader'
 import ImageAndText from '@/components/ImageAndText'
 
@@ -10,6 +11,7 @@ const components = [
   { name: 'ImageAndText', comp: ImageAndText },
   { name: 'CallToAction', comp: CallToAction },
   { name: 'ProjectCollection', comp: Projects },
+  { name: 'Usps', comp: Usps },
 ]
 
 const getComponent = (name) => {
@@ -34,5 +36,6 @@ const stack = computed(() => page?.stack)
     :key="element._id"
     :data="element"
   ></component>
+  <Usps />
   <Footer />
 </template>
