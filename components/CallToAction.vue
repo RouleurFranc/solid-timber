@@ -11,9 +11,9 @@ const stack = data?.value?.stack
     >
       <img
         src="../assets/images/pine-cone.png"
-        class="absolute left-[-13%] top-[-3%] rotate-12 scale-[0.2]"
+        class="absolute left-[-13%] top-[-3%] hidden rotate-12 scale-[0.2] md:block"
       />
-      <div class="mt-8 md:mt-4">
+      <div class="md:mt-4">
         <div class="mb-10 text-licorice md:mb-20">
           <h2
             class="mb-4 text-center text-xl font-extrabold tracking-tight text-licorice md:text-5xl"
@@ -29,13 +29,14 @@ const stack = data?.value?.stack
           <div
             v-for="element in stack"
             :key="element._id"
-            :data="element"
-            class="mb-8 rounded-3xl bg-green-accent p-6 md:mb-12 md:px-14 md:py-12"
+            class="mb-8 rounded-3xl bg-green-accent p-8 md:mb-12 md:px-14 md:py-12"
           >
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col items-center justify-between md:flex-row">
               <div
-                :class="element.image_position === 'Right' ? 'order-last' : ''"
-                class="mask2 basis-1/4 transition-all duration-200 hover:scale-105 hover:transition-all"
+                :class="
+                  element.image_position === 'Right' ? 'md:order-last' : ''
+                "
+                class="mask2 transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/4"
               >
                 <img
                   :src="element.image[0]?.url"
@@ -44,8 +45,10 @@ const stack = data?.value?.stack
               </div>
 
               <div
-                :class="element.image_position === 'Right' ? 'mr-10' : 'ml-10'"
-                class="flex min-h-[150px] max-w-[1070px] flex-col text-green-dark"
+                :class="
+                  element.image_position === 'Right' ? 'md:mr-10' : 'md:ml-10'
+                "
+                class="mt-6 flex min-h-[150px] max-w-[1070px] flex-col text-green-dark md:mt-0"
               >
                 <h3 class="mb-4 text-3xl">{{ element.title }}</h3>
                 <div class="text-lg leading-8">{{ element.text }}</div>
