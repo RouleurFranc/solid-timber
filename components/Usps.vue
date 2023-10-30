@@ -1,11 +1,7 @@
-<script>
-const svgAmount = 10
-</script>
-
 <template>
   <section class="bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16"
     >
       <div class="flex items-center justify-between">
         <div class="relative text-center">
@@ -99,7 +95,7 @@ const svgAmount = 10
             >kostenraming</span
           >
           <svg
-            class="svg1 z-10 fill-green-dark transition-all duration-300 hover:fill-coral-dark hover:transition-all hover:duration-300"
+            class="svg1 z-10 fill-green-dark"
             width="150"
             height="150"
             xmlns="http://www.w3.org/2000/svg"
@@ -111,8 +107,8 @@ const svgAmount = 10
           </svg>
         </div>
       </div>
-      <div class="mb-10 mt-20 flex flex-col text-center">
-        <h3 class="text-6xl text-green-light">AMBITIE IN HOUTBOUW?</h3>
+      <div class="my-10 flex flex-col text-center md:mt-20 lg:mt-24">
+        <h3 class="text-6xl text-green-light">Ambitie in houtbouw?</h3>
         <div class="my-6 text-xl">
           Neem dan contact met ons op! Dan kijken we mee naar de kansen in uw
           bouwproject.
