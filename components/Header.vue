@@ -8,7 +8,7 @@ const menuItems = data?.value?.MenuItems?.items
 <template>
   <nav class="left-0 top-0 z-20 w-full border-0 bg-green-dark">
     <div
-      class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-6"
+      class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 md:p-6"
     >
       <a
         href="/"
@@ -16,35 +16,41 @@ const menuItems = data?.value?.MenuItems?.items
       >
         <img
           src="../assets/images/solidtimber-logo.png"
-          class="mr-2 h-20"
+          class="mr-2 h-14 md:h-20"
           alt="Solid Timber Logo"
         />
         <span
-          class="self-center whitespace-nowrap text-4xl font-light text-white"
+          class="self-center whitespace-nowrap text-2xl font-light text-white md:text-4xl"
           >Solid Timber</span
         >
       </a>
       <div
-        class="flex md:order-2"
+        class="flex"
         @click="showMenu = !showMenu"
       >
         <button
           :class="showMenu ? 'open' : 'close'"
           type="button"
-          class="z-20 inline-flex h-16 w-16 items-center justify-center rounded-full bg-coral p-2 text-sm text-white transition-all hover:scale-110 hover:bg-coral-dark hover:transition-all focus:outline-none"
+          class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-coral p-2 text-sm text-white transition-all hover:scale-110 hover:bg-coral-dark hover:transition-all focus:outline-none md:h-16 md:w-16"
           aria-controls="navbar-sticky"
           aria-expanded="false"
         >
           <span class="sr-only">Open menu</span>
           <div
-            class="hamburger text-white"
+            class="hamburger h-9 w-[34px] text-white md:h-[40px] md:w-[38px]"
             :class="showMenu ? 'open' : 'close'"
             viewbox="0 0 60 40"
           >
-            <span class="bg-white"></span>
-            <span class="bg-white"></span>
-            <span class="bg-white"></span>
-            <span class="bg-white"></span>
+            <span class="top-[5px] h-[3px] bg-white md:top-[7px] md:h-1"></span>
+            <span
+              class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
+            ></span>
+            <span
+              class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
+            ></span>
+            <span
+              class="top-[27px] h-[3px] bg-white md:top-[29px] md:h-1"
+            ></span>
           </div>
         </button>
       </div>
@@ -53,11 +59,11 @@ const menuItems = data?.value?.MenuItems?.items
         class="w-full items-center justify-between md:order-1 md:w-auto"
       >
         <div
-          class="absolute left-0 top-0 flex h-screen w-full flex-col bg-green-light p-20 md:flex-row md:items-center md:justify-between md:px-48 xl:px-72"
+          class="absolute left-0 top-0 flex h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
         >
           <ul
             v-if="menuItems"
-            class="flex flex-col justify-between font-medium text-white"
+            class="mb-2 flex flex-col justify-between font-medium text-white md:mb-0"
           >
             <li
               v-for="menuItem in menuItems"
@@ -66,27 +72,27 @@ const menuItems = data?.value?.MenuItems?.items
               <NuxtLink
                 v-if="menuItem._slug"
                 :to="`/${menuItem._slug}`"
-                class="block py-2 pl-3 pr-4 text-white md:mb-10 md:p-0 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
+                class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
                 >{{ menuItem.title }}</NuxtLink
               >
             </li>
           </ul>
           <div class="flex flex-col text-white md:basis-1/3">
-            <div class="mb-2 text-2xl">E-mail</div>
+            <div class="mb-2 text-xl md:text-2xl">E-mail</div>
             <a
               href="mailto:info@solidtimber.nl"
               class="text-lg font-light"
             >
               info@solidtimber.nl
             </a>
-            <div class="mb-2 mt-4 text-2xl md:mt-10">Telefoon</div>
+            <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Telefoon</div>
             <a
               href="tel:+310307851767"
               class="text-lg font-light"
             >
               +31 (0)30 785 17 67
             </a>
-            <div class="mb-2 mt-4 text-2xl md:mt-10">Social</div>
+            <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Social</div>
             <div class="flex items-center justify-start">
               <a
                 href="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
@@ -121,7 +127,7 @@ const menuItems = data?.value?.MenuItems?.items
             </div>
             <a
               href="#"
-              class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-10"
+              class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-10"
             >
               Contact
               <svg
@@ -175,8 +181,6 @@ const menuItems = data?.value?.MenuItems?.items
   transition: all 1s ease-out;
 }
 .hamburger {
-  width: 38px;
-  height: 40px;
   position: relative;
   margin: 50px auto;
   -webkit-transform: rotate(0deg);
@@ -193,7 +197,6 @@ const menuItems = data?.value?.MenuItems?.items
 .hamburger span {
   display: block;
   position: absolute;
-  height: 4px;
   width: 100%;
   opacity: 1;
   left: 0;
@@ -205,19 +208,6 @@ const menuItems = data?.value?.MenuItems?.items
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-}
-
-.hamburger span:nth-child(1) {
-  top: 7px;
-}
-
-.hamburger span:nth-child(2),
-.hamburger span:nth-child(3) {
-  top: 18px;
-}
-
-.hamburger span:nth-child(4) {
-  top: 29px;
 }
 
 .hamburger.open span:nth-child(1) {
