@@ -26,7 +26,9 @@ const data = computed(() => props.data)
           <p class="mb-6 text-lg font-light !leading-8 lg:text-xl">
             {{ data.text }}
           </p>
-          <p class="mb-6 text-lg font-light !leading-8 lg:text-xl">
+          <p
+            class="mb-6 hidden text-lg font-light !leading-8 md:block lg:text-xl"
+          >
             {{ data.text_center }}
           </p>
           <NuxtLink

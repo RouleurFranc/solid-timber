@@ -1,11 +1,11 @@
 <template>
   <section class="bg-gradient-to-b from-coral to-coral-dark align-bottom">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:pb-20 lg:pt-24 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:pb-20 lg:pt-24 xl:gap-16"
     >
-      <div class="gap-8 md:grid md:grid-cols-3">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div
-          class="mr-2 flex flex-col justify-center border-r-4 border-solid border-coral pb-4 pt-10 text-xl text-beige md:text-2xl"
+          class="mr-2 flex flex-col items-center justify-center pb-4 pt-10 text-xl text-beige md:border-r-4 md:border-solid md:border-coral md:text-2xl"
         >
           Tijd voor de duurzame stap <br />
           Kies nu voor houtbouw!
@@ -66,7 +66,7 @@
           src="../assets/images/solidtimber-wit.png"
         />
         <div
-          class="flex flex-col border-l-4 border-coral p-10 text-center text-xl text-beige"
+          class="flex flex-col pt-6 text-center text-xl text-beige md:border-l-4 md:border-coral md:p-10"
         >
           <NuxtLink
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
@@ -92,23 +92,23 @@
       </div>
     </div>
     <div
-      class="m-auto my-10 flex max-w-[680px] items-center justify-between text-beige-light"
+      class="mx-auto my-6 flex flex-col items-center justify-between text-beige-light md:my-10 md:max-w-[680px] md:flex-row"
     >
-      <div class="text-4xl">Solid Timber</div>
+      <div class="text-3xl md:text-4xl">Solid Timber</div>
       <div class="xclass text-4xl font-extralight text-green-light">x</div>
       <img
-        class="flex max-w-[200px] items-center justify-center"
+        class="mb-4 flex max-w-[120px] items-center justify-center md:m-0 md:max-w-[200px]"
         src="../assets/images/Element-logo-wit-300x82.png"
       />
       <img
-        class="flex max-w-[160px] items-center justify-center"
+        class="flex max-w-[80px] items-center justify-center md:max-w-[160px]"
         src="../assets/images/wilen-trahus-logo-wit-300x121.png"
       />
     </div>
     <div
-      class="mx-auto mt-4 flex flex-col items-center justify-center text-beige-light md:mt-16"
+      class="mx-auto mt-12 flex flex-col items-center justify-center text-beige-light md:mt-16"
     >
-      <div class="text-sm">
+      <div class="text-[10px] md:text-sm">
         © Copyright 2023 | Solid Timber BV | KvK: 75331020
       </div>
       <div class="mt-4 flex h-6 w-10 items-center justify-center">

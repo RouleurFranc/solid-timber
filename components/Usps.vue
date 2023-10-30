@@ -1,9 +1,9 @@
 <template>
   <section class="bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:px-8 lg:py-24 xl:gap-16"
     >
-      <div class="flex items-center justify-between">
+      <div class="grid grid-cols-2 items-center justify-between gap-8 md:flex">
         <div class="relative text-center">
           <span
             class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"

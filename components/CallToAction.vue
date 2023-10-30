@@ -7,7 +7,7 @@ const stack = data?.value?.stack
 <template>
   <section class="relative bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 py-10 md:grid md:py-20 lg:px-8 lg:py-24 xl:py-32"
+      class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:py-24 xl:py-32"
     >
       <img
         src="../assets/images/pine-cone.png"

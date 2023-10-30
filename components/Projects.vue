@@ -7,7 +7,7 @@ const projects = data?.value?.projects
 <template>
   <section class="relative bg-green-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16 xl:py-32"
+      class="relative mx-auto max-w-screen-xl items-center px-8 py-16 md:py-20 lg:py-24 xl:gap-16 xl:py-32"
     >
       <h2 class="mb-10 text-center text-4xl text-beige md:text-6xl">
         {{ data.heading }}
