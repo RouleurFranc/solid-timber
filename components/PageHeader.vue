@@ -9,7 +9,7 @@ const data = computed(() => props.data)
     >
       <div class="mask1 mx-auto md:mr-8 md:basis-1/2">
         <img
-          class="max-h-[320px] md:max-h-[750px]"
+          class="max-h-[360px] md:max-h-[750px]"
           :src="data.image[0]?.url"
           alt="dashboard image"
         />
@@ -53,9 +53,16 @@ const data = computed(() => props.data)
 .mask1 {
   -webkit-mask-image: url('../assets/images/mask-image.svg');
   mask-image: url('../assets/images/mask-image.svg');
-  -webkit-mask-size: 90%;
-  mask-size: 90%;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .mask1 {
+    -webkit-mask-size: 90%;
+    mask-size: 90%;
+  }
 }
 </style>
