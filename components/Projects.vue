@@ -7,7 +7,7 @@ const projects = data?.value?.projects
 <template>
   <section class="relative bg-green-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16 xl:py-32"
     >
       <h2 class="mb-10 text-center text-2xl text-beige md:text-6xl">
         {{ data.heading }}
@@ -54,7 +54,7 @@ const projects = data?.value?.projects
           </NuxtLink>
         </div>
         <NuxtLink
-          class="mx-auto mt-10 flex max-w-[200px] items-center justify-center rounded-full bg-coral p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark"
+          class="mx-auto mt-10 flex max-w-[300px] items-center justify-center rounded-full bg-coral p-4 text-center text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark md:py-6"
           to="/projects"
           >Al onze projecten
           <svg

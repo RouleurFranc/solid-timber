@@ -7,14 +7,14 @@ const stack = data?.value?.stack
 <template>
   <section class="relative bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 md:grid lg:px-8"
+      class="relative mx-auto max-w-screen-xl items-center gap-8 px-4 py-10 md:grid md:py-20 lg:px-8 lg:py-24 xl:py-32"
     >
       <img
         src="../assets/images/pine-cone.png"
         class="absolute left-[-13%] top-[-3%] rotate-12 scale-[0.2]"
       />
       <div class="mt-8 md:mt-4">
-        <div class="my-32 text-licorice">
+        <div class="mb-10 text-licorice md:mb-20">
           <h2
             class="mb-4 text-center text-xl font-extrabold tracking-tight text-licorice md:text-5xl"
           >
@@ -25,7 +25,7 @@ const stack = data?.value?.stack
           </p>
         </div>
 
-        <div class="my-10 flex flex-col">
+        <div class="mt-10 flex flex-col">
           <div
             v-for="element in stack"
             :key="element._id"

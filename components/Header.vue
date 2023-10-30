@@ -53,7 +53,7 @@ const menuItems = data?.value?.MenuItems?.items
         class="w-full items-center justify-between md:order-1 md:w-auto"
       >
         <div
-          class="absolute left-0 top-0 flex h-screen w-full flex-col bg-green-light p-20 md:flex-row md:items-center md:justify-between md:p-48"
+          class="absolute left-0 top-0 flex h-screen w-full flex-col bg-green-light p-20 md:flex-row md:items-center md:justify-between md:px-48 xl:px-72"
         >
           <ul
             v-if="menuItems"
@@ -66,7 +66,7 @@ const menuItems = data?.value?.MenuItems?.items
               <NuxtLink
                 v-if="menuItem._slug"
                 :to="`/${menuItem._slug}`"
-                class="block py-2 pl-3 pr-4 text-white md:mb-10 md:p-0 md:text-5xl md:hover:text-coral xl:mb-16"
+                class="block py-2 pl-3 pr-4 text-white md:mb-10 md:p-0 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
                 >{{ menuItem.title }}</NuxtLink
               >
             </li>

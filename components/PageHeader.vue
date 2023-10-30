@@ -4,10 +4,10 @@ const data = computed(() => props.data)
 </script>
 <template>
   <section class="relative flex items-center justify-center bg-green-dark">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between pt-4 md:pt-10">
       <div class="mask1 mx-auto mr-8 md:basis-1/2">
         <img
-          class="max-h-[660px]"
+          class="max-h-[750px]"
           :src="data.image[0]?.url"
           alt="dashboard image"
         />
