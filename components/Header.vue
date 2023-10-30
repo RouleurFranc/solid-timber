@@ -139,7 +139,7 @@ const menuItems = data?.value?.MenuItems?.items
               </svg>
             </a>
             <div
-              class="absolute -bottom-2 left-auto right-6 flex h-6 w-10 justify-between text-white"
+              class="absolute inset-x-0 -bottom-2 mx-auto flex h-6 w-10 justify-between text-white"
             >
               <Icon
                 size="14"
