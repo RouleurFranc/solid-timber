@@ -25,15 +25,15 @@ const menuItems = data?.value?.MenuItems?.items
         >
       </a>
       <div
-        class="flex"
+        class="flex md:order-2"
         @click="showMenu = !showMenu"
       >
         <button
-          :class="showMenu ? 'open' : 'close'"
+          :class="
+            showMenu ? 'open fixed top-4 right-4 md:top-6 md:right-6' : 'close'
+          "
           type="button"
           class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-coral p-2 text-sm text-white transition-all hover:scale-110 hover:bg-coral-dark hover:transition-all focus:outline-none md:h-16 md:w-16"
-          aria-controls="navbar-sticky"
-          aria-expanded="false"
         >
           <span class="sr-only">Open menu</span>
           <div
@@ -59,7 +59,7 @@ const menuItems = data?.value?.MenuItems?.items
         class="w-full items-center justify-between md:order-1 md:w-auto"
       >
         <div
-          class="absolute left-0 top-0 flex h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
+          class="fixed left-0 top-0 flex h-screen min-h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
         >
           <ul
             v-if="menuItems"
@@ -155,7 +155,7 @@ const menuItems = data?.value?.MenuItems?.items
               <Icon
                 size="18"
                 name="mdi:pine-tree-variant"
-                class="tree"
+                class="tree treeMiddle"
               />
               <Icon
                 size="14"
@@ -171,15 +171,6 @@ const menuItems = data?.value?.MenuItems?.items
 </template>
 
 <style>
-.tree {
-  transition: all 1s ease-out;
-  margin-top: -4px;
-}
-
-.tree:hover {
-  margin-top: -8px;
-  transition: all 1s ease-out;
-}
 .hamburger {
   position: relative;
   margin: 50px auto;
@@ -234,5 +225,22 @@ const menuItems = data?.value?.MenuItems?.items
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+.treeMiddle {
+  animation: MoveUpDown 2s linear infinite;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 3px;
+  }
 }
 </style>
