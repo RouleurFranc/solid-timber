@@ -7,30 +7,26 @@ const data = computed(() => props.data)
   <section class="relative bg-beige">
     <div class="p-8 md:py-20 lg:py-24 xl:pb-44 xl:pt-36">
       <h2
-        class="mb-4 text-center text-2xl text-green-dark md:mb-10 md:text-6xl"
+        class="mb-4 text-center text-4xl text-green-dark md:mb-10 md:text-6xl"
       >
         {{ data.title }}
       </h2>
       <div
-        class="relative mx-auto max-w-screen-xl items-center gap-8 md:grid md:grid-cols-1 xl:gap-16"
+        class="relative mx-auto flex max-w-screen-xl flex-col items-center gap-8 md:grid md:grid-cols-1 xl:gap-16"
       >
         <img
-          :class="data.image_position === 'Right' ? 'order-last' : ''"
-          class="absolute right-0 top-0 h-60 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:h-144"
+          :class="data.image_position === 'Right' ? 'md:order-last' : ''"
+          class="z-10 h-80 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:absolute md:right-0 md:top-0 md:h-144"
           :src="data.image[0]?.url"
           alt="dashboard image"
         />
         <div
-          class="mt-8 max-w-[65%] bg-green-dark p-20 pr-40 text-beige-light md:mt-4"
+          class="-mt-16 bg-green-dark p-8 pt-16 text-beige-light md:mt-4 md:max-w-[65%] md:p-20 md:pr-32 lg:pr-40"
         >
-          <p
-            class="text-center font-light !leading-8 md:mb-6 md:text-left md:text-lg lg:text-xl"
-          >
+          <p class="mb-6 text-lg font-light !leading-8 lg:text-xl">
             {{ data.text }}
           </p>
-          <p
-            class="text-center font-light !leading-8 md:mb-6 md:text-left md:text-lg lg:text-xl"
-          >
+          <p class="mb-6 text-lg font-light !leading-8 lg:text-xl">
             {{ data.text_center }}
           </p>
           <NuxtLink
