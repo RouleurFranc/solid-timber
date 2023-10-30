@@ -1,7 +1,7 @@
 <template>
-  <section class="bg-coral-dark align-bottom">
+  <section class="bg-gradient-to-b from-coral to-coral-dark align-bottom">
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16 xl:py-32"
+      class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16 xl:pb-28 xl:pt-32"
     >
       <div class="gap-8 md:grid md:grid-cols-3">
         <div
@@ -11,7 +11,7 @@
           Kies nu voor houtbouw!
           <a
             href="#"
-            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-white hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
+            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-beige-light hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
           >
             Contact
             <svg
@@ -66,7 +66,7 @@
           src="../assets/images/solidtimber-wit.png"
         />
         <div
-          class="flex flex-col border-l-2 border-coral p-10 text-right text-xl text-beige"
+          class="flex flex-col border-l-2 border-coral p-10 text-center text-xl text-beige"
         >
           <NuxtLink
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
@@ -92,10 +92,10 @@
       </div>
     </div>
     <div
-      class="m-auto my-10 flex max-w-screen-lg items-center justify-between text-beige"
+      class="m-auto my-10 flex max-w-screen-md items-center justify-between text-beige-light"
     >
       <div class="text-4xl">Solid Timber</div>
-      <div class="ml-4 text-4xl text-green-light">x</div>
+      <div class="xclass ml-4 text-4xl font-extralight text-green-light">x</div>
       <img
         class="flex max-w-[200px] items-center justify-center"
         src="../assets/images/Element-logo-wit-300x82.png"
@@ -105,22 +105,53 @@
         src="../assets/images/wilen-trahus-logo-wit-300x121.png"
       />
     </div>
-    <div class="m-auto flex h-6 w-10 items-center justify-center text-beige">
-      <Icon
-        size="14"
-        name="mdi:pine-tree-variant"
-        class="tree"
-      />
-      <Icon
-        size="18"
-        name="mdi:pine-tree-variant"
-        class="tree"
-      />
-      <Icon
-        size="14"
-        name="mdi:pine-tree-variant"
-        class="tree"
-      />
+    <div
+      class="mx-auto mt-4 flex flex-col items-center justify-center text-beige-light md:mt-16"
+    >
+      <div class="text-sm">
+        © Copyright 2023 | Solid Timber BV | KvK: 75331020
+      </div>
+      <div class="mt-4 flex h-6 w-10 items-center justify-center">
+        <Icon
+          size="14"
+          name="mdi:pine-tree-variant"
+          class="tree"
+        />
+        <Icon
+          size="18"
+          name="mdi:pine-tree-variant"
+          class="tree"
+        />
+        <Icon
+          size="14"
+          name="mdi:pine-tree-variant"
+          class="tree"
+        />
+      </div>
     </div>
   </section>
 </template>
+
+<style>
+.xclass {
+  animation: color-change 10s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(244 238 224);
+  }
+  25% {
+    color: rgb(0 102 94);
+  }
+  50% {
+    color: rgb(0 62 57);
+  }
+  75% {
+    color: rgb(0 102 94);
+  }
+  100% {
+    color: rgb(244 238 224);
+  }
+}
+</style>
