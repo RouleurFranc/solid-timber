@@ -9,11 +9,11 @@ const projects = data?.value?.projects
     <div
       class="relative mx-auto max-w-screen-xl items-center px-4 py-16 md:py-20 lg:px-8 lg:py-24 xl:gap-16 xl:py-32"
     >
-      <h2 class="mb-10 text-center text-2xl text-beige md:text-6xl">
+      <h2 class="mb-10 text-center text-4xl text-beige md:text-6xl">
         {{ data.heading }}
       </h2>
       <div v-if="projects">
-        <div class="gap-8 md:grid md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <NuxtLink
             v-for="project in projects"
             :key="project._id"
@@ -26,7 +26,7 @@ const projects = data?.value?.projects
               :src="project.image?.url"
             />
             <div
-              class="flex items-center justify-between px-4 pb-2 pt-3 md:px-8 md:pb-4 md:pt-6"
+              class="flex items-center justify-between px-4 pb-4 pt-6 md:px-8"
             >
               <div class="flex flex-col">
                 <small class="text-[#334155]">{{ project.tag }}</small>
