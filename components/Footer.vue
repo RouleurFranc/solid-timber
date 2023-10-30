@@ -5,12 +5,13 @@
     >
       <div class="gap-8 md:grid md:grid-cols-3">
         <div
-          class="mr-2 flex flex-col border-r-2 border-solid border-coral pb-4 pt-10 text-xl text-white"
+          class="mr-2 flex flex-col justify-center border-r-2 border-solid border-coral pb-4 pt-10 text-xl text-beige md:text-2xl"
         >
-          Wij kijken graag hoe we jou kunnen helpen!
+          Tijd voor de duurzame stap <br />
+          Kies nu voor houtbouw!
           <a
             href="#"
-            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center font-medium text-white hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
+            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-white hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
           >
             Contact
             <svg
@@ -65,7 +66,7 @@
           src="../assets/images/solidtimber-wit.png"
         />
         <div
-          class="flex flex-col border-l-2 border-coral p-10 text-right text-xl text-white"
+          class="flex flex-col border-l-2 border-coral p-10 text-right text-xl text-beige"
         >
           <NuxtLink
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
@@ -91,7 +92,7 @@
       </div>
     </div>
     <div
-      class="m-auto my-10 flex max-w-screen-lg items-center justify-between text-white"
+      class="m-auto my-10 flex max-w-screen-lg items-center justify-between text-beige"
     >
       <div class="text-4xl">Solid Timber</div>
       <div class="ml-4 text-4xl text-green-light">x</div>
@@ -104,7 +105,7 @@
         src="../assets/images/wilen-trahus-logo-wit-300x121.png"
       />
     </div>
-    <div class="m-auto flex h-6 w-10 items-center justify-center text-white">
+    <div class="m-auto flex h-6 w-10 items-center justify-center text-beige">
       <Icon
         size="14"
         name="mdi:pine-tree-variant"
