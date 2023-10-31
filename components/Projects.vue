@@ -1,24 +1,40 @@
-<script setup>
-const props = defineProps(['data'])
+<script setup lang="ts">
+const props = defineProps<{
+  data: any
+  homeProjects: any
+  background: string
+  amount: number
+}>()
+
 const data = computed(() => props.data)
-const projects = data?.value?.projects
+const background = computed(() => props.background)
+const homeProjects = computed(() => props.homeProjects)
+const projectAmount = props.amount
+const projects = homeProjects.value
+
+console.log(projectAmount)
 </script>
 
 <template>
-  <section class="relative bg-green-light">
+  <section
+    :class="background ? `bg-${background}` : `bg-green-light`"
+    class="relative"
+  >
     <div
       class="relative mx-auto max-w-screen-xl items-center px-8 py-16 md:py-20 lg:py-24 xl:gap-16 xl:py-32"
     >
-      <h2 class="mb-10 text-center text-4xl text-beige md:text-6xl">
+      <h2
+        v-if="data.heading"
+        class="mb-10 text-center text-4xl text-beige md:text-6xl"
+      >
         {{ data.heading }}
       </h2>
       <div v-if="projects">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <NuxtLink
-            v-for="project in projects"
+            v-for="project in projects.slice(0, projectAmount)"
             :key="project._id"
             :to="`projects/${project._slug}`"
-            :data="project"
             class="flex flex-col rounded-xl bg-white transition-all duration-500 ease-in-out hover:scale-[0.98] hover:transition-all hover:duration-500"
           >
             <NuxtImg

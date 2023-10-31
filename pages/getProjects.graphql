@@ -1,0 +1,35 @@
+query GET_PROJECTS ($where: ProjectWhereInput, $limit: Int, $skip: Int) {
+  Projects(where: $where, limit: $limit, skip: $skip) {
+    items {
+      _id
+      _slug
+      content {
+        ... on Text {
+          body
+        }
+      }
+      details {
+        ... on Text {
+          body
+        }
+      }
+      image {
+        _id
+        url
+        name
+      }
+      image_slider {
+        name
+        url
+        _id
+      }
+      location {
+        latitude
+        longitude
+        _id
+      }
+      tag
+      title
+    }
+  }
+}

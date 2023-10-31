@@ -26,16 +26,19 @@ const { data } = await useAsyncQuery(GetPageBySlug, {
 
 const page = data?.value?.Page
 const stack = computed(() => page?.stack)
+const { projects } = stack.value[2]
 </script>
 
 <template>
-  <Header />
-  <component
-    :is="getComponent(element.__typename)"
-    v-for="element in stack"
-    :key="element._id"
-    :data="element"
-  ></component>
-  <Usps />
-  <Footer />
+  <div>
+    <component
+      :is="getComponent(element.__typename)"
+      v-for="element in stack"
+      :key="element._id"
+      :data="element"
+      :home-projects="projects"
+      :amount="9"
+    ></component>
+    <Usps />
+  </div>
 </template>
