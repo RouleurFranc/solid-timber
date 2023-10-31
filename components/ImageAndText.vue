@@ -1,6 +1,9 @@
 <!-- Add a script to fetch the data -->
-<script setup>
-const props = defineProps(['data'])
+<script setup lang="ts">
+const props = defineProps<{
+  data: any
+}>()
+
 const data = computed(() => props.data)
 </script>
 <template>
