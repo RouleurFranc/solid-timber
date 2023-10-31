@@ -4,6 +4,7 @@ const props = defineProps<{
   homeProjects: any
   background: string
   amount: number
+  isHome: boolean
 }>()
 
 const data = computed(() => props.data)
@@ -11,8 +12,6 @@ const background = computed(() => props.background)
 const homeProjects = computed(() => props.homeProjects)
 const projectAmount = props.amount
 const projects = homeProjects.value
-
-console.log(projectAmount)
 </script>
 
 <template>
@@ -21,13 +20,21 @@ console.log(projectAmount)
     class="relative"
   >
     <div
-      class="relative mx-auto max-w-screen-xl items-center px-8 py-16 md:py-20 lg:py-24 xl:gap-16 xl:py-32"
+      :class="
+        isHome
+          ? `px-8 py-16 md:py-20 lg:py-24 xl:py-32`
+          : `p-8 md:px-8 md:py-12`
+      "
+      class="relative mx-auto max-w-screen-xl items-center"
     >
       <h2
         v-if="data.heading"
         class="mb-10 text-center text-4xl text-beige md:text-6xl"
       >
         {{ data.heading }}
+      </h2>
+      <h2 v-if="data.title">
+        {{ data.title }}
       </h2>
       <div v-if="projects">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -70,7 +77,8 @@ console.log(projectAmount)
           </NuxtLink>
         </div>
         <NuxtLink
-          class="mx-auto mt-10 flex max-w-[300px] items-center justify-center rounded-full bg-coral p-4 text-center text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark md:py-6"
+          :class="isHome ? `flex` : `hidden`"
+          class="mx-auto mt-10 max-w-[300px] items-center justify-center rounded-full bg-coral p-4 text-center text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark md:py-6"
           to="/projects"
           >Al onze projecten
           <svg
