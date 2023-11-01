@@ -1,0 +1,33 @@
+query GET_PROJECT($slug: String) {
+	Project (slug: $slug) { 
+		_id
+		_slug
+		title
+		tag
+		image { 
+			_id
+			url
+		}
+		content { 
+			__typename
+      ... on Text {
+        body
+        html
+        _id
+        format
+        text
+      }
+    }
+		image_slider { 
+			_id
+			url
+		}
+		location { 
+			latitude
+			longitude
+		}
+		details { 
+			__typename
+		}
+	}
+}
