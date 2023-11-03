@@ -10,14 +10,14 @@ query GET_PROJECT($slug: String) {
 		}
 		content { 
 			__typename
-      ... on Text {
-        body
-        html
-        _id
-        format
-        text
-      }
-    }
+			... on Text {
+				body
+				html
+				_id
+				format
+				text
+      		}
+    	}
 		image_slider { 
 			_id
 			url

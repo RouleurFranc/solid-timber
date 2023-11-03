@@ -3,6 +3,8 @@
 const props = defineProps(['data'])
 const data = computed(() => props.data)
 const stack = data?.value?.stack
+const ctaContent = data.value.content
+console.log(ctaContent)
 </script>
 <template>
   <section class="relative bg-beige-light">
@@ -10,8 +12,9 @@ const stack = data?.value?.stack
       class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:py-24 xl:py-32"
     >
       <img
-        src="../assets/images/pine-cone.png"
-        class="absolute left-[-13%] top-[-3%] hidden rotate-12 scale-[0.2] md:block"
+        src="../assets/images/solidtimber-groen.png"
+        class="absolute left-[-13%] top-[-3%] hidden scale-[0.4] md:block"
+        alt="Solid Timber beeldmerk groen"
       />
       <div class="md:mt-4">
         <div class="mb-10 text-licorice md:mb-20">
@@ -23,6 +26,12 @@ const stack = data?.value?.stack
           <p class="text-center font-light md:mb-6 md:text-xl">
             {{ data.description }}
           </p>
+          <div class="max-w-screen-md m-auto"
+            v-for="content in ctaContent"
+            :key="content._id"
+          >
+            <div class="text-center" v-html="content.body"></div>
+          </div>
         </div>
 
         <div class="mt-10 flex flex-col">
@@ -68,5 +77,9 @@ const stack = data?.value?.stack
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+h4 {
+  @apply mt-10 text-green-dark font-semibold
 }
 </style>
