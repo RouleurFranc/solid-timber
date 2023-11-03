@@ -15,9 +15,7 @@ const data = computed(() => props.data)
         />
       </div>
       <div class="mt-[-20px] max-w-[700px] px-8 pb-10 md:basis-1/2 md:p-0">
-        <h1
-          class="mb-4 text-3xl font-semibold leading-none tracking-tight text-white md:text-5xl lg:text-6xl"
-        >
+        <h1 class="mb-4 text-3xl font-light text-white md:text-5xl lg:text-7xl">
           {{ data.heading }}
         </h1>
         <p

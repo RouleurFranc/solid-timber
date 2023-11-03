@@ -25,12 +25,14 @@ const { data } = await useAsyncQuery(GetPageBySlug, {
 })
 
 const page = data?.value?.Page
+const { seo } = page
 const stack = computed(() => page?.stack)
 const { projects } = stack.value[2]
 </script>
 
 <template>
   <div>
+    <Metadata :data="seo"></Metadata>
     <component
       :is="getComponent(element.__typename)"
       v-for="element in stack"

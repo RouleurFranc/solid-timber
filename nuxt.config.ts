@@ -2,7 +2,21 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Solid Timber',
+      title: 'Solid Timber | Voor elke bouwopgave een oplossing in hout!',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Een goed ontwerp tot en met realisatie van een houten constructie? Wij realiseren voor iedere bouwopgave een solide oplossing in hout. Wij zijn Solid Timber!',
+        },
+      ],
+      htmlAttrs: { lang: 'nl' },
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"',
+        },
+      ],
     },
   },
   ssr: false,
@@ -14,6 +28,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/eslint-module',
     '@nuxt/image',
+    'nuxt-simple-sitemap',
   ],
   apollo: {
     clients: {

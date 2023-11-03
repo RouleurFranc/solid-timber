@@ -17,8 +17,7 @@ module.exports = {
       xxl: '1800px',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      body: ['"Open Sans"', 'sans-serif'],
     },
     extend: {
       colors: {
