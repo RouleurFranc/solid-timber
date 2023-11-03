@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Solid Timber | Voor elke bouwopgave een oplossing in hout!',
+      title: 'Voor elke bouwopgave een oplossing in hout!',
       meta: [
         {
           name: 'description',

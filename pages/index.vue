@@ -1,5 +1,5 @@
 <script setup>
-import { GetPageBySlug } from '@/queries/get-page-by-slug'
+import { GetPageBySlug } from '@/queries/getPageBySlug'
 import CallToAction from '@/components/CallToAction.vue'
 import Projects from '@/components/Projects.vue'
 import Usps from '@/components/Usps.vue'
@@ -25,14 +25,13 @@ const { data } = await useAsyncQuery(GetPageBySlug, {
 })
 
 const page = data?.value?.Page
-const { seo } = page
 const stack = computed(() => page?.stack)
 const { projects } = stack.value[2]
 </script>
 
 <template>
   <div>
-    <Metadata :data="seo"></Metadata>
+    <Metadata :seo-slug="page._slug"></Metadata>
     <component
       :is="getComponent(element.__typename)"
       v-for="element in stack"
@@ -45,3 +44,4 @@ const { projects } = stack.value[2]
     <Usps />
   </div>
 </template>
+~/queries/getPageBySlug

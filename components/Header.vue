@@ -71,6 +71,7 @@ const menuItems = data?.value?.MenuItems?.items
             >
               <NuxtLink
                 v-if="menuItem._slug"
+                @click="showMenu = !showMenu"
                 :to="`/${menuItem._slug}`"
                 class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
                 >{{ menuItem.title }}</NuxtLink
