@@ -45,7 +45,7 @@ console.log(ctaContent)
                 :class="
                   element.image_position === 'Right' ? 'md:order-last' : ''
                 "
-                class="mask2 transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/4"
+                class="transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/4"
               >
                 <img
                   :src="element.image[0]?.url"
@@ -70,15 +70,6 @@ console.log(ctaContent)
   </section>
 </template>
 <style>
-.mask2 {
-  -webkit-mask-image: url('../assets/images/mask-image.svg');
-  mask-image: url('../assets/images/mask-image.svg');
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-
 h4 {
   @apply mt-10 text-green-dark font-semibold
 }
