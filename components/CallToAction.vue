@@ -16,7 +16,7 @@ const stack = data?.value?.stack
       <div class="md:mt-4">
         <div class="mb-10 text-licorice md:mb-20">
           <h2
-            class="mb-4 text-center text-xl font-extrabold tracking-tight text-licorice md:text-5xl"
+            class="mb-4 text-center text-xl font-normal tracking-tight text-licorice md:text-5xl"
           >
             {{ data.heading }}
           </h2>

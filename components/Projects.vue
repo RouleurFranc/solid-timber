@@ -29,7 +29,7 @@ const projects = homeProjects.value
     >
       <h2
         v-if="data.heading"
-        class="mb-10 text-center text-4xl text-beige md:text-6xl"
+        class="mb-10 text-center text-4xl font-light text-beige md:text-5xl"
       >
         {{ data.heading }}
       </h2>

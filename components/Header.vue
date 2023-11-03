@@ -6,7 +6,7 @@ const showMenu = ref(false)
 const menuItems = data?.value?.MenuItems?.items
 </script>
 <template>
-  <nav class="z-1 left-0 top-0 z-20 w-full border-0 bg-green-dark">
+  <nav class="left-0 top-0 z-20 w-full border-0 bg-green-dark">
     <div
       class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 md:p-6"
     >
@@ -20,7 +20,7 @@ const menuItems = data?.value?.MenuItems?.items
           alt="Solid Timber Logo"
         />
         <span
-          class="self-center whitespace-nowrap text-2xl font-light text-white md:text-4xl"
+          class="self-center whitespace-nowrap text-2xl font-light text-beige md:text-4xl"
           >Solid Timber</span
         >
       </a>
@@ -59,7 +59,7 @@ const menuItems = data?.value?.MenuItems?.items
         class="w-full items-center justify-between md:order-1 md:w-auto"
       >
         <div
-          class="fixed z-10 left-0 top-0 flex h-screen min-h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
+          class="fixed left-0 top-0 z-10 flex h-screen min-h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
         >
           <ul
             v-if="menuItems"

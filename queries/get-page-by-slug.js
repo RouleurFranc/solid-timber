@@ -6,6 +6,16 @@ export const GetPageBySlug = gql`
       _id
       title
       _slug
+      seo {
+        _id
+        seo_title
+        seo_description
+        seo_social_media_image {
+          _id
+          url
+        }
+        seo_allow
+      }
       stack {
         __typename
         ... on PageHeader {
