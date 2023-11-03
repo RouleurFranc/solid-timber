@@ -108,7 +108,9 @@
         </div>
       </div>
       <div class="my-10 flex flex-col text-center md:mt-20 lg:mt-24">
-        <h3 class="text-6xl text-green-light">Ambitie in houtbouw?</h3>
+        <h3 class="text-3xl text-green-light md:text-5xl">
+          Ambitie in houtbouw?
+        </h3>
         <div class="my-6 text-xl">
           Neem dan contact met ons op! Dan kijken we mee naar de kansen in uw
           bouwproject.

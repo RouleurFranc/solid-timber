@@ -10,7 +10,7 @@ const data = computed(() => props.data)
   <section class="relative bg-beige">
     <div class="p-8 md:py-20 lg:py-24 xl:pb-44 xl:pt-36">
       <h2
-        class="mb-4 text-center text-4xl text-green-dark md:mb-10 md:text-6xl"
+        class="mb-4 text-center text-4xl text-green-dark md:mb-10 md:text-5xl"
       >
         {{ data.title }}
       </h2>

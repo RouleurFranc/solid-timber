@@ -35,6 +35,11 @@ export const GetPageBySlug = gql`
             _id
             url
           }
+          content {
+            ... on Text {
+              body
+            }
+          }
           cta_label
           cta_url
           stack {
