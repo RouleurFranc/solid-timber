@@ -9,8 +9,8 @@
         >
           Tijd voor de duurzame stap <br />
           Kies nu voor houtbouw!
-          <a
-            href="#"
+          <NuxtLink
+            to="#"
             class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-beige-light hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
           >
             Contact
@@ -27,10 +27,11 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </a>
+          </NuxtLink>
           <div class="mt-6 flex items-center justify-start">
-            <a
-              href="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
+            <NuxtLink
+              to="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
+              title="Solid Timber Youtube"
               class="mr-4 group-hover:opacity-80"
             >
               <Icon
@@ -38,9 +39,10 @@
                 class="transition-all hover:opacity-80 hover:transition-all"
                 size="50"
               />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/solid-timber-bv"
+            </NuxtLink>
+            <NuxtLink
+              to="https://www.linkedin.com/company/solid-timber-bv"
+              title="Solid Timber Linkedin"
               class="mr-4 group-hover:opacity-80"
             >
               <Icon
@@ -48,9 +50,10 @@
                 class="transition-all hover:opacity-80 hover:transition-all"
                 size="40"
               />
-            </a>
-            <a
-              href="https://twitter.com/solidtimbernl"
+            </NuxtLink>
+            <NuxtLink
+              to="https://twitter.com/solidtimbernl"
+              title="Solid Timber twitter"
               class="mr-4 group-hover:opacity-80"
             >
               <Icon
@@ -58,7 +61,7 @@
                 class="text-white transition-all hover:opacity-80 hover:transition-all"
                 size="30"
               />
-            </a>
+            </NuxtLink>
           </div>
         </div>
         <img

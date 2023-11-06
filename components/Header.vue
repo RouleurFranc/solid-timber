@@ -101,8 +101,8 @@ const menuItems = data?.value?.MenuItems?.items
               </a>
               <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Social</div>
               <div class="flex items-center justify-start">
-                <a
-                  href="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
+                <NuxtLink
+                  to="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
                   title="Solid Timber Youtube"
                   aria-label="Solid Timber Youtube"
                   class="mr-4 group-hover:opacity-80"
@@ -112,9 +112,9 @@ const menuItems = data?.value?.MenuItems?.items
                     class="transition-all hover:opacity-80 hover:transition-all"
                     size="50"
                   />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/solid-timber-bv"
+                </NuxtLink>
+                <NuxtLink
+                  to="https://www.linkedin.com/company/solid-timber-bv"
                   aria-label="Solid Timber Linkedin"
                   title="Solid Timber Linkedin"
                   class="mr-4 group-hover:opacity-80"
@@ -124,9 +124,9 @@ const menuItems = data?.value?.MenuItems?.items
                     class="transition-all hover:opacity-80 hover:transition-all"
                     size="40"
                   />
-                </a>
-                <a
-                  href="https://twitter.com/solidtimbernl"
+                </NuxtLink>
+                <NuxtLink
+                  to="https://twitter.com/solidtimbernl"
                   aria-label="Solid Timber twitter"
                   title="Solid Timber twitter"
                   class="mr-4 group-hover:opacity-80"
@@ -136,7 +136,7 @@ const menuItems = data?.value?.MenuItems?.items
                     class="text-white transition-all hover:opacity-80 hover:transition-all"
                     size="30"
                   />
-                </a>
+                </NuxtLink>
               </div>
               <a
                 href="#"
