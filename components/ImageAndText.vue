@@ -16,7 +16,7 @@ const data = computed(() => props.data)
       <div
         class="relative mx-auto flex max-w-screen-xl flex-col items-center gap-8 md:grid md:grid-cols-1 xl:gap-16"
       >
-        <img
+        <NuxtImg
           :class="data.image_position === 'Right' ? 'md:order-last' : ''"
           class="z-10 h-80 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:absolute md:right-0 md:top-0 md:h-144"
           :src="data.image[0]?.url"
@@ -35,6 +35,7 @@ const data = computed(() => props.data)
           </p>
           <NuxtLink
             to="process"
+            title="Lees meer"
             class="inline-flex items-center text-xl font-light underline transition-all duration-500 hover:ml-4 hover:no-underline hover:transition-all hover:duration-500"
             >Lees meer
             <svg

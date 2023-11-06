@@ -76,6 +76,7 @@ const menuItems = data?.value?.MenuItems?.items
               >
                 <NuxtLink
                   v-if="menuItem._slug"
+                  :title="menuItem.title"
                   :to="`/${menuItem._slug}`"
                   class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
                   @click="showMenu = !showMenu"
@@ -102,6 +103,8 @@ const menuItems = data?.value?.MenuItems?.items
               <div class="flex items-center justify-start">
                 <a
                   href="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
+                  title="Solid Timber Youtube"
+                  aria-label="Solid Timber Youtube"
                   class="mr-4 group-hover:opacity-80"
                 >
                   <Icon
@@ -112,6 +115,8 @@ const menuItems = data?.value?.MenuItems?.items
                 </a>
                 <a
                   href="https://www.linkedin.com/company/solid-timber-bv"
+                  aria-label="Solid Timber Linkedin"
+                  title="Solid Timber Linkedin"
                   class="mr-4 group-hover:opacity-80"
                 >
                   <Icon
@@ -122,6 +127,8 @@ const menuItems = data?.value?.MenuItems?.items
                 </a>
                 <a
                   href="https://twitter.com/solidtimbernl"
+                  aria-label="Solid Timber twitter"
+                  title="Solid Timber twitter"
                   class="mr-4 group-hover:opacity-80"
                 >
                   <Icon
@@ -133,6 +140,7 @@ const menuItems = data?.value?.MenuItems?.items
               </div>
               <a
                 href="#"
+                title="Neem contact met ons op"
                 class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-10"
               >
                 Contact

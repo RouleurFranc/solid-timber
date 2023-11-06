@@ -70,22 +70,27 @@
           class="flex flex-col pt-6 text-center text-xl text-beige md:border-l-4 md:border-coral md:p-10"
         >
           <NuxtLink
+            title="Videos"
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
             >Videos</NuxtLink
           >
           <NuxtLink
+            title="Projects"
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
             >Projects</NuxtLink
           >
           <NuxtLink
+            title="Partners"
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
             >Partners</NuxtLink
           >
           <NuxtLink
+            title="Contact"
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
             >Contact</NuxtLink
           >
           <NuxtLink
+            title="Sitemap"
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
             >Sitemap</NuxtLink
           >

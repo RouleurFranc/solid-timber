@@ -41,6 +41,7 @@ const projects = homeProjects.value
           <NuxtLink
             v-for="project in projects.slice(0, projectAmount)"
             :key="project._id"
+            :title="project.title"
             :to="`projects/${project._slug}`"
             class="flex flex-col rounded-xl bg-white transition-all duration-500 ease-in-out hover:scale-[0.98] hover:transition-all hover:duration-500"
           >
@@ -56,7 +57,6 @@ const projects = homeProjects.value
                 <small class="text-[#334155]">{{ project.tag }}</small>
                 <h3 class="text-2xl">{{ project.title }}</h3>
               </div>
-
               <div
                 class="inline-flex items-center rounded-full bg-coral p-2 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark"
               >
@@ -81,6 +81,7 @@ const projects = homeProjects.value
           :class="isHome ? `flex` : `hidden`"
           class="mx-auto mt-10 max-w-[300px] items-center justify-center rounded-full bg-coral p-4 text-center text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark md:py-6"
           to="/projects"
+          title="Al onze projecten"
           >Al onze projecten
           <svg
             aria-hidden="true"

@@ -10,8 +10,8 @@ const ctaContent = data.value.content
     <div
       class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:py-24 xl:py-32"
     >
-      <img
-        src="../assets/images/solidtimber-groen.png"
+      <NuxtImg
+        src="./assets/images/solidtimber-groen.png"
         class="absolute left-[-13%] top-[-3%] hidden scale-[0.4] md:block"
         alt="Solid Timber beeldmerk groen"
       />
@@ -50,7 +50,7 @@ const ctaContent = data.value.content
                 "
                 class="transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/4"
               >
-                <img
+                <NuxtImg
                   :src="element.image[0]?.url"
                   class="object-cover"
                   :alt="element.image[0].name"

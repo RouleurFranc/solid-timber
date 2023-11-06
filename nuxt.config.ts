@@ -8,6 +8,10 @@ export default defineNuxtConfig({
           content:
             'Een goed ontwerp tot en met realisatie van een houten constructie? Wij realiseren voor iedere bouwopgave een solide oplossing in hout. Wij zijn Solid Timber!',
         },
+        {
+          name: 'theme_color',
+          content: '00665e',
+        },
       ],
       htmlAttrs: { lang: 'nl' },
       link: [
