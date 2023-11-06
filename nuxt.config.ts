@@ -37,6 +37,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
+    '@zadigetvoltaire/nuxt-gtm',
   ],
   apollo: {
     clients: {
@@ -48,6 +49,22 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       PREPR_ACCESS_TOKEN: process.env.PREPR_ACCESS_TOKEN,
+      gtm: {
+        id: 'GTM-KQP6FFLK',
+        queryParams: {
+          gtm_auth: 'LCNvKI6KvGVq5YINHcysXQ',
+          gtm_preview: 'env-1',
+          gtm_cookies_win: 'x',
+        },
+        defer: false,
+        compatibility: false,
+        enabled: true,
+        debug: true,
+        loadScript: false,
+        enableRouterSync: true,
+        trackOnNextTick: false,
+        devtools: true,
+      },
     },
   },
   css: ['~/assets/css/main.css'],

@@ -26,6 +26,7 @@
     "@types/node": "^18.17.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "autoprefixer": "^10.4.15",
     "eslint": "^8.52.0",
     "eslint-config-airbnb-base": "^15.0.0",
