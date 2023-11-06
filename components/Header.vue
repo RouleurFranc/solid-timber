@@ -6,169 +6,175 @@ const showMenu = ref(false)
 const menuItems = data?.value?.MenuItems?.items
 </script>
 <template>
-  <nav class="left-0 top-0 z-20 w-full border-0 bg-green-dark">
-    <div
-      class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 md:p-6"
-    >
-      <a
-        href="/"
-        class="flex items-center"
-      >
-        <img
-          src="../assets/images/solidtimber-logo.png"
-          class="mr-2 h-14 md:h-20"
-          alt="Solid Timber Logo"
-        />
-        <span
-          class="self-center whitespace-nowrap text-2xl font-light text-beige md:text-4xl"
-          >Solid Timber</span
-        >
-      </a>
+  <header>
+    <nav class="left-0 top-0 z-20 w-full border-0 bg-green-dark">
       <div
-        class="flex md:order-2"
-        @click="showMenu = !showMenu"
+        class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 md:p-6"
       >
-        <button
-          :class="
-            showMenu ? 'open fixed top-4 right-4 md:top-6 md:right-6' : 'close'
-          "
-          type="button"
-          class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-coral p-2 text-sm text-white transition-all hover:scale-110 hover:bg-coral-dark hover:transition-all focus:outline-none md:h-16 md:w-16"
+        <a
+          href="/"
+          class="flex items-center"
         >
-          <span class="sr-only">Open menu</span>
-          <div
-            class="hamburger h-9 w-[34px] text-white md:h-[40px] md:w-[38px]"
-            :class="showMenu ? 'open' : 'close'"
-            viewbox="0 0 60 40"
+          <img
+            src="../assets/images/solidtimber-logo.png"
+            class="mr-2 h-14 md:h-20"
+            alt="Solid Timber Logo"
+          />
+          <span
+            class="self-center whitespace-nowrap text-2xl font-light text-beige md:text-4xl"
+            >Solid Timber</span
           >
-            <span class="top-[5px] h-[3px] bg-white md:top-[7px] md:h-1"></span>
-            <span
-              class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
-            ></span>
-            <span
-              class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
-            ></span>
-            <span
-              class="top-[27px] h-[3px] bg-white md:top-[29px] md:h-1"
-            ></span>
-          </div>
-        </button>
-      </div>
-      <div
-        :class="showMenu ? 'flex' : 'hidden'"
-        class="w-full items-center justify-between md:order-1 md:w-auto"
-      >
+        </a>
         <div
-          class="fixed left-0 top-0 z-10 flex h-screen min-h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
+          class="flex md:order-2"
+          @click="showMenu = !showMenu"
         >
-          <ul
-            v-if="menuItems"
-            class="mb-2 flex flex-col justify-between font-medium text-white md:mb-0"
+          <button
+            :class="
+              showMenu
+                ? 'open fixed top-4 right-4 md:top-6 md:right-6'
+                : 'close'
+            "
+            type="button"
+            class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-coral p-2 text-sm text-white transition-all hover:scale-110 hover:bg-coral-dark hover:transition-all focus:outline-none md:h-16 md:w-16"
           >
-            <li
-              v-for="menuItem in menuItems"
-              :key="menuItem._id"
-            >
-              <NuxtLink
-                v-if="menuItem._slug"
-                @click="showMenu = !showMenu"
-                :to="`/${menuItem._slug}`"
-                class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
-                >{{ menuItem.title }}</NuxtLink
-              >
-            </li>
-          </ul>
-          <div class="flex flex-col text-white md:basis-1/3">
-            <div class="mb-2 text-xl md:text-2xl">E-mail</div>
-            <a
-              href="mailto:info@solidtimber.nl"
-              class="text-lg font-light"
-            >
-              info@solidtimber.nl
-            </a>
-            <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Telefoon</div>
-            <a
-              href="tel:+310307851767"
-              class="text-lg font-light"
-            >
-              +31 (0)30 785 17 67
-            </a>
-            <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Social</div>
-            <div class="flex items-center justify-start">
-              <a
-                href="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
-                class="mr-4 group-hover:opacity-80"
-              >
-                <Icon
-                  name="mdi:youtube"
-                  class="transition-all hover:opacity-80 hover:transition-all"
-                  size="50"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/solid-timber-bv"
-                class="mr-4 group-hover:opacity-80"
-              >
-                <Icon
-                  name="mdi:linkedin"
-                  class="transition-all hover:opacity-80 hover:transition-all"
-                  size="40"
-                />
-              </a>
-              <a
-                href="https://twitter.com/solidtimbernl"
-                class="mr-4 group-hover:opacity-80"
-              >
-                <Icon
-                  name="pajamas:twitter"
-                  class="text-white transition-all hover:opacity-80 hover:transition-all"
-                  size="30"
-                />
-              </a>
-            </div>
-            <a
-              href="#"
-              class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-10"
-            >
-              Contact
-              <svg
-                aria-hidden="true"
-                class="-mr-1 ml-2 h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
+            <span class="sr-only">Open menu</span>
             <div
-              class="absolute inset-x-0 -bottom-2 mx-auto flex h-6 w-10 justify-between text-white"
+              class="hamburger h-9 w-[34px] text-white md:h-[40px] md:w-[38px]"
+              :class="showMenu ? 'open' : 'close'"
+              viewbox="0 0 60 40"
             >
-              <Icon
-                size="14"
-                name="mdi:pine-tree-variant"
-                class="tree"
-              />
-              <Icon
-                size="18"
-                name="mdi:pine-tree-variant"
-                class="tree treeMiddle"
-              />
-              <Icon
-                size="14"
-                name="mdi:pine-tree-variant"
-                class="tree"
-              />
+              <span
+                class="top-[5px] h-[3px] bg-white md:top-[7px] md:h-1"
+              ></span>
+              <span
+                class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
+              ></span>
+              <span
+                class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
+              ></span>
+              <span
+                class="top-[27px] h-[3px] bg-white md:top-[29px] md:h-1"
+              ></span>
+            </div>
+          </button>
+        </div>
+        <div
+          :class="showMenu ? 'flex' : 'hidden'"
+          class="w-full items-center justify-between md:order-1 md:w-auto"
+        >
+          <div
+            class="fixed left-0 top-0 z-10 flex h-screen min-h-screen w-full flex-col bg-green-light px-10 py-20 md:flex-row md:items-center md:justify-between md:p-20 md:px-48 xl:px-72"
+          >
+            <ul
+              v-if="menuItems"
+              class="mb-2 flex flex-col justify-between font-medium text-white md:mb-0"
+            >
+              <li
+                v-for="menuItem in menuItems"
+                :key="menuItem._id"
+              >
+                <NuxtLink
+                  v-if="menuItem._slug"
+                  :to="`/${menuItem._slug}`"
+                  class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
+                  @click="showMenu = !showMenu"
+                  >{{ menuItem.title }}</NuxtLink
+                >
+              </li>
+            </ul>
+            <div class="flex flex-col text-white md:basis-1/3">
+              <div class="mb-2 text-xl md:text-2xl">E-mail</div>
+              <a
+                href="mailto:info@solidtimber.nl"
+                class="text-lg font-light"
+              >
+                info@solidtimber.nl
+              </a>
+              <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Telefoon</div>
+              <a
+                href="tel:+310307851767"
+                class="text-lg font-light"
+              >
+                +31 (0)30 785 17 67
+              </a>
+              <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Social</div>
+              <div class="flex items-center justify-start">
+                <a
+                  href="https://www.youtube.com/channel/UCszF6lIuqipHaG-UkSutYhA"
+                  class="mr-4 group-hover:opacity-80"
+                >
+                  <Icon
+                    name="mdi:youtube"
+                    class="transition-all hover:opacity-80 hover:transition-all"
+                    size="50"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/solid-timber-bv"
+                  class="mr-4 group-hover:opacity-80"
+                >
+                  <Icon
+                    name="mdi:linkedin"
+                    class="transition-all hover:opacity-80 hover:transition-all"
+                    size="40"
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/solidtimbernl"
+                  class="mr-4 group-hover:opacity-80"
+                >
+                  <Icon
+                    name="pajamas:twitter"
+                    class="text-white transition-all hover:opacity-80 hover:transition-all"
+                    size="30"
+                  />
+                </a>
+              </div>
+              <a
+                href="#"
+                class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-10"
+              >
+                Contact
+                <svg
+                  aria-hidden="true"
+                  class="-mr-1 ml-2 h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <div
+                class="absolute inset-x-0 -bottom-2 mx-auto flex h-6 w-10 justify-between text-white"
+              >
+                <Icon
+                  size="14"
+                  name="mdi:pine-tree-variant"
+                  class="tree"
+                />
+                <Icon
+                  size="18"
+                  name="mdi:pine-tree-variant"
+                  class="tree treeMiddle"
+                />
+                <Icon
+                  size="14"
+                  name="mdi:pine-tree-variant"
+                  class="tree"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 </template>
 
 <style>

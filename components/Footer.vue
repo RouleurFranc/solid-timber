@@ -1,5 +1,5 @@
 <template>
-  <section class="z-0 bg-gradient-to-b from-coral to-coral-dark align-bottom">
+  <footer class="z-0 bg-gradient-to-b from-coral to-coral-dark align-bottom">
     <div
       class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:pb-20 lg:pt-24 xl:gap-16"
     >
@@ -129,7 +129,7 @@
         />
       </div>
     </div>
-  </section>
+  </footer>
 </template>
 
 <style>
