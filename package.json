@@ -50,13 +50,13 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.6",
+    "@gtm-support/vue-gtm": "^2.2.0",
     "@vueuse/core": "^10.5.0",
     "@vueuse/nuxt": "^10.5.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
-    "nuxt-simple-sitemap": "^3.4.1",
-    "vue-gtag": "^2.0.1"
+    "nuxt-simple-sitemap": "^3.4.1"
   },
   "engines": {
     "node": "^18.0.0"
