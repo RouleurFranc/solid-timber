@@ -49,6 +49,8 @@ const projects = homeProjects.value
               class="rounded-t-xl"
               :src="project.image?.url"
               :alt="project.image?.name"
+              sizes="100vw md:50vw lg:430px"
+              loading="lazy"
             />
             <div
               class="flex items-center justify-between px-4 pb-4 pt-6 md:px-8"

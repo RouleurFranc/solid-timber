@@ -21,6 +21,7 @@ const data = computed(() => props.data)
           class="z-10 h-80 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:absolute md:right-0 md:top-0 md:h-144"
           :src="data.image[0]?.url"
           :alt="data.image[0]?.name"
+          sizes="100vw sm:50vw md:520px"
         />
         <div
           class="-mt-16 bg-green-dark p-8 pt-16 text-beige-light md:mt-4 md:max-w-[65%] md:p-20 md:pr-32 lg:pr-40"
