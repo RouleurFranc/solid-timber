@@ -20,9 +20,7 @@ const projectContent = project.content
       v-else-if="project"
       class="relative bg-green-accent"
     >
-      <h1
-        class="pt-16 text-center text-3xl text-green-dark md:text-4xl lg:text-5xl"
-      >
+      <h1 class="pt-16 text-center text-3xl text-green-dark md:text-4xl">
         {{ project.title }}
       </h1>
       <img

@@ -1,17 +1,17 @@
 <template>
   <footer class="z-0 bg-gradient-to-b from-coral to-coral-dark align-bottom">
     <div
-      class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:pb-20 lg:pt-24 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center p-8 md:pb-16 md:pt-20 xl:gap-16"
     >
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div
-          class="mr-2 flex flex-col items-center justify-center pb-4 pt-10 text-xl text-beige md:border-r-4 md:border-solid md:border-coral md:text-2xl"
+          class="mr-2 flex flex-col items-center justify-center pb-4 pt-10 text-xl text-white md:text-2xl"
         >
           Tijd voor de duurzame stap <br />
           Kies nu voor houtbouw!
           <NuxtLink
             to="#"
-            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-beige-light hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
+            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-white hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
           >
             Contact
             <svg
@@ -64,14 +64,13 @@
             </NuxtLink>
           </div>
         </div>
-        <img
+        <NuxtImg
           class="m-auto flex max-h-[200px] items-center justify-center"
-          src="../assets/images/solidtimber-wit.png"
+          src="/solidtimber-wit.png"
           alt="Solid Timber logo wit"
+          loading="lazy"
         />
-        <div
-          class="flex flex-col pt-6 text-center text-xl text-beige md:border-l-4 md:border-coral md:p-10"
-        >
+        <div class="flex flex-col pt-6 text-center text-xl text-white md:p-10">
           <NuxtLink
             title="Videos"
             class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
@@ -101,23 +100,25 @@
       </div>
     </div>
     <div
-      class="mx-auto my-6 flex flex-col items-center justify-between text-beige-light md:my-10 md:max-w-[680px] md:flex-row"
+      class="mx-auto my-6 flex flex-col items-center justify-between text-white md:my-10 md:max-w-[680px] md:flex-row"
     >
       <div class="text-3xl md:text-4xl">Solid Timber</div>
       <div class="xclass text-4xl font-extralight text-green-light">x</div>
-      <img
+      <NuxtImg
         class="mb-4 flex max-w-[120px] items-center justify-center md:m-0 md:max-w-[200px]"
-        src="../assets/images/Element-logo-wit-300x82.png"
+        src="/Element-logo-wit-300x82.png"
         alt="Element logo wit"
+        loading="lazy"
       />
-      <img
+      <NuxtImg
         class="flex max-w-[80px] items-center justify-center md:max-w-[160px]"
-        src="../assets/images/wilen-trahus-logo-wit-300x121.png"
+        src="/wilen-trahus-logo-wit-300x121.png"
         alt="Wilen Trahus logo wit"
+        loading="lazy"
       />
     </div>
     <div
-      class="mx-auto mt-12 flex flex-col items-center justify-center text-beige-light md:mt-16"
+      class="mx-auto mt-12 flex flex-col items-center justify-center text-white md:mt-16"
     >
       <div class="text-[10px] md:text-sm">
         © Copyright 2023 | Solid Timber BV | KvK: 75331020

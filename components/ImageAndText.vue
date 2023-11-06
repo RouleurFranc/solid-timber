@@ -22,9 +22,10 @@ const data = computed(() => props.data)
           :src="data.image[0]?.url"
           :alt="data.image[0]?.name"
           sizes="100vw sm:50vw md:520px"
+          loading="lazy"
         />
         <div
-          class="-mt-16 bg-green-dark p-8 pt-16 text-beige-light md:mt-4 md:max-w-[65%] md:p-20 md:pr-32 lg:pr-40"
+          class="-mt-16 bg-green-dark p-8 pt-16 text-white md:mt-4 md:max-w-[65%] md:p-20 md:pr-32 lg:pr-40"
         >
           <p class="mb-6 text-lg font-light !leading-8 lg:text-xl">
             {{ data.text }}

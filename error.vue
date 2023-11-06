@@ -10,11 +10,11 @@ const handleError = () => {
 <template>
   <div class="bg-beige p-4 md:p-8">
     <div v-if="error.statusCode === '404'">
-      <h1 class="mb-4 marker:text-5xl">{{ error.statusCode }}</h1>
+      <h1 class="mb-4 text-3xl md:text-4xl">{{ error.statusCode }}</h1>
       <p>Oeps de pagina die je zoekt bestaat helaas niet.</p>
     </div>
     <div v-else>
-      <h1 class="mb-4 text-5xl">{{ error.statusCode }}</h1>
+      <h1 class="mb-4 text-2xl">{{ error.statusCode }}</h1>
       <p>Oeps er lijkt iets fout te zijn gegaan.</p>
     </div>
     <div>

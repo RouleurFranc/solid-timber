@@ -15,13 +15,13 @@ const menuItems = data?.value?.MenuItems?.items
           href="/"
           class="flex items-center"
         >
-          <img
-            src="../assets/images/solidtimber-logo.png"
+          <NuxtImg
+            src="/solidtimber-logo.png"
             class="mr-2 h-14 md:h-20"
             alt="Solid Timber Logo"
           />
           <span
-            class="self-center whitespace-nowrap text-2xl font-light text-beige md:text-4xl"
+            class="self-center whitespace-nowrap text-2xl font-light text-white md:text-4xl"
             >Solid Timber</span
           >
         </a>

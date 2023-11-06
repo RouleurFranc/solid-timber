@@ -10,7 +10,9 @@ const seoSlug = 'projects'
     <Metadata :seo-slug="seoSlug"></Metadata>
     <div v-if="error">{{ error }}</div>
     <div v-else-if="projects && projects.length">
-      <div class="mx-auto max-w-screen-xl items-center px-8 pt-10">
+      <div
+        class="mx-auto max-w-screen-xl items-center px-8 pt-10 text-center md:pt-16"
+      >
         <h1 class="text-3xl md:text-4xl">Projecten</h1>
         <p>Bij Solid Timber zijn we trots op onderstaande projecten!</p>
       </div>
@@ -24,6 +26,7 @@ const seoSlug = 'projects'
         :amount="99"
         :is-home="false"
       />
+      <Usps></Usps>
     </div>
   </section>
 </template>

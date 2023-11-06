@@ -2,7 +2,7 @@
 import { GetMetadata } from '@/queries/getMetadata'
 
 const props = defineProps<{
-  seoSlug: {}
+  seoSlug: any
 }>()
 
 const { data } = await useAsyncQuery(GetMetadata, {

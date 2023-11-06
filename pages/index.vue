@@ -40,6 +40,7 @@ const { projects } = stack.value[2]
       :home-projects="projects"
       :amount="9"
       :is-home="true"
+      background="green-light"
     ></component>
     <Usps />
   </div>
