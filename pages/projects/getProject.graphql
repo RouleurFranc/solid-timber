@@ -7,6 +7,7 @@ query GET_PROJECT($slug: String) {
 		image { 
 			_id
 			url
+			name
 		}
 		content { 
 			__typename

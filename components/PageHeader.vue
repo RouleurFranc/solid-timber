@@ -11,7 +11,7 @@ const data = computed(() => props.data)
         <img
           class="max-h-[360px] md:max-h-[750px]"
           :src="data.image[0]?.url"
-          alt="dashboard image"
+          :alt="data.image[0].name"
         />
       </div>
       <div class="mt-[-20px] max-w-[700px] px-8 pb-10 md:basis-1/2 md:p-0">

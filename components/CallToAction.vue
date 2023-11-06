@@ -50,6 +50,7 @@ console.log(ctaContent)
                 <img
                   :src="element.image[0]?.url"
                   class="object-cover"
+                  :alt="element.image[0].name"
                 />
               </div>
 

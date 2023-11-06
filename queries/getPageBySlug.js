@@ -12,6 +12,7 @@ export const GetPageBySlug = gql`
           cta_label
           image {
             url(width: 1600)
+            name
           }
           _id
           text
@@ -19,6 +20,7 @@ export const GetPageBySlug = gql`
         ... on ImageAndText {
           image {
             url(width: 800)
+            name
           }
           text
           text_center
@@ -34,6 +36,7 @@ export const GetPageBySlug = gql`
           background_image {
             _id
             url
+            name
           }
           content {
             ... on Text {

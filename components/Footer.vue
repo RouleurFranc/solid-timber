@@ -64,6 +64,7 @@
         <img
           class="m-auto flex max-h-[200px] items-center justify-center"
           src="../assets/images/solidtimber-wit.png"
+          alt="Solid Timber logo wit"
         />
         <div
           class="flex flex-col pt-6 text-center text-xl text-beige md:border-l-4 md:border-coral md:p-10"
@@ -99,10 +100,12 @@
       <img
         class="mb-4 flex max-w-[120px] items-center justify-center md:m-0 md:max-w-[200px]"
         src="../assets/images/Element-logo-wit-300x82.png"
+        alt="Element logo wit"
       />
       <img
         class="flex max-w-[80px] items-center justify-center md:max-w-[160px]"
         src="../assets/images/wilen-trahus-logo-wit-300x121.png"
+        alt="Wilen Trahus logo wit"
       />
     </div>
     <div
