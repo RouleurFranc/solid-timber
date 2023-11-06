@@ -44,4 +44,3 @@ const { projects } = stack.value[2]
     <Usps />
   </div>
 </template>
-~/queries/getPageBySlug

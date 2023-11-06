@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /apple-app-site-association
+Disallow: /.well-known/
+Disallow: /.well-known/traffic-advice
+
+# These are additional paths Google is known to search (optional)
+Disallow: /m/
+Disallow: /mobile/
+
+Disallow: /sitemap.txt
+
+Allow: /
+
+Sitemap: https://www.solidtimber.nl/sitemap.xml

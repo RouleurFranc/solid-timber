@@ -1,4 +1,4 @@
-query GET_PROJECTS ($where: ProjectWhereInput, $limit: Int, $skip: Int) {
+query GET_PROJECTS($where: ProjectWhereInput, $limit: Int, $skip: Int) {
   Projects(where: $where, limit: $limit, skip: $skip, sort: publish_on_ASC) {
     items {
       _id

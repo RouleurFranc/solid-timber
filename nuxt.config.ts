@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -19,6 +18,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  site: {
+    url: 'https://solidtimber.nl',
+    name: 'Solid Timber',
+  },
   ssr: false,
   devtools: { enabled: true },
   modules: [
@@ -29,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxt/image',
     'nuxt-simple-sitemap',
+    'nuxt-simple-robots',
   ],
   apollo: {
     clients: {

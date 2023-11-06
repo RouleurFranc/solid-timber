@@ -8,7 +8,6 @@ const handleError = () => {
 </script>
 
 <template>
-  <Header />
   <div class="bg-beige p-4 md:p-8">
     <div v-if="error.statusCode === '404'">
       <h1 class="mb-4 marker:text-5xl">{{ error.statusCode }}</h1>
@@ -43,5 +42,4 @@ const handleError = () => {
       </div>
     </div>
   </div>
-  <Footer />
 </template>

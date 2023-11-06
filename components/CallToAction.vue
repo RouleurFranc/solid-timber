@@ -4,7 +4,6 @@ const props = defineProps(['data'])
 const data = computed(() => props.data)
 const stack = data?.value?.stack
 const ctaContent = data.value.content
-console.log(ctaContent)
 </script>
 <template>
   <section class="relative bg-beige-light">
@@ -26,11 +25,15 @@ console.log(ctaContent)
           <p class="text-center font-light md:mb-6 md:text-xl">
             {{ data.description }}
           </p>
-          <div class="max-w-screen-md m-auto"
+          <div
             v-for="content in ctaContent"
             :key="content._id"
+            class="m-auto max-w-screen-md"
           >
-            <div class="text-center" v-html="content.body"></div>
+            <div
+              class="text-center"
+              v-html="content.body"
+            ></div>
           </div>
         </div>
 
@@ -72,6 +75,6 @@ console.log(ctaContent)
 </template>
 <style>
 h4 {
-  @apply mt-10 text-green-dark font-semibold
+  @apply mt-10 text-green-dark font-semibold;
 }
 </style>
