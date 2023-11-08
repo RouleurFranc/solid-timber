@@ -11,7 +11,7 @@
           Kies nu voor houtbouw!
           <NuxtLink
             to="#"
-            class="mt-4 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-green-light px-10 py-4 text-center text-lg font-medium text-white hover:bg-green-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-6"
+            class="mt-4 flex w-full max-w-[300px] items-center justify-center rounded-3xl bg-green-light p-4 text-center text-lg font-medium text-white hover:bg-green-dark focus:outline-none md:mt-6"
           >
             Contact
             <svg

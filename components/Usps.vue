@@ -29,17 +29,17 @@ const uspItems = data?.value?.Usps?.items
           />
           <div
             v-if="uspItem.text"
-            class="mt-4 text-lg text-green-dark md:text-xl lg:text-2xl"
+            class="mt-4 text-green-dark md:text-xl lg:text-2xl"
           >
             {{ uspItem.text }}
           </div>
         </li>
       </ul>
       <div class="my-4 flex flex-col text-center md:my-10">
-        <h3 class="text-3xl text-green-light md:text-4xl">
+        <h4 class="text-3xl text-green-light md:text-4xl">
           Ambitie in houtbouw?
-        </h3>
-        <div class="mt-2 mb-6 text-xl">
+        </h4>
+        <div class="mb-6 mt-2 md:text-xl">
           Neem dan contact met ons op! Dan kijken we mee naar de kansen in uw
           bouwproject.
         </div>

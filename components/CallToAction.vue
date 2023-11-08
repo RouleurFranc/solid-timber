@@ -65,7 +65,7 @@ const ctaContent = data.value.content
                 "
                 class="mt-6 flex min-h-[150px] max-w-[1070px] flex-col text-green-dark md:mt-0"
               >
-                <h3 class="mb-4 text-3xl">{{ element.title }}</h3>
+                <h4 class="mb-4 text-3xl">{{ element.title }}</h4>
                 <div class="text-lg leading-8">{{ element.text }}</div>
               </div>
             </div>
@@ -76,7 +76,7 @@ const ctaContent = data.value.content
   </section>
 </template>
 <style>
-h4 {
+h3 {
   @apply mt-10 text-green-dark font-semibold;
 }
 </style>

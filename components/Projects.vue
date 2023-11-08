@@ -57,7 +57,7 @@ const projects = homeProjects.value
             >
               <div class="flex flex-col">
                 <small class="text-[#334155]">{{ project.tag }}</small>
-                <h3 class="text-2xl">{{ project.title }}</h3>
+                <h2 class="text-lg md:text-2xl">{{ project.title }}</h2>
               </div>
               <div
                 class="inline-flex items-center rounded-full bg-coral p-2 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark"
@@ -81,7 +81,7 @@ const projects = homeProjects.value
         </div>
         <NuxtLink
           :class="isHome ? `flex` : `hidden`"
-          class="mx-auto mt-10 max-w-[300px] items-center justify-center rounded-full bg-coral p-4 text-center text-lg font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark md:py-6"
+          class="mx-auto mt-10 max-w-[300px] items-center justify-center rounded-full bg-coral p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark md:py-4 md:text-lg"
           to="/projects"
           title="Al onze projecten"
           >Al onze projecten
