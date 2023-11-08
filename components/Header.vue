@@ -16,7 +16,7 @@ const menuItems = data?.value?.MenuItems?.items
           class="flex items-center"
         >
           <NuxtImg
-            src="/solidtimber-logo.png"
+            :src="`/solidtimber-logo.png`"
             class="mr-2 h-14 md:h-20"
             alt="Solid Timber Logo"
           />

@@ -1,113 +1,41 @@
+<script lang="ts" setup>
+import { GetUsps } from '@/queries/getUsps'
+
+const { data } = await useAsyncQuery(GetUsps)
+const uspItems = data?.value?.Usps?.items
+</script>
 <template>
   <section class="bg-beige-light">
     <div
       class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:px-8 xl:gap-16"
     >
-      <div class="grid grid-cols-2 items-center justify-between gap-8 md:flex">
-        <div class="relative text-center">
-          <span
-            class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"
-            >Houtbouw</span
+      <div
+        class="grid grid-cols-2 items-center justify-between gap-8 md:flex"
+      ></div>
+      <ul
+        v-if="uspItems"
+        class="grid grid-cols-2 items-start pt-4 font-medium md:flex md:justify-between md:pt-0"
+      >
+        <li
+          v-for="uspItem in uspItems"
+          :key="uspItem._id"
+          class="mb-8 flex flex-col items-center justify-center text-center hover:text-green-dark"
+        >
+          <Icon
+            v-if="uspItem.icon"
+            :name="uspItem.icon"
+            class="text-green-light transition-all hover:transition-all"
+            size="40"
+          />
+          <div
+            v-if="uspItem.text"
+            class="mt-4 text-lg text-green-dark md:text-xl lg:text-2xl"
           >
-          <svg
-            class="svg1 z-10 fill-green-dark"
-            width="150"
-            height="150"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 375 375"
-          >
-            <path
-              d="M40.69 312.645C3.27 275.515-7.167 239.748 4.81 130.565 16.79 21.38 174.383-19.66 247.949 17.015c73.565 36.677 137.152 80.957 125.834 182.69-11.319 101.732-90.199 174.628-175.333 171.276-85.135-3.351-120.335-21.207-157.758-58.337z"
-            ></path>
-          </svg>
-        </div>
-        <div class="relative text-center">
-          <span
-            class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"
-            >clt</span
-          >
-          <svg
-            class="svg1 z-10 fill-green-dark"
-            width="150"
-            height="150"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 375 375"
-          >
-            <path
-              d="M40.69 312.645C3.27 275.515-7.167 239.748 4.81 130.565 16.79 21.38 174.383-19.66 247.949 17.015c73.565 36.677 137.152 80.957 125.834 182.69-11.319 101.732-90.199 174.628-175.333 171.276-85.135-3.351-120.335-21.207-157.758-58.337z"
-            ></path>
-          </svg>
-        </div>
-        <div class="relative text-center">
-          <span
-            class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"
-            >berekeningen</span
-          >
-          <svg
-            class="svg1 z-10 fill-green-dark"
-            width="150"
-            height="150"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 375 375"
-          >
-            <path
-              d="M40.69 312.645C3.27 275.515-7.167 239.748 4.81 130.565 16.79 21.38 174.383-19.66 247.949 17.015c73.565 36.677 137.152 80.957 125.834 182.69-11.319 101.732-90.199 174.628-175.333 171.276-85.135-3.351-120.335-21.207-157.758-58.337z"
-            ></path>
-          </svg>
-        </div>
-        <div class="relative text-center">
-          <span
-            class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"
-            >tekenwerk</span
-          >
-          <svg
-            class="svg1 z-10 fill-green-dark"
-            width="150"
-            height="150"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 375 375"
-          >
-            <path
-              d="M40.69 312.645C3.27 275.515-7.167 239.748 4.81 130.565 16.79 21.38 174.383-19.66 247.949 17.015c73.565 36.677 137.152 80.957 125.834 182.69-11.319 101.732-90.199 174.628-175.333 171.276-85.135-3.351-120.335-21.207-157.758-58.337z"
-            ></path>
-          </svg>
-        </div>
-        <div class="relative text-center">
-          <span
-            class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"
-            >bouwkundig advies</span
-          >
-          <svg
-            class="svg1 z-10 fill-green-dark"
-            width="150"
-            height="150"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 375 375"
-          >
-            <path
-              d="M40.69 312.645C3.27 275.515-7.167 239.748 4.81 130.565 16.79 21.38 174.383-19.66 247.949 17.015c73.565 36.677 137.152 80.957 125.834 182.69-11.319 101.732-90.199 174.628-175.333 171.276-85.135-3.351-120.335-21.207-157.758-58.337z"
-            ></path>
-          </svg>
-        </div>
-        <div class="relative text-center">
-          <span
-            class="pointer-events-none absolute inset-x-0 top-[50%] mx-auto -translate-y-1/2 text-base uppercase text-beige-light"
-            >kostenraming</span
-          >
-          <svg
-            class="svg1 z-10 fill-green-dark"
-            width="150"
-            height="150"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 375 375"
-          >
-            <path
-              d="M40.69 312.645C3.27 275.515-7.167 239.748 4.81 130.565 16.79 21.38 174.383-19.66 247.949 17.015c73.565 36.677 137.152 80.957 125.834 182.69-11.319 101.732-90.199 174.628-175.333 171.276-85.135-3.351-120.335-21.207-157.758-58.337z"
-            ></path>
-          </svg>
-        </div>
-      </div>
-      <div class="my-10 flex flex-col text-center md:mt-20 lg:mt-24">
+            {{ uspItem.text }}
+          </div>
+        </li>
+      </ul>
+      <div class="my-4 flex flex-col text-center md:my-10">
         <h3 class="text-3xl text-green-light md:text-5xl">
           Ambitie in houtbouw?
         </h3>
@@ -138,13 +66,3 @@
     </div>
   </section>
 </template>
-
-<style>
-.svg1 {
-  transition: all 0.3s ease-in-out;
-}
-.svg1:hover {
-  fill: #db785d;
-  transition: all 0.3s ease-in-out;
-}
-</style>
