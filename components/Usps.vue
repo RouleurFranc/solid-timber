@@ -36,10 +36,10 @@ const uspItems = data?.value?.Usps?.items
         </li>
       </ul>
       <div class="my-4 flex flex-col text-center md:my-10">
-        <h3 class="text-3xl text-green-light md:text-5xl">
+        <h3 class="text-3xl text-green-light md:text-4xl">
           Ambitie in houtbouw?
         </h3>
-        <div class="my-6 text-xl">
+        <div class="mt-2 mb-6 text-xl">
           Neem dan contact met ons op! Dan kijken we mee naar de kansen in uw
           bouwproject.
         </div>
