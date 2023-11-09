@@ -64,9 +64,9 @@
             </NuxtLink>
           </div>
         </div>
-        <NuxtImg
+        <img
           class="m-auto flex max-h-[200px] items-center justify-center"
-          src="/solidtimber-wit.png"
+          src="../assets/images/solidtimber-wit.png"
           alt="Solid Timber logo wit"
           loading="lazy"
         />
@@ -104,15 +104,15 @@
     >
       <div class="text-3xl md:text-4xl">Solid Timber</div>
       <div class="xclass text-4xl font-extralight text-green-light">x</div>
-      <NuxtImg
+      <img
         class="mb-4 flex max-w-[120px] items-center justify-center md:m-0 md:max-w-[200px]"
-        src="/Element-logo-wit-300x82.png"
+        src="../assets/images/Element-logo-wit-300x82.png"
         alt="Element logo wit"
         loading="lazy"
       />
-      <NuxtImg
+      <img
         class="flex max-w-[80px] items-center justify-center md:max-w-[160px]"
-        src="/wilen-trahus-logo-wit-300x121.png"
+        src="../assets/images/wilen-trahus-logo-wit-300x121.png"
         alt="Wilen Trahus logo wit"
         loading="lazy"
       />

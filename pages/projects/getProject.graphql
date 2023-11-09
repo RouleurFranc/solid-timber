@@ -29,6 +29,21 @@ query GET_PROJECT($slug: String) {
     }
     details {
       __typename
+      ... on Text {
+        body
+        html
+        text
+      }
     }
+    seo { 
+			_id
+			seo_title
+			seo_description
+			seo_social_media_image { 
+				_id
+				url
+			}
+			seo_allow
+		}
   }
 }

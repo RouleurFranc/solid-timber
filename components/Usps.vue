@@ -7,7 +7,7 @@ const uspItems = data?.value?.Usps?.items
 <template>
   <section class="bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:px-8 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center p-8 md:py-20 lg:px-12 xl:px-24 xxl:gap-16"
     >
       <div
         class="grid grid-cols-2 items-center justify-between gap-8 md:flex"

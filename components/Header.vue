@@ -1,13 +1,22 @@
-<script setup>
+<script setup lang="ts">
 import { GetMenuItems } from '@/queries/getMenuItems'
 
+const props = defineProps<{
+  backgroundColor: string
+  textColor: string
+}>()
+
 const { data } = await useAsyncQuery(GetMenuItems)
+const background = computed(() => props.backgroundColor)
 const showMenu = ref(false)
 const menuItems = data?.value?.MenuItems?.items
 </script>
 <template>
   <header>
-    <nav class="left-0 top-0 z-20 w-full border-0 bg-green-dark">
+    <nav
+      :class="background ? `bg-${background}` : `bg-green-dark`"
+      class="left-0 top-0 z-20 w-full border-0"
+    >
       <div
         class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4 md:p-6"
       >
@@ -15,13 +24,14 @@ const menuItems = data?.value?.MenuItems?.items
           href="/"
           class="flex items-center"
         >
-          <NuxtImg
-            :src="`/solidtimber-logo.png`"
+          <img
+            src="../assets/images/solidtimber-logo.png"
             class="mr-2 h-14 md:h-20"
             alt="Solid Timber Logo"
           />
           <span
-            class="self-center whitespace-nowrap text-2xl font-light text-white md:text-4xl"
+            :class="textColor ? `text-${textColor}` : `text-white`"
+            class="self-center whitespace-nowrap text-2xl font-normal md:text-4xl"
             >Solid Timber</span
           >
         </a>
