@@ -52,7 +52,7 @@ const router = useRouter()
             <div class="mt-8 flex w-full flex-col md:ml-8">
               <button
                 class="absolute right-8 top-10 justify-start self-start rounded-full bg-green-light px-8 py-2 text-white transition-all hover:scale-105 hover:bg-green-dark hover:transition-all"
-                @click="$router.back()"
+                @click="router.back()"
               >
                 Terug
               </button>
