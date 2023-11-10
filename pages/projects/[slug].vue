@@ -15,6 +15,7 @@ const projectContent = project.content
 const projectDetails = project.details
 const seoTitle = project.seo.seo_title
 const seoDescription = project.seo.seo_description
+const imageSlider = project.image_slider
 
 definePageMeta({
   layout: 'project',
@@ -45,9 +46,10 @@ const router = useRouter()
           <div
             class="relative mx-auto flex max-w-screen-xl flex-col items-center px-6 pb-6 pt-4 md:flex-row md:px-8 md:pb-16 md:pt-10"
           >
-            <img
+            <NuxtImg
               class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px]"
               :src="project.image.url"
+              :alt="project.image.name"
             />
             <div class="mt-8 flex w-full flex-col md:ml-8">
               <button
@@ -71,6 +73,35 @@ const router = useRouter()
           </div>
         </div>
 
+        <div
+          v-if="imageSlider"
+          class="bg-green-dark px-8 py-16 text-white"
+        >
+          <Carousel
+            :items-to-show="1"
+            :wrap-around="true"
+            class="mx-auto max-w-screen-lg"
+          >
+            <Slide
+              v-for="(slide, i) in imageSlider"
+              :key="slide"
+            >
+              <NuxtImg
+                :src="imageSlider[i].url"
+                class="carousel__item object-cover lg:min-w-[800px]"
+                :alt="imageSlider[i].name"
+                sizes="100vw sm:50vw md:700px"
+                width="1000"
+                height="600"
+              />
+            </Slide>
+
+            <template #addons>
+              <Navigation />
+              <Pagination />
+            </template>
+          </Carousel>
+        </div>
         <div class="bg-beige">
           <div class="mx-auto max-w-screen-xl items-center">
             <div class="mb-6 bg-beige px-8 py-10 md:py-16">
@@ -113,5 +144,21 @@ const router = useRouter()
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+.carousel__icon {
+  @apply text-green-dark bg-white min-w-[36px];
+}
+
+.carousel__pagination-button:after {
+  @apply bg-green-light;
+}
+
+.carousel__pagination-button--active:after {
+  @apply bg-beige;
+}
+
+.carousel__pagination-button:after:hover {
+  @apply bg-beige;
 }
 </style>

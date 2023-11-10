@@ -19,7 +19,7 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"',
         },
-        { rel: 'canonical', href: 'https://solidtimber.nl' },
+        { hid: 'canonical', rel: 'canonical', href: 'https://solidtimber.nl' },
       ],
     },
   },
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     url: 'https://solidtimber.nl',
     name: 'Solid Timber',
   },
-  ssr: false,
+  ssr: false, 
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -38,6 +38,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
+    'vue3-carousel-nuxt',
   ],
   apollo: {
     clients: {
