@@ -19,6 +19,8 @@ const seoDescription = project.seo.seo_description
 definePageMeta({
   layout: 'project',
 })
+
+const router = useRouter()
 </script>
 <template>
   <div>
@@ -34,38 +36,51 @@ definePageMeta({
       <div v-if="error">{{ error }}</div>
       <div
         v-else-if="project"
-        class="relative bg-green-accent"
+        class="relative"
       >
-        <div
-          class="flex flex-col items-center px-6 pb-6 pt-4 md:flex-row md:px-8 md:pb-16 md:pt-10"
-        >
-          <img
-            class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl lg:min-h-[500px]"
-            :src="project.image.url"
-          />
-          <div class="mt-8 w-full md:ml-8">
-            <h1
-              class="border-b border-solid border-b-green-dark pb-12 text-center text-3xl text-green-dark md:text-5xl"
-            >
-              {{ project.title }}
-            </h1>
-            <div
-              v-for="detail in projectDetails"
-              :key="detail._id"
-              class="details pt-8 text-white"
-              v-html="detail.html"
-            ></div>
+        <div class="bg-green-accent">
+          <div
+            class="mx-auto max-w-screen-xl px-8 text-right xl:-mb-16 xl:pt-12"
+          ></div>
+          <div
+            class="relative mx-auto flex max-w-screen-xl flex-col items-center px-6 pb-6 pt-4 md:flex-row md:px-8 md:pb-16 md:pt-10"
+          >
+            <img
+              class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px]"
+              :src="project.image.url"
+            />
+            <div class="mt-8 flex w-full flex-col md:ml-8">
+              <button
+                class="absolute right-8 top-10 justify-start self-start rounded-full bg-green-light px-8 py-2 text-white transition-all hover:scale-105 hover:bg-green-dark hover:transition-all"
+                @click="$router.back()"
+              >
+                Terug
+              </button>
+              <h1
+                class="border-b border-solid border-b-green-dark pb-12 text-center text-3xl text-green-dark md:text-5xl"
+              >
+                {{ project.title }}
+              </h1>
+              <div
+                v-for="detail in projectDetails"
+                :key="detail._id"
+                class="details pt-8 text-white"
+                v-html="detail.html"
+              ></div>
+            </div>
           </div>
         </div>
 
-        <div
-          class="mx-auto max-w-screen-xl items-center bg-beige px-8 py-10 md:p-16"
-        >
-          <div
-            v-for="content in projectContent"
-            :key="content._id"
-          >
-            <div v-html="content.html"></div>
+        <div class="bg-beige">
+          <div class="mx-auto max-w-screen-xl items-center">
+            <div class="mb-6 bg-beige px-8 py-10 md:py-16">
+              <div
+                v-for="content in projectContent"
+                :key="content._id"
+              >
+                <div v-html="content.html"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -80,7 +95,7 @@ definePageMeta({
 }
 
 .details li {
-  @apply bg-green-light mb-2 md:mb-6 py-2 px-4 inline-block rounded-full text-center min-w-[180px] md:min-w-0;
+  @apply border-2 border-green-dark font-medium text-green-dark mb-2 md:mb-6 py-2 px-4 inline-block text-center min-w-[180px] md:min-w-0;
 }
 
 .details li {
