@@ -147,7 +147,11 @@ const router = useRouter()
 }
 
 .carousel__icon {
-  @apply text-green-dark bg-white min-w-[36px];
+  @apply text-green-dark bg-white min-w-[36px] transition-all;
+}
+
+.carousel__icon:hover {
+  @apply text-white bg-green-dark transition-all;
 }
 
 .carousel__pagination-button:after {
