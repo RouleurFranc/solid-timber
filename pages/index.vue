@@ -5,6 +5,7 @@ import Projects from '@/components/Projects.vue'
 import Usps from '@/components/Usps.vue'
 import PageHeader from '@/components/PageHeader'
 import ImageAndText from '@/components/ImageAndText'
+import ImageCollection from '@/components/ImageCollection'
 
 const components = [
   { name: 'PageHeader', comp: PageHeader },
@@ -12,6 +13,7 @@ const components = [
   { name: 'CallToAction', comp: CallToAction },
   { name: 'ProjectCollection', comp: Projects },
   { name: 'Usps', comp: Usps },
+  { name: 'ImageCollection', comp: ImageCollection },
 ]
 
 const getComponent = (name) => {
@@ -27,6 +29,7 @@ const { data } = await useAsyncQuery(GetPageBySlug, {
 const page = data?.value?.Page
 const stack = computed(() => page?.stack)
 const { projects } = stack.value[2]
+console.log(page)
 </script>
 
 <template>

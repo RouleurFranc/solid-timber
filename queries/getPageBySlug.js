@@ -58,6 +58,14 @@ export const GetPageBySlug = gql`
             image_position
           }
         }
+        ... on ImageCollection {
+          _id
+          images {
+            _id
+            url
+            name
+          }
+        }
         ... on ProjectCollection {
           _id
           heading

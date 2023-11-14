@@ -1,0 +1,74 @@
+<script setup lang="ts">
+import { onClickOutside } from '@vueuse/core'
+
+const props = defineProps<{
+  data: any
+  homeProjects: object
+  amount: number
+  isHome: boolean
+  background: string
+}>()
+
+const data = computed(() => props.data)
+const images = data?.value?.images
+const showImageFullscreen = ref(false)
+const imageRef = ref(null)
+const imageSource = ref('')
+const imageTitle = ref('')
+
+const showImageModal = (source: string, name: string) => {
+  if (showImageFullscreen.value === false) {
+    showImageFullscreen.value = true
+  }
+  if (source) {
+    imageSource.value = source
+    imageTitle.value = name
+  }
+}
+
+onClickOutside(imageRef, () => {
+  showImageFullscreen.value = false
+})
+</script>
+<template>
+  <div class="bg-beige-light p-8 md:py-20">
+    <div class="mx-auto grid w-full max-w-screen-xl grid-cols-4 gap-2 md:gap-8">
+      <NuxtImg
+        v-for="(image, index) in images"
+        :key="index"
+        :src="image.url"
+        :alt="image.name"
+        sizes="100vw sm:200 md:320"
+        width="320px"
+        height="320px"
+        class="max-h-[320px] cursor-zoom-in items-center rounded-xl object-cover transition-all duration-200 ease-in-out hover:scale-105 hover:transition-all hover:duration-200 hover:ease-in-out md:min-h-[320px]"
+        @click="showImageModal(image.url, image.name)"
+      />
+
+      <div
+        :class="showImageFullscreen ? 'block' : 'hidden'"
+        class="fixed left-0 top-0 z-20 flex h-screen w-full flex-col overflow-hidden bg-green-dark bg-opacity-90"
+      >
+        <span
+          class="absolute right-8 top-8 text-6xl text-white transition-all hover:scale-105 hover:transition-all"
+          @click="showImageFullscreen = false"
+          >&times;</span
+        >
+        <img
+          v-if="imageSource"
+          ref="imageRef"
+          :src="imageSource"
+          sizes="100vw sm:200 md:900"
+          width="900"
+          height="600"
+          class="absolute inset-x-0 bottom-16 top-0 m-auto block max-h-[600px] w-[80%] max-w-[900px] object-cover"
+        />
+        <h3
+          class="absolute inset-x-0 bottom-16 top-auto m-auto max-w-screen-xl px-8 text-center text-2xl text-white"
+        >
+          {{ imageTitle }}
+        </h3>
+      </div>
+    </div>
+  </div>
+</template>
