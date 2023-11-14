@@ -15,17 +15,17 @@ const data = computed(() => props.data)
         />
       </div>
       <div class="mt-[-20px] max-w-[700px] px-8 pb-10 md:basis-1/2 md:p-0">
-        <h1 class="mb-4 text-3xl font-light text-white md:text-5xl lg:text-7xl">
+        <h1 class="mb-4 text-3xl font-light text-brown md:text-5xl lg:text-7xl">
           {{ data.heading }}
         </h1>
         <p
-          class="mb-8 text-base font-light leading-10 text-white md:text-lg lg:text-xl"
+          class="mb-8 text-base font-light leading-10 text-brown md:text-lg lg:text-xl"
         >
           {{ data.text }}
         </p>
         <a
           href="#"
-          class="inline-flex items-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark"
+          class="inline-flex items-center rounded-3xl bg-brown px-10 py-4 text-center font-medium text-white hover:bg-brown-dark focus:outline-none focus:ring-4 focus:ring-brown-dark"
         >
           {{ data.cta_label }}
           <svg

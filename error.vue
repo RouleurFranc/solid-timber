@@ -22,7 +22,7 @@ const handleError = () => {
         <strong>{{ error.message }}</strong>
       </p>
       <div
-        class="mx-auto mt-10 flex max-w-[400px] cursor-pointer items-center justify-center rounded-full bg-coral p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-coral-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-coral-dark"
+        class="mx-auto mt-10 flex max-w-[400px] cursor-pointer items-center justify-center rounded-full bg-brown p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-brown-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-brown-dark"
         @click="handleError"
       >
         Naar de homepage

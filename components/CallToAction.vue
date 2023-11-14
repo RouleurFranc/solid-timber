@@ -49,12 +49,12 @@ const ctaContent = data.value.content
                 :class="
                   element.image_position === 'Right' ? 'md:order-last' : ''
                 "
-                class="transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/4"
+                class="transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/2"
               >
                 <NuxtImg
                   :src="element.image[0]?.url"
                   sizes="100vw sm:50vw md:900px"
-                  class="object-cover"
+                  class="object-cover md:w-full max-w-[240px] rounded-xl"
                   :alt="element.image[0].name"
                 />
               </div>

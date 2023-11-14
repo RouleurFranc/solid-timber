@@ -1,5 +1,5 @@
 <template>
-  <footer class="z-0 bg-gradient-to-b from-coral to-coral-dark align-bottom">
+  <footer class="z-0 bg-brown-dark align-bottom">
     <div
       class="relative mx-auto max-w-screen-xl items-center p-8 md:pb-16 md:pt-20 xl:gap-16"
     >

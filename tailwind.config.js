@@ -26,6 +26,8 @@ module.exports = {
         green: '#004b2e',
         'green-dark': '#003e39',
         'green-accent': '#dde3c3',
+        brown: '#d1bda5',
+        'brown-dark': '#b79872',
         coral: '#cd4631',
         'coral-old': '#f48668',
         'coral-dark': '#db785d',

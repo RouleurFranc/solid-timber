@@ -46,7 +46,7 @@ const menuItems = data?.value?.MenuItems?.items
                 : 'close'
             "
             type="button"
-            class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-coral p-2 text-sm text-white transition-all hover:scale-110 hover:bg-coral-dark hover:transition-all focus:outline-none md:h-16 md:w-16"
+            class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brown p-2 text-sm text-white transition-all hover:scale-110 hover:bg-brown-dark hover:transition-all focus:outline-none md:h-16 md:w-16"
           >
             <span class="sr-only">Open menu</span>
             <div
@@ -88,7 +88,7 @@ const menuItems = data?.value?.MenuItems?.items
                   v-if="menuItem._slug"
                   :title="menuItem.title"
                   :to="`/${menuItem._slug}`"
-                  class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-coral lg:text-6xl xl:mb-16"
+                  class="mb-8 block text-2xl text-white md:mb-10 md:text-5xl md:hover:text-brown lg:text-6xl xl:mb-16"
                   @click="showMenu = !showMenu"
                   >{{ menuItem.title }}</NuxtLink
                 >
@@ -151,7 +151,7 @@ const menuItems = data?.value?.MenuItems?.items
               <a
                 href="#"
                 title="Neem contact met ons op"
-                class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-coral px-10 py-4 text-center font-medium text-white hover:bg-coral-dark focus:outline-none focus:ring-4 focus:ring-coral-dark md:mt-10"
+                class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-brown px-10 py-4 text-center font-medium text-white hover:bg-brown-dark focus:outline-none focus:ring-4 focus:ring-brown-dark md:mt-10"
               >
                 Contact
                 <svg
