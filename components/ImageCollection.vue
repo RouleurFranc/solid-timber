@@ -39,8 +39,9 @@ onClickOutside(imageRef, () => {
         :src="image.url"
         :alt="image.name"
         sizes="100vw sm:200 md:320"
-        width="320px"
-        height="320px"
+        width="320"
+        height="320"
+        loading="lazy"
         class="max-h-[320px] cursor-zoom-in items-center rounded-xl object-cover transition-all duration-200 ease-in-out hover:scale-105 hover:transition-all hover:duration-200 hover:ease-in-out md:min-h-[320px]"
         @click="showImageModal(image.url, image.name)"
       />
@@ -54,14 +55,16 @@ onClickOutside(imageRef, () => {
           @click="showImageFullscreen = false"
           >&times;</span
         >
-        <img
+        <NuxtImg
           v-if="imageSource"
           ref="imageRef"
           :src="imageSource"
+          :alt="imageTitle"
           sizes="100vw sm:200 md:900"
           width="900"
           height="600"
           class="absolute inset-x-0 bottom-16 top-0 m-auto block max-h-[600px] w-[80%] max-w-[900px] object-cover"
+          loading="lazy"
         />
         <h3
           class="absolute inset-x-0 bottom-16 top-auto m-auto max-w-screen-xl px-8 text-center text-2xl text-white"

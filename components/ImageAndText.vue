@@ -4,7 +4,6 @@ const props = defineProps<{
 }>()
 
 const data = computed(() => props.data)
-console.log(data.value)
 </script>
 <template>
   <section class="relative bg-beige">
