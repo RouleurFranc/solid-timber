@@ -50,6 +50,7 @@ const router = useRouter()
               class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px]"
               :src="project.image.url"
               :alt="project.image.name"
+              loading="lazy"
             />
             <div class="mt-8 flex w-full flex-col md:ml-8">
               <button
@@ -93,6 +94,7 @@ const router = useRouter()
                 sizes="100vw sm:50vw md:700px"
                 width="1000"
                 height="600"
+                loading="lazy"
               />
             </Slide>
 

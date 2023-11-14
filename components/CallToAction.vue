@@ -56,6 +56,7 @@ const ctaContent = data.value.content
                   sizes="100vw sm:50vw md:900px"
                   class="object-cover md:w-full max-w-[240px] rounded-xl"
                   :alt="element.image[0].name"
+                  loading="lazy"
                 />
               </div>
 
