@@ -4,6 +4,7 @@ const props = defineProps<{
 }>()
 
 const data = computed(() => props.data)
+console.log(data.value)
 </script>
 <template>
   <section class="relative bg-beige">
@@ -14,20 +15,20 @@ const data = computed(() => props.data)
         {{ data.title }}
       </h2>
       <div
-        class="relative mx-auto flex max-w-screen-xl flex-col items-center gap-8 md:grid md:grid-cols-1 xl:gap-16"
+        class="relative mx-auto flex max-w-screen-xl flex-col items-center md:flex-row md:justify-around"
       >
         <NuxtImg
           :class="data.image_position === 'Right' ? 'md:order-last' : ''"
-          class="z-10 h-80 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:absolute md:right-0 md:top-0 md:h-144"
+          class="z-10 h-80 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:h-96 lg:h-[46rem]"
           :src="data.image[0]?.url"
           :alt="data.image[0]?.name"
           sizes="100vw sm:50vw md:520px"
           loading="lazy"
         />
         <div
-          class="-mt-16 bg-green-dark p-8 pt-16 text-white md:mt-4 md:max-w-[65%] md:p-20 md:pr-32 lg:pr-40"
+          class="-mt-16 rounded-l-xl bg-green-dark p-8 pt-1 text-brown md:mt-4 md:max-w-[65%] md:p-20 md:pr-32 lg:py-32 lg:pr-24"
         >
-          <p class="mb-6 text-lg font-light !leading-8 lg:text-xl">
+          <p class="mb-6 text-lg font-semibold !leading-8 lg:text-xl">
             {{ data.text }}
           </p>
           <p
