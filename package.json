@@ -51,7 +51,12 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.6",
+    "@formkit/i18n": "^1.3.0",
+    "@formkit/icons": "^1.3.0",
     "@formkit/nuxt": "^1.3.0",
+    "@formkit/tailwindcss": "^1.3.0",
+    "@formkit/themes": "^1.3.0",
+    "@formkit/vue": "^1.3.0",
     "@gtm-support/vue-gtm": "^2.2.0",
     "@vueuse/core": "^10.5.0",
     "@vueuse/nuxt": "^10.5.0",

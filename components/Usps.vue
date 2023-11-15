@@ -44,7 +44,7 @@ const uspItems = data?.value?.Usps?.items
           bouwproject.
         </div>
         <a
-          href="#"
+          href="/contact"
           class="mx-auto inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-brown px-10 py-4 text-center font-medium text-white hover:bg-brown-dark focus:outline-none focus:ring-4 focus:ring-brown-dark"
         >
           Contact

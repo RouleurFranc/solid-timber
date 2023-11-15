@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     url: 'https://solidtimber.nl',
     name: 'Solid Timber',
   },
-  ssr: false, 
+  ssr: false,
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -39,6 +39,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     'nuxt-simple-robots',
     'vue3-carousel-nuxt',
+    '@formkit/nuxt',
   ],
   apollo: {
     clients: {
