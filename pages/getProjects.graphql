@@ -1,5 +1,5 @@
 query GET_PROJECTS($where: ProjectWhereInput, $limit: Int, $skip: Int) {
-  Projects(where: $where, limit: $limit, skip: $skip, sort: publish_on_ASC) {
+  Projects(where: $where, limit: $limit, skip: $skip, sort: publish_on_DESC) {
     items {
       _id
       _slug

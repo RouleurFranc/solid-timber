@@ -5,6 +5,7 @@ query GET_PROJECT($slug: String) {
     title
     intro
     tag
+    attributes
     image {
       _id
       url

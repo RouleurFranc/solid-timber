@@ -44,10 +44,10 @@ const router = useRouter()
             class="mx-auto max-w-screen-xl px-8 text-right xl:-mb-16 xl:pt-12"
           ></div>
           <div
-            class="relative mx-auto flex max-w-screen-xl flex-col items-center px-6 pb-6 pt-4 md:flex-row md:px-8 md:pb-16 md:pt-10"
+            class="relative mx-auto flex max-w-screen-xl flex-col items-center px-6 pb-6 pt-4 md:flex-row md:px-8 md:pb-16 md:pt-10 xl:pb-24"
           >
             <NuxtImg
-              class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px] xl:min-h-[600px]"
+              class="block max-w-[800px] basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px] xl:min-h-[600px]"
               :src="project.image.url"
               :alt="project.image.name"
               loading="lazy"
@@ -71,7 +71,7 @@ const router = useRouter()
                 v-html="detail.html"
               ></div>
               <div
-                class="p-8 text-green-dark text-center text-lg"
+                class="p-8 text-center text-lg text-green-dark"
                 v-html="project.intro"
               ></div>
             </div>
@@ -109,24 +109,47 @@ const router = useRouter()
           </Carousel>
         </div>
         <div class="bg-beige">
-          <div class="mx-auto max-w-screen-xl items-center">
-            <div class="mb-6 bg-beige px-8 py-10 md:py-16">
+          <div
+            :class="
+              project.attributes
+                ? 'grid grid-cols-2 items-center justify-between gap-8'
+                : ''
+            "
+            class="mx-auto max-w-screen-xl p-8 py-10 md:gap-20 md:py-20 lg:py-24 xl:py-32"
+          >
+            <div>
               <div
                 v-for="content in projectContent"
                 :key="content._id"
+                class="text-lg leading-8 text-green-dark md:basis-1/2"
               >
                 <div v-html="content.html"></div>
               </div>
+            </div>
+            <div
+              v-if="project.attributes"
+              class="attributes border-y border-solid border-b-green-dark p-8"
+            >
+              <div v-html="project.attributes" />
             </div>
           </div>
         </div>
       </div>
       <p v-if="!project">Er zijn op dit moment geen actuele projecten.</p>
+      <Usps />
     </section>
   </div>
 </template>
 
 <style>
+.attributes div ul li {
+  @apply grid grid-cols-2 gap-0;
+}
+
+.attributes strong {
+  @apply text-green-light;
+}
+
 .details ul {
   @apply flex flex-col md:flex-row justify-center items-center md:justify-around;
 }
