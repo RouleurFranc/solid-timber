@@ -47,7 +47,7 @@ const router = useRouter()
             class="relative mx-auto flex max-w-screen-xl flex-col items-center px-6 pb-6 pt-4 md:flex-row md:px-8 md:pb-16 md:pt-10"
           >
             <NuxtImg
-              class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px]"
+              class="block basis-1/2 rounded-t-xl object-cover md:rounded-l-xl md:rounded-tr-none lg:min-h-[500px] xl:min-h-[600px]"
               :src="project.image.url"
               :alt="project.image.name"
               loading="lazy"
@@ -60,7 +60,7 @@ const router = useRouter()
                 Terug
               </button>
               <h1
-                class="border-b border-solid border-b-green-dark pb-12 text-center text-3xl text-green-dark md:text-5xl"
+                class="mt-8 border-b border-solid border-b-green-dark pb-12 text-center text-3xl text-green-dark md:text-5xl"
               >
                 {{ project.title }}
               </h1>
@@ -69,6 +69,10 @@ const router = useRouter()
                 :key="detail._id"
                 class="details pt-8 text-white"
                 v-html="detail.html"
+              ></div>
+              <div
+                class="p-8 text-green-dark text-center text-lg"
+                v-html="project.intro"
               ></div>
             </div>
           </div>
@@ -81,7 +85,7 @@ const router = useRouter()
           <Carousel
             :items-to-show="1"
             :wrap-around="true"
-            class="mx-auto max-w-screen-lg"
+            class="mx-auto max-w-[1200px]"
           >
             <Slide
               v-for="(slide, i) in imageSlider"
@@ -89,7 +93,7 @@ const router = useRouter()
             >
               <NuxtImg
                 :src="imageSlider[i].url"
-                class="carousel__item object-cover lg:min-w-[800px]"
+                class="carousel__item w-full object-cover"
                 :alt="imageSlider[i].name"
                 sizes="100vw sm:50vw md:700px"
                 width="1000"

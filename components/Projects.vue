@@ -46,7 +46,7 @@ const projects = homeProjects.value
             class="flex flex-col rounded-xl bg-white transition-all duration-500 ease-in-out hover:scale-[0.98] hover:transition-all hover:duration-500"
           >
             <NuxtImg
-              class="rounded-t-xl"
+              class="max-h-[270px] rounded-t-xl"
               :src="project.image?.url"
               :alt="project.image?.name"
               sizes="100vw md:50vw lg:430px"

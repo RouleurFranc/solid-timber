@@ -3,6 +3,7 @@ query GET_PROJECT($slug: String) {
     _id
     _slug
     title
+    intro
     tag
     image {
       _id
