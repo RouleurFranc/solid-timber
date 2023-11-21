@@ -60,7 +60,7 @@ const projects = homeProjects.value
                 <h2 class="text-lg md:text-2xl">{{ project.title }}</h2>
               </div>
               <div
-                class="inline-flex items-center rounded-full bg-brown p-2 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-brown-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-brown-dark"
+                class="inline-flex items-center rounded-full bg-pink p-2 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-pink-light hover:transition-all focus:outline-none focus:ring-4 focus:ring-pink-light"
               >
                 <svg
                   aria-hidden="true"
@@ -81,7 +81,7 @@ const projects = homeProjects.value
         </div>
         <NuxtLink
           :class="isHome ? `flex` : `hidden`"
-          class="mx-auto mt-10 max-w-[300px] items-center justify-center rounded-full bg-brown p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-brown-dark hover:transition-all focus:outline-none focus:ring-4 focus:ring-brown-dark md:py-4 md:text-lg"
+          class="mx-auto mt-10 max-w-[300px] items-center justify-center rounded-full bg-pink p-4 text-center font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-pink-light hover:transition-all focus:outline-none focus:ring-4 focus:ring-pink-light md:py-4 md:text-lg"
           to="/projects"
           title="Al onze projecten"
           >Al onze projecten

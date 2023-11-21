@@ -68,11 +68,6 @@ onClickOutside(imageRef, () => {
           class="absolute inset-x-0 bottom-16 top-0 m-auto block max-h-[600px] w-[80%] max-w-[900px] object-cover"
           loading="lazy"
         />
-        <h3
-          class="absolute inset-x-0 bottom-16 top-auto m-auto max-w-screen-xl px-8 text-center text-2xl text-white"
-        >
-          {{ imageTitle }}
-        </h3>
       </div>
     </div>
   </div>
