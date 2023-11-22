@@ -1,4 +1,12 @@
-export default defineNuxtConfig({
+import { generateClasses } from '@formkit/themes'
+import formKitTailwind from '@formkit/themes/tailwindcss'
+import solidTimerTheme from './tailwind-theme.js'
+
+export default {
+  ui: {
+    plugins: [formKitTailwind],
+    content: ['./tailwind-theme.js'],
+  },
   app: {
     head: {
       title: 'Voor elke bouwopgave een oplossing in hout!',
@@ -63,7 +71,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  classes: generateClasses(solidTimerTheme),
   build: {
     transpile: ['tslib'],
   },
-})
+}
