@@ -1,5 +1,39 @@
-<script setup lang="ts">
-console.log('test')
+<script lang="ts">
+const config = useRuntimeConfig()
+const WEB3FORMS_ACCESS_KEY = config.public.webformToken
+
+export default {
+  data() {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: '',
+    }
+  },
+  methods: {
+    async submitForm() {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          firstName: this.firstName,
+          lastName: this.lastName,
+          email: this.email,
+          message: this.message,
+        }),
+      })
+      const result = await response.json()
+      if (result.success) {
+        console.log(result)
+      }
+    },
+  },
+}
 </script>
 <template>
   <div>
@@ -17,13 +51,54 @@ console.log('test')
         <h1 class="mb-10 text-center text-4xl text-green-dark">Contact</h1>
 
         <FormKit
-          id="name"
-          type="text"
-          name="name"
-          label="Name"
-          help="Your full name"
-          placeholder="“Jon Doe”"
-        />
+          type="form"
+          submit-label="Contact"
+          @submit="submitForm"
+        >
+          <FormKit
+            v-model="firstName"
+            outer-class="required"
+            type="text"
+            label="Voornaam"
+            name="firstName"
+            validation="required|length:2,32|matches:/^[\u00C0-\u017Fa-zA-Z\s'-]*$/"
+            placeholder="Voornaam”"
+          />
+
+          <FormKit
+            v-model="lastName"
+            outer-class="required"
+            type="text"
+            label="Achternaam"
+            name="lastName"
+            placeholder="Achternaam *"
+            validation="length:2,32|required|matches:/^[\u00C0-\u017Fa-zA-Z\s'-]*$/"
+          />
+
+          <FormKit
+            id="email"
+            v-model="email"
+            outer-class="required"
+            type="email"
+            label="E-mailadres"
+            name="email"
+            placeholder="E-mailadres *"
+            validation="required|email"
+            :delay="1500"
+          />
+          <FormKit
+            v-model="message"
+            type="textarea"
+            name="message"
+            label="Uw bericht"
+            placeholder="Ambitie in houtbouw? Of wilt u meer informatie? Laat het ons weten!."
+            validation="length:0,220"
+            validation-visibility="live"
+            :validation-messages="{
+              length: 'Instructions cannot be more than 220 characters.',
+            }"
+          />
+        </FormKit>
       </div>
     </section>
   </div>

@@ -59,6 +59,7 @@ export default {
   runtimeConfig: {
     public: {
       PREPR_ACCESS_TOKEN: process.env.PREPR_ACCESS_TOKEN,
+      webformToken: process.env.WEB3_FORM_TOKEN,
     },
   },
   css: ['~/assets/css/main.css'],
