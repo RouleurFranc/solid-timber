@@ -64,7 +64,7 @@ const showContactButton = computed(() => props.contactButton)
       :class="showContactButton ? 'block' : 'hidden'"
       href="/contact"
       title="Neem contact met ons op"
-      class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-pink px-10 py-4 text-center font-medium text-white hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light md:mt-10"
+      class="mt-6 inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-pink px-10 py-4 text-center font-semibold text-licorice hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light md:mt-10"
     >
       Contact
       <svg

@@ -50,16 +50,16 @@ const menuItems = data?.value?.MenuItems?.items
               viewbox="0 0 60 40"
             >
               <span
-                class="top-[5px] h-[3px] bg-white md:top-[7px] md:h-1"
+                class="top-[5px] h-[3px] bg-licorice md:top-[7px] md:h-1"
               ></span>
               <span
-                class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
+                class="top-[16px] h-[3px] bg-licorice md:top-[18px] md:h-1"
               ></span>
               <span
-                class="top-[16px] h-[3px] bg-white md:top-[18px] md:h-1"
+                class="top-[16px] h-[3px] bg-licorice md:top-[18px] md:h-1"
               ></span>
               <span
-                class="top-[27px] h-[3px] bg-white md:top-[29px] md:h-1"
+                class="top-[27px] h-[3px] bg-licorice md:top-[29px] md:h-1"
               ></span>
             </div>
           </button>

@@ -25,7 +25,7 @@ const data = computed(() => props.data)
         </p>
         <a
           href="#"
-          class="inline-flex items-center rounded-3xl bg-pink px-10 py-4 text-center font-medium text-white hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light"
+          class="inline-flex items-center rounded-3xl bg-pink px-10 py-4 text-center font-semibold text-licorice hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light"
         >
           {{ data.cta_label }}
           <svg

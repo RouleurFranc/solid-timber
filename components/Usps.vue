@@ -45,7 +45,7 @@ const uspItems = data?.value?.Usps?.items
         </div>
         <a
           href="/contact"
-          class="mx-auto inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-pink px-10 py-4 text-center font-medium text-white hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light"
+          class="mx-auto inline-flex max-w-[200px] items-center justify-center rounded-3xl bg-pink px-10 py-4 text-center font-semibold text-licorice hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light"
         >
           Contact
           <svg
