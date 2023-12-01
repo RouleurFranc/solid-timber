@@ -43,6 +43,7 @@ const { projects } = stack.value[2]
       :amount="9"
       :is-home="true"
       background="green-light"
+      :image-small="false"
     ></component>
     <Usps />
   </div>

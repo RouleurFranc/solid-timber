@@ -47,7 +47,7 @@ const showContactButton = computed(() => props.contactButton)
           size="40"
         />
       </NuxtLink>
-      <NuxtLink
+      <!-- <NuxtLink
         to="https://twitter.com/solidtimbernl"
         aria-label="Solid Timber twitter"
         title="Solid Timber twitter"
@@ -58,7 +58,7 @@ const showContactButton = computed(() => props.contactButton)
           class="text-white transition-all hover:opacity-80 hover:transition-all"
           size="30"
         />
-      </NuxtLink>
+      </NuxtLink> -->
     </div>
     <a
       :class="showContactButton ? 'block' : 'hidden'"

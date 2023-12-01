@@ -1,17 +1,26 @@
-<script setup>
-const props = defineProps(['data'])
+<script setup lang="ts">
+const props = defineProps<{
+  data: any
+  imageSmall: boolean
+}>()
+
 const data = computed(() => props.data)
+const image = data.value?.image[0]
 </script>
 <template>
   <section class="relative flex items-center justify-center bg-green-dark">
     <div
-      class="flex flex-col items-center justify-between pt-4 md:flex-row md:pt-10"
+      class="flex flex-col items-center justify-between py-4 md:flex-row md:pt-10"
     >
-      <div class="mask1 mx-auto md:mr-8 md:basis-1/2">
+      <div
+        :class="imageSmall ? 'mask-small' : null"
+        class="mask1 mx-auto md:mr-8 md:basis-1/2"
+      >
         <img
+          v-if="image.url"
           class="max-h-[360px] md:max-h-[750px]"
-          :src="data.image[0]?.url"
-          :alt="data.image[0].name"
+          :src="image.url"
+          :alt="image.name"
         />
       </div>
       <div class="mt-[-20px] max-w-[700px] px-8 pb-10 md:basis-1/2 md:p-0">
@@ -19,12 +28,14 @@ const data = computed(() => props.data)
           {{ data.heading }}
         </h1>
         <p
+          v-if="data.text"
           class="mb-8 text-base font-light leading-10 text-brown md:text-lg lg:text-xl"
         >
           {{ data.text }}
         </p>
         <a
-          href="#"
+          v-if="data.cta_label"
+          :href="data.cta_url"
           class="inline-flex items-center rounded-3xl bg-pink px-10 py-4 text-center font-semibold text-licorice hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light"
         >
           {{ data.cta_label }}
@@ -61,6 +72,11 @@ const data = computed(() => props.data)
   .mask1 {
     -webkit-mask-size: 90%;
     mask-size: 90%;
+  }
+
+  .mask1.mask-small {
+    -webkit-mask-size: 75%;
+    mask-size: 75%;
   }
 }
 </style>

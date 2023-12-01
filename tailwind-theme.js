@@ -4,12 +4,12 @@
 export default {
   // Global styles apply to _all_ inputs with matching section keys
   global: {
-    fieldset: 'border border-gray-400 rounded px-2 pb-1',
+    fieldset: 'border rounded border-brown-dark px-2 pb-1',
     help: 'text-xs text-gray-500',
     inner:
-      'formkit-disabled:bg-gray-200 formkit-disabled:cursor-not-allowed formkit-disabled:pointer-events-none',
+      'formkit-disabled:bg-gray-200 border border-brown-dark formkit-disabled:cursor-not-allowed formkit-disabled:pointer-events-none',
     input:
-      'appearance-none bg-transparent focus:outline-none focus:ring-0 focus:shadow-none',
+      'appearance-none bg-white focus:outline-none focus:ring-0 focus:shadow-none',
     label: 'block mb-1 font-bold text-sm',
     legend: 'font-bold text-sm',
     loaderIcon: 'inline-flex items-center w-4 text-gray-600 animate-spin',
@@ -37,20 +37,20 @@ export default {
   },
   'family:button': {
     input:
-      '$reset inline-flex items-center bg-green-light text-white text-sm font-normal py-3 px-6 rounded focus-visible:outline-2 focus-visible:outline-green-light focus-visible:outline-offset-2 formkit-disabled:bg-gray-400 formkit-loading:before:w-4 formkit-loading:before:h-4 formkit-loading:before:mr-2 formkit-loading:before:border formkit-loading:before:border-2 formkit-loading:before:border-r-transparent formkit-loading:before:rounded-3xl formkit-loading:before:border-white formkit-loading:before:animate-spin',
+      '$reset inline-flex items-center bg-green-light text-white text-sm font-normal py-3 px-6 focus-visible:outline-2 focus-visible:outline-green-light focus-visible:outline-offset-2 formkit-disabled:bg-gray-400 formkit-loading:before:w-4 formkit-loading:before:h-4 formkit-loading:before:mr-2 formkit-loading:before:border formkit-loading:before:border-2 formkit-loading:before:border-r-transparent formkit-loading:before:rounded-3xl formkit-loading:before:border-white formkit-loading:before:animate-spin',
     wrapper: 'mb-1',
     prefixIcon: '$reset block w-4 -ml-2 mr-2 stretch',
     suffixIcon: '$reset block w-4 ml-2 stretch',
   },
   'family:dropdown': {
     dropdownWrapper:
-      'my-2 w-full shadow-lg rounded [&::-webkit-scrollbar]:hidden',
+      'my-2 w-full shadow-lg [&::-webkit-scrollbar]:hidden',
     emptyMessageInner:
       'flex items-center justify-center text-sm p-2 text-center w-full text-gray-500 [&>span]:mr-3 [&>span]:ml-0',
     inner:
-      'relative flex ring-1 ring-gray-400 focus-within:ring-green-accent focus-within:ring-2 rounded mb-2 formkit-disabled:focus-within:ring-gray-400 formkit-disabled:focus-within:ring-1 [&>span:first-child]:focus-within:text-green-accent',
+      'relative flex ring-1 ring-gray-400 focus-within:ring-green-accent focus-within:ring-2 mb-2 formkit-disabled:focus-within:ring-gray-400 formkit-disabled:focus-within:ring-1 [&>span:first-child]:focus-within:text-green-accent',
     input: 'w-full px-3 py-2',
-    listbox: 'bg-white shadow-lg rounded overflow-hidden',
+    listbox: 'bg-white shadow-lg overflow-hidden',
     listboxButton: 'flex w-12 self-stretch justify-center mx-auto',
     listitem:
       'pl-7 relative hover:bg-gray-300 data-[is-active="true"]:bg-gray-300 aria-selected:bg-green-light aria-selected:text-white data-[is-active="true"]:aria-selected:bg-green-light data-[is-active="true"]:aria-selected:bg-green-dark',
@@ -69,13 +69,13 @@ export default {
   },
   'family:text': {
     inner:
-      'flex items-centerc ring-1 ring-gray-400 focus-within:ring-green-accent focus-within:ring-2 [&>label:first-child]:focus-within:text-green-accent rounded mb-1',
+      'flex items-center focus-within:ring-green-accent focus-within:ring-2 [&>label:first-child]:focus-within:text-green-accent mb-1',
     input:
       'w-full px-3 py-2 border-none text-base text-gray-700 placeholder-gray-400',
   },
   'family:date': {
     inner:
-      'flex items-center ring-1 ring-gray-400 focus-within:ring-green-accent focus-within:ring-2 [&>label:first-child]:focus-within:text-green-accent rounded mb-1',
+      'flex items-center focus-within:ring-green-accent focus-within:ring-2 [&>label:first-child]:focus-within:text-green-accent rounded mb-1',
     input: 'w-full px-3 py-2 border-none text-gray-700 placeholder-gray-400',
   },
 
@@ -84,7 +84,7 @@ export default {
     inner:
       'flex max-w-[5.5em] w-full formkit-prefix-icon:max-w-[7.5em] formkit-suffix-icon:formkit-prefix-icon:max-w-[10em]',
     input:
-      '$reset appearance-none w-full cursor-pointer border-none rounded p-0 m-0 bg-transparent [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-none',
+      '$reset appearance-none w-full cursor-pointer border-none p-0 m-0 bg-white [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-none',
     suffixIcon: 'min-w-[2.5em] pr-0 pl-0 m-auto',
   },
   file: {
@@ -117,7 +117,7 @@ export default {
   },
   select: {
     inner:
-      'flex relative items-center rounded mb-1 ring-1 ring-gray-400 focus-within:ring-green-accent focus-within:ring-2 [&>span:first-child]:focus-within:text-green-accent',
+      'flex relative items-center mb-1 focus-within:ring-green-accent focus-within:ring-2 [&>span:first-child]:focus-within:text-green-accent',
     input:
       'w-full pl-3 pr-8 py-2 border-none text-base text-gray-700 placeholder-gray-400 formkit-multiple:p-0 data-[placeholder="true"]:text-gray-400 formkit-multiple:data-[placeholder="true"]:text-inherit',
     selectIcon:
@@ -126,7 +126,7 @@ export default {
   },
   textarea: {
     inner:
-      'flex rounded mb-1 ring-1 ring-gray-400 focus-within:ring-green-accent [&>label:first-child]:focus-within:text-green-accent',
+      'flex mb-1 focus-within:ring-green-accent [&>label:first-child]:focus-within:text-green-accent',
     input:
       'block w-full h-32 px-3 py-3 border-none text-base text-gray-700 placeholder-gray-400 focus:shadow-outline',
   },

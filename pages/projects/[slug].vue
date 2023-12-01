@@ -141,7 +141,7 @@ const router = useRouter()
   </div>
 </template>
 
-<style>
+<style type="text/css" scoped>
 .attributes div ul li {
   @apply grid grid-cols-2 gap-0;
 }

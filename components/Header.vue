@@ -26,7 +26,7 @@ const menuItems = data?.value?.MenuItems?.items
         >
           <img
             src="../assets/images/logo-solidtimber-wit.png"
-            class="ml-2 h-14 md:h-24 -mt-2"
+            class="-mt-2 ml-2 h-14 md:h-24"
             alt="Solid Timber Logo"
           />
         </a>

@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { reset } from '@formkit/core'
+import GET_CONTACT from './getContact.graphql'
+
+const { data: pageData } = await useAsyncQuery(GET_CONTACT, {})
+const contactPageData = pageData?.value?.Page
+const seoSlug = 'contact'
+const pageComponents = contactPageData?.stack
+const pageHeader = pageComponents[0]
 
 const config = useRuntimeConfig()
 const showSuccess = ref(false)
@@ -44,93 +51,98 @@ const submitForm = async () => {
 </script>
 <template>
   <div>
-    <head>
-      <Title>Ambitie in Houtbouw? Neem contact op! - Solid Timber</Title>
-      <Meta
-        name="description"
-        content="Ambitie in houtbouw? Neem dan contact met ons op! Dan kijken we mee naar de kansen in uw bouwproject."
-      />
-    </head>
-    <section class="relative bg-beige-light">
-      <div
-        class="mx-auto max-w-screen-lg px-6 pb-6 pt-4 md:px-8 md:pb-16 md:pt-10 xl:py-24"
+    <Metadata :seo-slug="seoSlug"></Metadata>
+    <PageHeader
+      :image-small="true"
+      :data="pageHeader"
+    />
+    <div class="mx-auto flex max-w-screen-xl flex-col md:flex-row">
+      <section
+        class="relative px-6 pb-6 pt-4 md:basis-1/2 md:px-8 md:pb-16 md:pt-10 xl:py-16"
       >
-        <h1 class="mb-10 text-center text-4xl text-green-dark md:text-5xl">
-          Contact
-        </h1>
-        <div class="flex flex-col md:flex-row">
-          <div class="mr-12 md:mr-16">
+        <div class="pr-8">
+          <FormKit
+            id="signupForm"
+            type="form"
+            submit-label="Contact"
+            @submit="submitForm"
+          >
+            <h2 class="text-green-dark">
+              Ambitie in Houtbouw? Of wilt u meer informatie?
+            </h2>
+            <input
+              type="hidden"
+              name="from_name"
+              value="Solid Timber contact"
+            />
             <FormKit
-              id="signupForm"
-              type="form"
-              submit-label="Contact"
-              @submit="submitForm"
-            >
-              <h2>Ambitie in Houtbouw? Of wilt u meer informatie?</h2>
-              <input
-                type="hidden"
-                name="from_name"
-                value="Solid Timber contact"
-              />
-              <FormKit
-                v-model="formData.firstName"
-                outer-class="required"
-                type="text"
-                label="Voornaam"
-                name="firstName"
-                validation="required|length:2,32|matches:/^[\u00C0-\u017Fa-zA-Z\s'-]*$/"
-                placeholder="Voornaam *"
-              />
+              v-model="formData.firstName"
+              outer-class="required"
+              type="text"
+              label="Voornaam"
+              name="firstName"
+              validation="required|length:2,32|matches:/^[\u00C0-\u017Fa-zA-Z\s'-]*$/"
+              placeholder="Voornaam *"
+            />
 
-              <FormKit
-                v-model="formData.lastName"
-                outer-class="required"
-                type="text"
-                label="Achternaam"
-                name="lastName"
-                placeholder="Achternaam *"
-                validation="length:2,32|required|matches:/^[\u00C0-\u017Fa-zA-Z\s'-]*$/"
-              />
+            <FormKit
+              v-model="formData.lastName"
+              outer-class="required"
+              type="text"
+              label="Achternaam"
+              name="lastName"
+              placeholder="Achternaam *"
+              validation="length:2,32|required|matches:/^[\u00C0-\u017Fa-zA-Z\s'-]*$/"
+            />
 
-              <FormKit
-                id="email"
-                v-model="formData.email"
-                outer-class="required"
-                type="email"
-                label="E-mailadres"
-                name="email"
-                placeholder="E-mailadres *"
-                validation="required|email"
-                :delay="1500"
-              />
-              <FormKit
-                v-model="formData.message"
-                type="textarea"
-                name="message"
-                label="Uw bericht"
-                placeholder="Ambitie in houtbouw? Of wilt u meer informatie? Laat het ons weten!."
-                validation="length:0,220"
-                validation-visibility="live"
-                :validation-messages="{
-                  length: 'Instructions cannot be more than 220 characters.',
-                }"
-              />
-            </FormKit>
-            <div
-              v-if="showSuccess"
-              class="my-4 flex items-center py-2 font-semibold text-[#198754]"
-            >
-              <Icon
-                name="material-symbols:check-circle"
-                class="mr-1 transition-all hover:opacity-80 hover:transition-all"
-                size="26"
-              />
-              Het contactformulier is succesvol verzonden!
-            </div>
+            <FormKit
+              id="email"
+              v-model="formData.email"
+              outer-class="required"
+              type="email"
+              label="E-mailadres"
+              name="email"
+              placeholder="E-mailadres *"
+              validation="required|email"
+              :delay="1500"
+            />
+            <FormKit
+              v-model="formData.message"
+              type="textarea"
+              name="message"
+              label="Uw bericht"
+              placeholder="Ambitie in houtbouw? Of wilt u meer informatie? Laat het ons weten!"
+              validation="length:0,500"
+              validation-visibility="live"
+              :validation-messages="{
+                length: 'Uw bericht mag korter zijn dan 500 tekens.',
+              }"
+            />
+          </FormKit>
+          <div
+            v-if="showSuccess"
+            class="my-4 flex items-center py-2 font-semibold text-[#198754]"
+          >
+            <Icon
+              name="material-symbols:check-circle"
+              class="mr-1 transition-all hover:opacity-80 hover:transition-all"
+              size="26"
+            />
+            Het contactformulier is succesvol verzonden!
           </div>
-          <Social :contact-button="false" />
         </div>
-      </div>
-    </section>
+      </section>
+      <section
+        class="relative flex flex-col bg-gray px-6 pb-6 pt-4 after:absolute after:-right-full after:top-0 after:h-full after:w-full after:bg-gray md:basis-1/2 md:px-8 md:pb-16 md:pt-10 xl:py-24"
+      >
+        <Social :contact-button="false" />
+        <div class="my-4 flex flex-col">
+          <small>Solid Timber BV</small>
+          <small>KvK: 75331020</small>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
+
+<style type="text/css" scoped></style>
