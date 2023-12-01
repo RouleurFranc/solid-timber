@@ -6,20 +6,26 @@ query GET_CONTACT {
 		stack { 
             __typename
             ... on PageHeader {
-            _id
-            heading
-            image {
-                _id
-                url
+				_id
+				heading
+				image {
+					_id
+					url
+				}
+				text
+				cta_label
+				cta_url
             }
-            text
-            cta_label
-            cta_url
-            }
+			... on ImageCollection {
+				_id
+				images {
+							
+					url
+					_id
+					name
+				}
+			}
         }
-		content { 
-			__typename
-		}
 		seo { 
 			_id
 			seo_title

@@ -6,7 +6,9 @@ const { data: pageData } = await useAsyncQuery(GET_CONTACT, {})
 const contactPageData = pageData?.value?.Page
 const seoSlug = 'contact'
 const pageComponents = contactPageData?.stack
+
 const pageHeader = pageComponents[0]
+const imageCollection = pageComponents[1]
 
 const config = useRuntimeConfig()
 const showSuccess = ref(false)
@@ -58,7 +60,7 @@ const submitForm = async () => {
     />
     <div class="mx-auto flex max-w-screen-xl flex-col md:flex-row">
       <section
-        class="relative px-6 pb-6 pt-4 md:basis-1/2 md:px-8 md:pb-16 md:pt-10 xl:py-16"
+        class="relative px-6 pb-6 pt-4 md:basis-1/2 md:px-8 md:pb-16 md:pt-10 xl:py-24"
       >
         <div class="pr-8">
           <FormKit
@@ -142,6 +144,11 @@ const submitForm = async () => {
         </div>
       </section>
     </div>
+    <ImageCollection
+      :data="imageCollection"
+      :is-home="false"
+      background="green-light"
+    />
   </div>
 </template>
 

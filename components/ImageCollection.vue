@@ -3,8 +3,6 @@ import { onClickOutside } from '@vueuse/core'
 
 const props = defineProps<{
   data: any
-  homeProjects: object
-  amount: number
   isHome: boolean
   background: string
 }>()
@@ -31,7 +29,10 @@ onClickOutside(imageRef, () => {
 })
 </script>
 <template>
-  <div class="bg-beige-light p-8 md:py-20">
+  <div
+    :class="background ? `bg-${background}` : 'bg-beige-light'"
+    class="p-8 md:py-20"
+  >
     <div class="mx-auto grid w-full max-w-screen-xl grid-cols-4 gap-2 md:gap-8">
       <NuxtImg
         v-for="(image, index) in images"

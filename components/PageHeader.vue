@@ -10,7 +10,7 @@ const image = data.value?.image[0]
 <template>
   <section class="relative flex items-center justify-center bg-green-dark">
     <div
-      class="flex flex-col items-center justify-between py-4 md:flex-row md:pt-10"
+      class="flex flex-col items-center justify-between py-4 md:flex-row md:pb-10 md:pt-4"
     >
       <div
         :class="imageSmall ? 'mask-small' : null"
