@@ -16,14 +16,15 @@ const image = data.value?.image[0]
         :class="imageSmall ? 'mask-small' : null"
         class="mask1 mx-auto md:mr-8 md:basis-1/2"
       >
-        <img
+        <NuxtImg
           v-if="image.url"
-          class="max-h-[360px] md:max-h-[750px]"
+          class="h-full max-h-[360px] md:max-h-[750px]"
           :src="image.url"
           :alt="image.name"
+          loading="lazy"
         />
       </div>
-      <div class="mt-[-20px] max-w-[700px] px-8 pb-10 md:basis-1/2 md:p-0">
+      <div class="max-w-[700px] px-8 pb-10 md:mt-[-20px] md:basis-1/2 md:p-0">
         <h1 class="mb-4 text-3xl font-light text-brown md:text-5xl lg:text-7xl">
           {{ data.heading }}
         </h1>
@@ -33,9 +34,10 @@ const image = data.value?.image[0]
         >
           {{ data.text }}
         </p>
-        <a
+        <NuxtLink
           v-if="data.cta_label"
-          :href="data.cta_url"
+          :to="data.cta_url"
+          :title="data.cta_label"
           class="inline-flex items-center rounded-3xl bg-pink px-10 py-4 text-center font-semibold text-licorice hover:bg-pink-light focus:outline-none focus:ring-4 focus:ring-pink-light"
         >
           {{ data.cta_label }}
@@ -52,7 +54,7 @@ const image = data.value?.image[0]
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>
@@ -66,6 +68,11 @@ const image = data.value?.image[0]
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+.mask1.mask-small {
+  -webkit-mask-size: 75%;
+  mask-size: 75%;
 }
 
 @media (min-width: 768px) {

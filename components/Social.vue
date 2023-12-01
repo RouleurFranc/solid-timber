@@ -10,14 +10,14 @@ const showContactButton = computed(() => props.contactButton)
     <div class="mb-2 text-xl md:text-2xl">E-mail</div>
     <a
       href="mailto:info@solidtimber.nl"
-      class="text-lg font-light"
+      class="text-lg font-light hover:text-brown-dark"
     >
       info@solidtimber.nl
     </a>
     <div class="mb-2 mt-4 text-xl md:mt-10 md:text-2xl">Telefoon</div>
     <a
       href="tel:+310307851767"
-      class="text-lg font-light"
+      class="text-lg font-light hover:text-brown-dark"
     >
       +31 (0)30 785 17 67
     </a>
@@ -31,7 +31,7 @@ const showContactButton = computed(() => props.contactButton)
       >
         <Icon
           name="mdi:youtube"
-          class="transition-all hover:opacity-80 hover:transition-all"
+          class="transition-all hover:text-[#ff0000] hover:transition-all"
           size="50"
         />
       </NuxtLink>
@@ -43,7 +43,7 @@ const showContactButton = computed(() => props.contactButton)
       >
         <Icon
           name="mdi:linkedin"
-          class="transition-all hover:opacity-80 hover:transition-all"
+          class="transition-all hover:text-[#0e76a8] hover:transition-all"
           size="40"
         />
       </NuxtLink>

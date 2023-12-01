@@ -25,6 +25,17 @@ query GET_CONTACT {
 					name
 				}
 			}
+			... on Person {
+				_id  
+				bio
+				full_name
+				linkedin
+				profile_pic {
+					url
+					_id
+					name
+				}
+			}
         }
 		seo { 
 			_id

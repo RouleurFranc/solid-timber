@@ -33,7 +33,9 @@ onClickOutside(imageRef, () => {
     :class="background ? `bg-${background}` : 'bg-beige-light'"
     class="p-8 md:py-20"
   >
-    <div class="mx-auto grid w-full max-w-screen-xl grid-cols-4 gap-2 md:gap-8">
+    <div
+      class="mx-auto grid w-full max-w-screen-xl auto-rows-[1fr] grid-cols-2 gap-4 md:grid-cols-4 md:gap-8"
+    >
       <NuxtImg
         v-for="(image, index) in images"
         :key="index"
@@ -44,7 +46,7 @@ onClickOutside(imageRef, () => {
         width="320"
         height="320"
         loading="lazy"
-        class="max-h-[320px] cursor-zoom-in items-center rounded-xl object-cover transition-all duration-200 ease-in-out hover:scale-105 hover:transition-all hover:duration-200 hover:ease-in-out md:min-h-[320px]"
+        class="max-h-[100px] cursor-zoom-in items-center rounded-xl object-cover transition-all duration-200 ease-in-out hover:scale-105 hover:transition-all hover:duration-200 hover:ease-in-out md:max-h-[320px] md:min-h-[320px]"
         @click="showImageModal(image.url, image.name)"
       />
 

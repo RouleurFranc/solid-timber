@@ -10,6 +10,14 @@ const pageComponents = contactPageData?.stack
 const pageHeader = pageComponents[0]
 const imageCollection = pageComponents[1]
 
+const person = pageComponents.filter((result: any) => {
+  const { __typename } = result
+  if (__typename === 'Person') {
+    return result
+  }
+  return null
+})
+
 const config = useRuntimeConfig()
 const showSuccess = ref(false)
 const WEB3FORMS_ACCESS_KEY = config.public.webformToken
@@ -62,7 +70,7 @@ const submitForm = async () => {
       <section
         class="relative px-6 pb-6 pt-4 md:basis-1/2 md:px-8 md:pb-16 md:pt-10 xl:py-24"
       >
-        <div class="pr-8">
+        <div class="lg:pr-8">
           <FormKit
             id="signupForm"
             type="form"
@@ -135,8 +143,14 @@ const submitForm = async () => {
         </div>
       </section>
       <section
-        class="relative flex flex-col bg-gray px-6 pb-6 pt-4 after:absolute after:-right-full after:top-0 after:h-full after:w-full after:bg-gray md:basis-1/2 md:px-8 md:pb-16 md:pt-10 xl:py-24"
+        class="relative flex flex-col bg-gray px-6 pb-6 pt-4 md:basis-1/2 md:px-8 md:pb-16 md:pt-10"
       >
+        <Person
+          :data="person"
+          :is-about-us="false"
+          background="gray"
+          class="mb-4 lg:mb-2"
+        />
         <Social :contact-button="false" />
         <div class="my-4 flex flex-col">
           <small>Solid Timber BV</small>
