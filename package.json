@@ -53,8 +53,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.10.8",
-    "@formkit/core": "^1.3.0",
-    "@formkit/i18n": "^1.3.0",
+    "@formkit/core": "^1.6.5",
+    "@formkit/i18n": "^1.6.5",
     "@formkit/icons": "^1.6.5",
     "@formkit/nuxt": "^1.6.5",
     "@formkit/tailwindcss": "^1.6.5",
