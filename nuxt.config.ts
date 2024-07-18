@@ -35,7 +35,7 @@ export default {
     url: 'https://solidtimber.nl',
     name: 'Solid Timber',
   },
-  ssr: false,
+  ssr: true,
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -44,10 +44,9 @@ export default {
     'nuxt-icon',
     '@nuxtjs/eslint-module',
     '@nuxt/image',
-    'nuxt-simple-sitemap',
-    'nuxt-simple-robots',
     'vue3-carousel-nuxt',
     '@formkit/nuxt',
+    "@nuxtjs/seo"
   ],
   apollo: {
     clients: {
