@@ -68,7 +68,7 @@ onClickOutside(imageRef, () => {
           sizes="100vw sm:200 md:900"
           width="900"
           height="600"
-          class="absolute inset-x-0 bottom-16 top-0 m-auto block max-h-[600px] w-[80%] max-w-[900px] object-cover"
+          class="absolute inset-x-0 bottom-16 top-0 m-auto block max-h-[600px] w-4/5 max-w-[900px] object-cover"
           loading="lazy"
         />
       </div>

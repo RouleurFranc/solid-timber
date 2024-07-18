@@ -51,6 +51,8 @@ export default {
     'vue3-carousel-nuxt',
     '@formkit/nuxt',
     '@nuxtjs/seo',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
 
   apollo: {
