@@ -49,7 +49,12 @@
     "no-undef": 0,
     "object-curly-newline": "off",
     "operator-linebreak": ["off"],
-    "prettier/prettier": 1,
+    "prettier/prettier": [
+      1, 
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "quotes": ["error", "single"],
     "semi": ["error", "never"]
   }

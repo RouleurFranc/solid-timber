@@ -7,6 +7,7 @@ export default {
     plugins: [formKitTailwind],
     content: ['./tailwind-theme.js'],
   },
+
   app: {
     head: {
       title: 'Voor elke bouwopgave een oplossing in hout!',
@@ -31,12 +32,15 @@ export default {
       ],
     },
   },
+
   site: {
     url: 'https://solidtimber.nl',
     name: 'Solid Timber',
   },
-  ssr: false,
+
+  ssr: true,
   devtools: { enabled: true },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/apollo',
@@ -44,11 +48,13 @@ export default {
     'nuxt-icon',
     '@nuxtjs/eslint-module',
     '@nuxt/image',
-    'nuxt-simple-sitemap',
-    'nuxt-simple-robots',
     'vue3-carousel-nuxt',
     '@formkit/nuxt',
+    '@nuxtjs/seo',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
+
   apollo: {
     clients: {
       default: './apollo/prepr.ts',
@@ -56,24 +62,32 @@ export default {
       bsegment: './apollo/bsegment.ts',
     },
   },
+
   runtimeConfig: {
     public: {
       PREPR_ACCESS_TOKEN: process.env.PREPR_ACCESS_TOKEN,
       webformToken: process.env.WEB3_FORM_TOKEN,
     },
   },
+
   css: ['~/assets/css/main.css'],
+
   image: {
     dir: 'assets/images',
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   classes: generateClasses(solidTimerTheme),
+
   build: {
     transpile: ['tslib'],
   },
+
+  compatibilityDate: '2024-07-18',
 }
