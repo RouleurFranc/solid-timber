@@ -6,5 +6,5 @@ module.exports = {
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
-  endOfLine: 'auto'
+  endOfLine: 'auto',
 }
