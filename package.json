@@ -38,7 +38,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.18.1",
-    "nuxt": "^3.8.1",
+    "nuxt": "^3.12.4",
     "nuxt-icon": "^0.6.5",
     "nuxt-simple-robots": "^3.1.9",
     "nuxt-site-config": "^1.5.5",
