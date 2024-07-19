@@ -12,16 +12,16 @@ query GET_PROJECTS($where: ProjectWhereInput, $limit: Int, $skip: Int) {
       title
     }
   }
-  Page (id: "1c0b889c-7b5f-41ee-8ca0-69dffbd7fd93") { 
-			content { 
-			__typename
-    ... on Text {
-      _id
-      html
-      body
-      text
-      format
+ Page(id: "1c0b889c-7b5f-41ee-8ca0-69dffbd7fd93") {
+    content {
+      __typename
+      ... on Text {
+        _id
+        html
+        body
+        text
+        format
+      }
     }
   }
-	}
 }

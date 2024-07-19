@@ -41,7 +41,7 @@ const menuItems = data?.value?.MenuItems?.items
                 : 'close'
             "
             type="button"
-            class="z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-pink p-2 text-sm text-white transition-all hover:scale-110 hover:bg-pink-light hover:transition-all focus:outline-none md:h-16 md:w-16"
+            class="z-20 inline-flex size-12 items-center justify-center rounded-full bg-pink p-2 text-sm text-white transition-all hover:scale-110 hover:bg-pink-light hover:transition-all focus:outline-none md:size-16"
           >
             <span class="sr-only">Open menu</span>
             <div

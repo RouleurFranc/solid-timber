@@ -1,51 +1,50 @@
 query GET_CONTACT {
-	Page (id: "fc59b837-bccf-4d7d-b89b-a5421d43f274") { 
-		_id
-		title
-		_slug
-		stack { 
-            __typename
-            ... on PageHeader {
-				_id
-				heading
-				image {
-					_id
-					url
-				}
-				text
-				cta_label
-				cta_url
-            }
-			... on ImageCollection {
-				_id
-				images {
-							
-					url
-					_id
-					name
-				}
-			}
-			... on Person {
-				_id  
-				bio
-				full_name
-				linkedin
-				profile_pic {
-					url
-					_id
-					name
-				}
-			}
+  Page(id: "fc59b837-bccf-4d7d-b89b-a5421d43f274") {
+    _id
+    title
+    _slug
+    stack {
+      __typename
+      ... on PageHeader {
+        _id
+        heading
+        image {
+          _id
+          url
         }
-		seo { 
-			_id
-			seo_title
-			seo_description
-			seo_social_media_image { 
-				_id
-				url
-			}
-			seo_allow
-		}
-	}
+        text
+        cta_label
+        cta_url
+      }
+      ... on ImageCollection {
+        _id
+        images {
+          url
+          _id
+          name
+        }
+      }
+      ... on Person {
+        _id
+        bio
+        full_name
+        linkedin
+        profile_pic {
+          url
+          _id
+          name
+        }
+      }
+    }
+    seo {
+      _id
+      seo_title
+      seo_description
+      seo_social_media_image {
+        _id
+        url
+      }
+      seo_allow
+    }
+  }
 }

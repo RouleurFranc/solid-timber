@@ -13,7 +13,6 @@ const ctaContent = props.data.content
     >
       <div class="md:mt-4">
         <div class="mb-10 text-licorice md:mb-20">
-
           <img
             src="../assets/images/solidtimber-groen.png"
             class="w-32 mb-8 mx-auto lg:mx-0 lg:float-left lg:mb-0"

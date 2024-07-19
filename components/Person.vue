@@ -7,7 +7,6 @@ const props = defineProps<{
 
 const data = computed(() => props.data)
 const persons = data?.value
-console.log(persons)
 </script>
 <template>
   <div

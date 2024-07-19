@@ -9,7 +9,7 @@ const props = defineProps<{
       <h2
         class="mb-4 text-center text-4xl text-green-dark md:mb-10 md:text-5xl"
       >
-        {{ data.title }}
+        {{ props.data.title }}
       </h2>
       <div
         class="relative mx-auto flex max-w-screen-xl flex-col items-center md:flex-row md:justify-around"
@@ -17,8 +17,8 @@ const props = defineProps<{
         <NuxtImg
           :class="data.image_position === 'Right' ? 'md:order-last' : ''"
           class="z-10 h-80 w-auto rounded-xl border-2 border-green-light object-cover shadow-[5px_5px_0px_0px_rgba(0,102,94)] transition-all duration-500 hover:shadow-none hover:transition-all hover:duration-500 md:h-96 lg:h-[46rem]"
-          :src="data.image[0]?.url"
-          :alt="data.image[0]?.name"
+          :src="props.data.image[0]?.url"
+          :alt="props.data.image[0]?.name"
           sizes="100vw sm:50vw md:520px"
           loading="lazy"
         />
@@ -40,7 +40,7 @@ const props = defineProps<{
             >Lees meer
             <svg
               aria-hidden="true"
-              class="-mr-1 ml-2 h-5 w-5"
+              class="-mr-1 ml-2 size-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
