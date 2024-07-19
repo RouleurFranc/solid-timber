@@ -38,7 +38,7 @@ export default {
     name: 'Solid Timber',
   },
 
-  ssr: true,
+  ssr: false,
   devtools: { enabled: true },
 
   modules: [
