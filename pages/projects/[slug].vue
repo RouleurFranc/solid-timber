@@ -64,6 +64,7 @@ const router = useRouter()
               >
                 {{ project.title }}
               </h1>
+              <!-- eslint-disable vue/no-v-html -->
               <div
                 v-for="detail in projectDetails"
                 :key="detail._id"
@@ -74,6 +75,7 @@ const router = useRouter()
                 class="p-8 text-center text-lg text-green-dark"
                 v-html="project.intro"
               ></div>
+              <!-- eslint-enable -->
             </div>
           </div>
         </div>
@@ -93,7 +95,7 @@ const router = useRouter()
             >
               <NuxtImg
                 :src="imageSlider[i].url"
-                class="carousel__item w-full object-cover"
+                class="w-full object-cover"
                 :alt="imageSlider[i].name"
                 sizes="100vw sm:50vw md:700px"
                 width="1000"
@@ -123,14 +125,18 @@ const router = useRouter()
                 :key="content._id"
                 class="text-lg leading-8 text-green-dark md:basis-1/2"
               >
+                <!-- eslint-disable vue/no-v-html -->
                 <div v-html="content.html"></div>
+                <!-- eslint-enable -->
               </div>
             </div>
             <div
               v-if="project.attributes"
               class="attributes border-y border-solid border-b-green-dark p-8"
             >
+              <!-- eslint-disable vue/no-v-html -->
               <div v-html="project.attributes" />
+              <!-- eslint-enable -->
             </div>
           </div>
         </div>

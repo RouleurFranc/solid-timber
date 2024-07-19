@@ -2,8 +2,6 @@
 const props = defineProps<{
   data: any
 }>()
-
-const data = computed(() => props.data)
 </script>
 <template>
   <section class="relative bg-beige">

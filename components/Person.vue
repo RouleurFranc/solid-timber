@@ -24,8 +24,8 @@ console.log(persons)
         :alt="person.profile_pic[0].name"
         class="mb-8"
       />
-      <h3 class="m-0">{{ person.full_name }}</h3>
-      <h5>CEO</h5>
+      <h3 class="m-0 text-white">{{ person.full_name }}</h3>
+      <h5 class="opacity-50">CEO</h5>
       <NuxtLink
         :to="person.url"
         :title="`LinkedIn profiel ${person.full_name}`"
@@ -33,7 +33,7 @@ console.log(persons)
       >
         <Icon
           name="mdi:linkedin"
-          class="mr-1"
+          class="mr-1 shrink-0"
           size="20"
         />
         LinkedIn

@@ -34,7 +34,9 @@ const projectsContent = data?.value?.Page?.content
         :key="content._id"
         class="mx-auto mb-20 mt-12 max-w-screen-lg items-center border-y border-y-green-dark px-8 py-10 text-center text-lg leading-8 text-green-dark"
       >
+        <!-- eslint-disable vue/no-v-html -->
         <div v-html="content.html"></div>
+        <!-- eslint-enable -->
       </div>
       <Usps />
     </div>
