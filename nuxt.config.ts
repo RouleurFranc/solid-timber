@@ -44,8 +44,6 @@ export default {
     'nuxt-icon',
     '@nuxtjs/eslint-module',
     '@nuxt/image',
-    'nuxt-simple-sitemap',
-    'nuxt-simple-robots',
     'vue3-carousel-nuxt',
     '@formkit/nuxt',
   ],
