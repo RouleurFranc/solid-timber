@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --host 0.0.0.0",
+    "dev": "nuxt dev",
     "dev-https": "",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -11,7 +11,7 @@
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm lint:js && npm lint:prettier",
-    "lintfix": "prettier --write --list-different . && npm lint:js --fix"
+    "lint:fix": "prettier --write --list-different . && npm run lint:js --fix"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -66,6 +66,6 @@
     "vue3-carousel-nuxt": "^1.1.0"
   },
   "engines": {
-    "node": "^18.0.0"
+    "node": "^20.15.0"
   }
 }
