@@ -48,16 +48,16 @@ const ctaContent = props.data.content
             class="mb-8 rounded-3xl bg-green-accent p-8 md:mb-12 md:px-14 md:py-12"
           >
             <div class="flex flex-col items-center justify-between md:flex-row">
-                <NuxtImg
-                  :src="element.image[0]?.url"
-                  sizes="100vw sm:50vw md:900px"
+              <NuxtImg
+                :src="element.image[0]?.url"
+                sizes="100vw sm:50vw md:900px"
                 :class="
                   element.image_position === 'Right' ? 'md:order-last' : ''
                 "
                 class="object-cover w-full max-w-[240px] rounded-xl transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/2"
-                  :alt="element.image[0].name"
-                  loading="lazy"
-                />
+                :alt="element.image[0].name"
+                loading="lazy"
+              />
 
               <div
                 :class="
