@@ -9,7 +9,7 @@ const ctaContent = props.data.content
 <template>
   <section class="relative bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:py-24 xl:py-32"
+      class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:pt-24 lg:pb-10"
     >
       <div class="md:mt-4">
         <div class="mb-10 text-licorice md:mb-20">
@@ -20,11 +20,11 @@ const ctaContent = props.data.content
             alt="Solid Timber beeldmerk groen"
           />
           <h2
-            class="mb-4 text-center text-2xl font-normal tracking-tight text-licorice md:text-5xl"
+            class="mb-4 text-center text-2xl font-normal tracking-tight text-green md:text-5xl"
           >
             {{ data.heading }}
           </h2>
-          <p class="text-center font-light md:mb-6 md:text-xl">
+          <p class="text-center font-light text-green md:mb-6 md:text-2xl">
             {{ data.description }}
           </p>
           <div
@@ -41,32 +41,32 @@ const ctaContent = props.data.content
           </div>
         </div>
 
-        <div class="mt-10 flex flex-col">
+        <div class="mt-10 flex flex-col lg:flex-row justify-between shrink-0">
           <div
             v-for="element in stack"
             :key="element._id"
-            class="mb-8 rounded-3xl bg-green-accent p-8 md:mb-12 md:px-14 md:py-12"
+            class="mb-8 mr-10 rounded-3xl max-w-[400px] bg-green-dark text-beige"
           >
-            <div class="flex flex-col items-center justify-between md:flex-row">
+            <div class="flex flex-col items-center justify-between">
               <NuxtImg
                 :src="element.image[0]?.url"
                 sizes="100vw sm:50vw md:900px"
                 :class="
-                  element.image_position === 'Right' ? 'md:order-last' : ''
+                  element.image_position === 'Right' ? 'md:order-first' : ''
                 "
-                class="object-cover w-full max-w-[240px] rounded-xl transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/2"
+                class="mb-10 object-cover w-full rounded-t-xl transition-all duration-200 hover:scale-95 hover:transition-all"
                 :alt="element.image[0].name"
                 loading="lazy"
               />
 
               <div
                 :class="
-                  element.image_position === 'Right' ? 'md:mr-10' : 'md:ml-10'
+                  element.image_position === 'Right' ? 'md:mb-10' : 'md:mb-10'
                 "
-                class="mt-6 flex min-h-[150px] max-w-[1070px] flex-col text-green-dark md:mt-0"
+                class="mt-6 flex min-h-[150px] max-w-[1070px] flex-col md:mt-0 pt-0 px-8 pb-8 md:px-14"
               >
                 <h4 class="mb-4 text-3xl">{{ element.title }}</h4>
-                <div class="text-lg leading-8">{{ element.text }}</div>
+                <div class="leading-8">{{ element.text }}</div>
               </div>
             </div>
           </div>

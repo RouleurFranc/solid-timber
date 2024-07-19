@@ -1,7 +1,7 @@
 <template>
   <footer class="z-0 bg-brown-dark align-bottom">
     <div
-      class="relative mx-auto max-w-screen-xl items-center p-8 md:pb-16 md:pt-20 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center p-8 md:pb-6 md:pt-10 xl:pb-0 xl:gap-16"
     >
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div
@@ -64,48 +64,64 @@
             </NuxtLink>
           </div>
         </div>
-        <img
-          class="m-auto flex max-h-[200px] items-center justify-center"
-          src="../assets/images/solidtimber-wit.png"
-          alt="Solid Timber logo wit"
-          loading="lazy"
-        />
+        <div class="flex flex-col items-center justify-center">
+          <img
+            class="mx-auto mb-8 flex max-h-[200px] items-center justify-center"
+            src="../assets/images/solidtimber-wit.png"
+            alt="Solid Timber logo wit"
+            loading="lazy"
+          />
+          <a
+            href="mailto:info@solidtimber.nl"
+            class="text-lg text-white hover:text-green-dark"
+          >
+            info@solidtimber.nl
+          </a>
+          <div class="text-white text-lg">Ketjapweg 18 | 3541 RH | Utrecht</div>
+          <a
+            href="tel:+310307851767"
+            class="text-white hover:text-green-dark"
+          >
+            +31 (0)30 785 17 67
+          </a>
+        </div>
         <div class="flex flex-col pt-6 text-center text-xl text-white md:p-10">
+          <div class="mb-6">SOLID INFO</div>
           <NuxtLink
             title="Videos"
-            class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
             >Videos</NuxtLink
           >
           <NuxtLink
             title="Projects"
-            class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
             >Projects</NuxtLink
           >
           <NuxtLink
             title="Partners"
-            class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
             >Partners</NuxtLink
           >
           <NuxtLink
             title="Contact"
-            class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
             >Contact</NuxtLink
           >
           <NuxtLink
             title="Sitemap"
-            class="mb-6 underline transition-all duration-500 hover:mr-4 hover:no-underline hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
             >Sitemap</NuxtLink
           >
         </div>
       </div>
     </div>
     <div
-      class="mx-auto my-6 flex flex-col items-center justify-between text-white md:my-10 md:max-w-[680px] md:flex-row"
+      class="mx-auto mb-6 flex flex-col items-center justify-between text-white md:mt-2 md:mb-4 md:max-w-[680px]"
     >
-      <div class="text-3xl md:text-4xl">Solid Timber</div>
-      <div class="xclass text-4xl font-extralight text-green-light">x</div>
+      <div class="mb-4 text-2xl">Partners</div>
+      <!-- <div class="xclass text-4xl font-extralight text-green-light">x</div> -->
       <img
-        class="mb-4 flex max-w-[120px] items-center justify-center md:m-0 md:max-w-[200px]"
+        class="mb-4 flex max-w-[120px] items-center justify-center md:max-w-[200px]"
         src="../assets/images/Element-logo-wit-300x82.png"
         alt="Element logo wit"
         loading="lazy"
@@ -118,7 +134,7 @@
       />
     </div>
     <div
-      class="mx-auto mt-12 flex flex-col items-center justify-center text-white md:mt-16"
+      class="mx-auto mt-12 flex flex-col items-center justify-center text-white md:mt-8"
     >
       <div class="text-[10px] md:text-sm">
         © Copyright 2024 | Solid Timber BV | KvK: 75331020
