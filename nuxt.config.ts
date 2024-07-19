@@ -72,6 +72,9 @@ export default {
 
   image: {
     dir: 'assets/images',
+    prepr: {
+      projectName: 'https://main-solid-timber.prepr.io/',
+    },
   },
 
   postcss: {
