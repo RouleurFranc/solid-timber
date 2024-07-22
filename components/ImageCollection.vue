@@ -30,8 +30,7 @@ onClickOutside(imageRef, () => {
 </script>
 <template>
   <div
-    :class="background ? `bg-${background}` : 'bg-beige-light'"
-    class="p-8 md:py-20"
+    class="bg-beige-light p-8 md:py-20"
   >
     <div
       class="mx-auto grid w-full max-w-screen-xl auto-rows-[1fr] grid-cols-2 gap-4 md:grid-cols-4 md:gap-8"
