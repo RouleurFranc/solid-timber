@@ -46,11 +46,11 @@ p {
   }
 
   .carousel__pagination-button--active:after {
-    @apply bg-beige;
+    @apply bg-green-dark;
   }
 
   .carousel__pagination-button:after:hover {
-    @apply bg-beige;
+    @apply bg-green-dark;
   }
 
   .details li {
@@ -71,7 +71,7 @@ p {
   }
 
   .attributes div ul li {
-    @apply grid grid-cols-2 gap-0;
+    @apply text-xl grid grid-cols-2 gap-0 leading-8;
   }
 
   .attributes strong {

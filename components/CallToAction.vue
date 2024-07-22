@@ -15,7 +15,7 @@ const ctaContent = props.data.content
         <div class="mb-10 text-licorice md:mb-20">
           <img
             src="../assets/images/solidtimber-groen.png"
-            class="w-32 mb-8 mx-auto lg:mx-0 lg:float-left lg:mb-0"
+            class="mx-auto mb-8 w-32 lg:float-left lg:mx-0 lg:mb-0"
             sizes="100vw sm:50vw md:200px"
             alt="Solid Timber beeldmerk groen"
           />
@@ -54,7 +54,7 @@ const ctaContent = props.data.content
                 :class="
                   element.image_position === 'Right' ? 'md:order-last' : ''
                 "
-                class="object-cover w-full max-w-[240px] rounded-xl transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/2"
+                class="w-full max-w-[240px] rounded-xl object-cover transition-all duration-200 hover:scale-105 hover:transition-all md:basis-1/2"
                 :alt="element.image[0].name"
                 loading="lazy"
               />
