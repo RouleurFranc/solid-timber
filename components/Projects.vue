@@ -20,11 +20,7 @@ const projects = homeProjects.value
     class="relative"
   >
     <div
-      :class="
-        isHome
-          ? `px-8 py-16 md:py-20 lg:py-24`
-          : `p-8 md:px-8 md:py-12`
-      "
+      :class="isHome ? `px-8 py-16 md:py-20 lg:py-24` : `p-8 md:px-8 md:py-12`"
       class="relative mx-auto max-w-screen-xl items-center"
     >
       <h2
@@ -53,11 +49,13 @@ const projects = homeProjects.value
               loading="lazy"
             />
             <div
-              class="flex bg-brown rounded-b-xl items-center justify-between px-4 pb-4 pt-6 md:px-8"
+              class="flex items-center justify-between rounded-b-xl bg-brown px-4 pb-4 pt-6 md:px-8"
             >
               <div class="flex flex-col">
                 <small class="text-green">{{ project.tag }}</small>
-                <h2 class="text-lg text-green md:text-2xl">{{ project.title }}</h2>
+                <h2 class="text-lg text-green md:text-2xl">
+                  {{ project.title }}
+                </h2>
               </div>
               <div
                 class="inline-flex items-center rounded-full bg-pink p-2 text-center font-semibold text-licorice transition-all duration-200 hover:scale-105 hover:bg-pink-light hover:transition-all focus:outline-none focus:ring-4 focus:ring-pink-light"

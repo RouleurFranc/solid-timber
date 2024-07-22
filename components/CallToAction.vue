@@ -9,13 +9,13 @@ const ctaContent = props.data.content
 <template>
   <section class="relative bg-beige-light">
     <div
-      class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:pt-24 lg:pb-10"
+      class="relative mx-auto max-w-screen-xl items-center gap-8 px-8 py-10 md:grid md:py-20 lg:px-8 lg:pb-10 lg:pt-24"
     >
       <div class="md:mt-4">
         <div class="mb-10 text-licorice md:mb-20">
           <img
             src="../assets/images/solidtimber-groen.png"
-            class="w-32 mb-8 mx-auto lg:mx-0 lg:float-left lg:mb-0"
+            class="mx-auto mb-8 w-32 lg:float-left lg:mx-0 lg:mb-0"
             sizes="100vw sm:50vw md:200px"
             alt="Solid Timber beeldmerk groen"
           />
@@ -41,11 +41,11 @@ const ctaContent = props.data.content
           </div>
         </div>
 
-        <div class="mt-10 flex flex-col lg:flex-row justify-between shrink-0">
+        <div class="mt-10 flex shrink-0 flex-col justify-between lg:flex-row">
           <div
             v-for="element in stack"
             :key="element._id"
-            class="mb-8 mr-10 rounded-3xl max-w-[400px] bg-green-dark text-beige"
+            class="mb-8 mr-10 max-w-[400px] rounded-3xl bg-green-dark text-beige"
           >
             <div class="flex flex-col items-center justify-between">
               <NuxtImg
@@ -54,7 +54,7 @@ const ctaContent = props.data.content
                 :class="
                   element.image_position === 'Right' ? 'md:order-first' : ''
                 "
-                class="mb-10 object-cover w-full rounded-t-xl transition-all duration-200 hover:scale-95 hover:transition-all"
+                class="mb-10 w-full rounded-t-xl object-cover transition-all duration-200 hover:scale-95 hover:transition-all"
                 :alt="element.image[0].name"
                 loading="lazy"
               />
@@ -63,7 +63,7 @@ const ctaContent = props.data.content
                 :class="
                   element.image_position === 'Right' ? 'md:mb-10' : 'md:mb-10'
                 "
-                class="mt-6 flex min-h-[150px] max-w-[1070px] flex-col md:mt-0 pt-0 px-8 pb-8 md:px-14"
+                class="mt-6 flex min-h-[150px] max-w-[1070px] flex-col px-8 pb-8 pt-0 md:mt-0 md:px-14"
               >
                 <h4 class="mb-4 text-3xl">{{ element.title }}</h4>
                 <div class="leading-8">{{ element.text }}</div>
