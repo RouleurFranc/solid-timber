@@ -38,15 +38,15 @@ query GET_PROJECT($slug: String) {
         text
       }
     }
-    seo { 
-			_id
-			seo_title
-			seo_description
-			seo_social_media_image { 
-				_id
-				url
-			}
-			seo_allow
-		}
+    seo {
+      _id
+      seo_title
+      seo_description
+      seo_social_media_image {
+        _id
+        url
+      }
+      seo_allow
+    }
   }
 }

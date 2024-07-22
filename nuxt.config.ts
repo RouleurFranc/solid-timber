@@ -38,7 +38,7 @@ export default {
     name: 'Solid Timber',
   },
 
-  ssr: true,
+  ssr: false,
   devtools: { enabled: true },
 
   modules: [
@@ -51,8 +51,6 @@ export default {
     'vue3-carousel-nuxt',
     '@formkit/nuxt',
     '@nuxtjs/seo',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
   ],
 
   apollo: {
@@ -74,6 +72,9 @@ export default {
 
   image: {
     dir: 'assets/images',
+    prepr: {
+      projectName: 'https://main-solid-timber.prepr.io/',
+    },
   },
 
   postcss: {
@@ -89,5 +90,5 @@ export default {
     transpile: ['tslib'],
   },
 
-  compatibilityDate: '2024-07-18',
+  compatibilityDate: '2024-07-19',
 }

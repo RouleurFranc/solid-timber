@@ -1,0 +1,4 @@
+[build]
+  command = "NODE_OPTIONS=--max_old_space_size=4096 npm run build"
+[images]
+  remote_images = ["https://solid-timber.stream.prepr.io/.*"]

@@ -121,7 +121,7 @@
       class="mx-auto mt-12 flex flex-col items-center justify-center text-white md:mt-16"
     >
       <div class="text-[10px] md:text-sm">
-        © Copyright 2023 | Solid Timber BV | KvK: 75331020
+        © Copyright 2024 | Solid Timber BV | KvK: 75331020
       </div>
       <div class="mt-4 flex h-6 w-10 items-center justify-center">
         <Icon
