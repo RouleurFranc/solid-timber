@@ -1,7 +1,7 @@
 <template>
   <footer class="z-0 bg-brown-dark align-bottom">
     <div
-      class="relative mx-auto max-w-screen-xl items-center p-8 md:pb-6 md:pt-10 xl:pb-0 xl:gap-16"
+      class="relative mx-auto max-w-screen-xl items-center p-8 md:pb-6 md:pt-10 xl:gap-16 xl:pb-0"
     >
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div
@@ -77,7 +77,7 @@
           >
             info@solidtimber.nl
           </a>
-          <div class="text-white text-lg">Ketjapweg 18 | 3541 RH | Utrecht</div>
+          <div class="text-lg text-white">Ketjapweg 18 | 3541 RH | Utrecht</div>
           <a
             href="tel:+310307851767"
             class="text-white hover:text-green-dark"
@@ -89,34 +89,34 @@
           <div class="mb-6">SOLID INFO</div>
           <NuxtLink
             title="Videos"
-            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:cursor-pointer hover:text-green hover:transition-all hover:duration-500"
             >Videos</NuxtLink
           >
           <NuxtLink
             title="Projects"
-            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:cursor-pointer hover:text-green hover:transition-all hover:duration-500"
             >Projects</NuxtLink
           >
           <NuxtLink
             title="Partners"
-            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:cursor-pointer hover:text-green hover:transition-all hover:duration-500"
             >Partners</NuxtLink
           >
           <NuxtLink
             title="Contact"
-            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:cursor-pointer hover:text-green hover:transition-all hover:duration-500"
             >Contact</NuxtLink
           >
           <NuxtLink
             title="Sitemap"
-            class="mb-6 transition-all duration-500 hover:text-green hover:cursor-pointer hover:transition-all hover:duration-500"
+            class="mb-6 transition-all duration-500 hover:cursor-pointer hover:text-green hover:transition-all hover:duration-500"
             >Sitemap</NuxtLink
           >
         </div>
       </div>
     </div>
     <div
-      class="mx-auto mb-6 flex flex-col items-center justify-between text-white md:mt-2 md:mb-4 md:max-w-[680px]"
+      class="mx-auto mb-6 flex flex-col items-center justify-between text-white md:mb-4 md:mt-2 md:max-w-[680px]"
     >
       <div class="mb-4 text-2xl">Partners</div>
       <!-- <div class="xclass text-4xl font-extralight text-green-light">x</div> -->
