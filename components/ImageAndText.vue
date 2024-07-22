@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 <template>
   <section class="relative bg-beige">
-    <div class="p-8 md:py-20 lg:py-24 xl:pb-44 xl:pt-36">
+    <div class="p-8 md:py-20 lg:py-24 xl:pb-32">
       <h2
         class="mb-4 text-center text-4xl text-green-dark md:mb-10 md:text-5xl"
       >

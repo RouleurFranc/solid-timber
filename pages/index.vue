@@ -28,8 +28,7 @@ const { data } = await useAsyncQuery(GetPageBySlug, {
 
 const page = data?.value?.Page
 const stack = computed(() => page?.stack)
-const { projects } = stack.value[2]
-console.log(projects)
+const { projects } = stack.value[3]
 </script>
 
 <template>
