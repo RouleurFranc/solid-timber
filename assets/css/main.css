@@ -21,3 +21,60 @@ h4 {
 p {
   @apply mb-2;
 }
+
+@layer components {
+  .details {
+    ul {
+      @apply flex flex-col md:flex-row justify-center items-center md:justify-around;
+    }
+
+    li {
+      @apply border-2 border-white font-medium text-white mb-2 md:mb-6 py-2 px-4 inline-block text-center min-w-[180px] md:min-w-0;
+    }
+  }
+
+  .carousel__icon {
+    @apply text-green-dark bg-white min-w-[36px] transition-all;
+  }
+
+  .carousel__icon:hover {
+    @apply text-white bg-green-dark transition-all;
+  }
+
+  .carousel__pagination-button:after {
+    @apply bg-green-light;
+  }
+
+  .carousel__pagination-button--active:after {
+    @apply bg-beige;
+  }
+
+  .carousel__pagination-button:after:hover {
+    @apply bg-beige;
+  }
+
+  .details li {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in both;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .attributes div ul li {
+    @apply grid grid-cols-2 gap-0;
+  }
+
+  .attributes strong {
+    @apply text-green-light;
+  }
+}

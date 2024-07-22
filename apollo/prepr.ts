@@ -1,5 +1,5 @@
-import { defineApolloClient } from "@nuxtjs/apollo";
- 
+import { defineApolloClient } from '@nuxtjs/apollo'
+
 export default defineApolloClient({
   httpEndpoint: 'https://graphql.prepr.io/graphql',
   defaultOptions: {},

@@ -43,7 +43,7 @@ console.log(projects)
       :home-projects="projects"
       :amount="9"
       :is-home="true"
-      background="green-light"
+      background="green-dark"
       :image-small="false"
     ></component>
     <Usps />
